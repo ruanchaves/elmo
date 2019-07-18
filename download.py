@@ -7,42 +7,46 @@ import os
 import subprocess
 from loguru import logger
 
-logger.add("file_{time}.log")
-
-filenames = 'embeddings.txt'
-DIR = './embeddings/USP/'
-
 def get_large_file(url, file, length=16*1024):
     req = urlopen(url)
     with open(file, 'wb') as fp:
         shutil.copyfileobj(req, fp, length)
 
-with open(filenames,'r') as f: 
-    links = f.read().split('\n')
-    links = list(filter(lambda x: x.strip() , links))
+settings = {}
+
+with open("settings.yaml", 'r') as stream:
+    try:
+        settings = yaml.safe_load(stream)
+    except yaml.YAMLError as exc:
+        print(exc)
+        sys.exit(1)
+
+logger.add("download_{time}.log")
+
+NILC_DIR = settings['NILC']['dir']
+links = settings['NILC']['sources']
 
 for url in links:
     folder = url.split('/')[-2]
     dst = url.split('/')[-1]
     try:
-        os.mkdir(DIR + folder)
+        os.mkdir(NILC_DIR + folder)
     except FileExistsError as e:
         pass
-    destination = DIR + folder + '/' + dst
+    destination = NILC_DIR + folder + '/' + dst
     if os.path.isfile(destination):
         continue
     logger.debug('Downloading {0}'.format(url))
     get_large_file(url, destination)
 
-for path, subdirs, files in os.walk(DIR):
+for path, subdirs, files in os.walk(NILC_DIR):
     for name in files:
         if name.endswith('.zip'):
             dst = path + name
             logger.debug('Extracting {0}'.format(dst))
             subprocess.call('unzip',dst, '-d', path)
-            subprocess.call('rm', dst)
 
-for path, subdirs, files in os.walk(DIR):
+for path, subdirs, files in os.walk(NILC_DIR):
     for name in files:
         if name.endswith('.txt'):
             dst = path + name
