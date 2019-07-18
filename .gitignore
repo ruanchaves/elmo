@@ -1,5 +1,6 @@
 # ELMo embeddings
 embeddings/
+datasets/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
