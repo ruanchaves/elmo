@@ -12,6 +12,7 @@ from loguru import logger
 import yaml
 import sys
 import os
+import datetime
 
 def run_NILC(model, func, dst):
     test_results = run_regression(model, func)
@@ -32,8 +33,7 @@ def run_regression(model, func):
     test_results = LR.evaluate_testset()
     return test_results 
 
-def run_elmo(lang, func):
-    model = Embedding(ELMoEmbeddings(lang))
+def run_elmo(model, func):
     test_results = run_regression(model, func)
     measure = {
         'model' : 'ELMo',
@@ -45,7 +45,8 @@ def run_elmo(lang, func):
 if __name__ == '__main__':
     
     logger.add("evaluate_{time}.log")
-    
+
+    stats = []    
     settings = {}
     with open("settings.yaml", 'r') as stream:
         try:
@@ -61,7 +62,11 @@ if __name__ == '__main__':
     test, train = Loader(PATH, files).load_dataset()
     gold = test['similarity'].astype(float).values.flatten()
 
-    stats = []
+    elmo = Embedding(ELMoEmbeddings('pt'))
+    measure = run_elmo(elmo, flair_distance)
+    logger.debug(measure)
+    stats.append(measure)
+
     for path, subdirs, files in os.walk(EMBEDDINGS_DIR):
         for name in files:
             dst = path + '/' + name
@@ -71,12 +76,6 @@ if __name__ == '__main__':
                 measure = run_NILC(model, gensim_distance, dst)
                 logger.debug(measure)
                 stats.append(measure)
-
-
-    elmo = Embedding(ELMoEmbeddings('pt'))
-    measure = run_elmo(elmo, flair_distance)
-    logger.debug(measure)
-    stats.append(measure)
 
     with open('stats-' + str(int(datetime.datetime.now().timestamp())) + '.json', 'w+') as f:
         json.dump(stats, f)

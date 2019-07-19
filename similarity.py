@@ -76,14 +76,10 @@ class Regression(object):
     def evaluate_testset(self):
         x = self.results['features_train']
         y = self.results['results_train']
-        print(x)
-        print(y)
         test = self.results['features_test']
-        print(test)
         l_reg = LinearRegression()
         l_reg.fit(x, y)
         test_predict = l_reg.predict(test)
-        print(test_predict)
         return test_predict.flatten()      
 
 if __name__ == '__main__':
