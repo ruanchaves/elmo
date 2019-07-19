@@ -42,6 +42,7 @@ def run_elmo(model, func):
         }
     return measure
 
+
 if __name__ == '__main__':
     
     logger.add("evaluate_{time}.log")
@@ -56,7 +57,7 @@ if __name__ == '__main__':
             sys.exit(1)
     model_name = settings['ELMo']['name']
     PATH = settings['ASSIN']['path']
-    files = settings['ASSIN']['files']['ptbr']
+    files = settings['ASSIN']['files']['ptpt']
     EMBEDDINGS_DIR = settings['NILC']['dir']
 
     test, train = Loader(PATH, files).load_dataset()
