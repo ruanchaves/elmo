@@ -58,9 +58,9 @@ class Embedding(object):
         return self
 
     def format(self):
-        features_train = np.array(self.train_sims).reshape(1,-1)
-        results_train = self.train['similarity'].values.reshape(1, -1)
-        features_test = np.array(self.test_sims).reshape(1, -1)
+        features_train = np.array(self.train_sims).reshape(-1,1)
+        results_train = self.train['similarity'].values.astype(float).flatten()
+        features_test = np.array(self.test_sims).reshape(-1, 1)
         self.results = {
             'features_train' : features_train,
             'results_train' : results_train,
@@ -76,10 +76,14 @@ class Regression(object):
     def evaluate_testset(self):
         x = self.results['features_train']
         y = self.results['results_train']
+        print(x)
+        print(y)
         test = self.results['features_test']
+        print(test)
         l_reg = LinearRegression()
         l_reg.fit(x, y)
         test_predict = l_reg.predict(test)
+        print(test_predict)
         return test_predict.flatten()      
 
 if __name__ == '__main__':

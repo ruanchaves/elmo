@@ -11,12 +11,14 @@ import json
 from loguru import logger
 import yaml
 import sys
+import os
 
 def run_NILC(model, func, dst):
     test_results = run_regression(model, func)
-    model_name = '_'.join(dst.rstrip('.model').split('/')[-2:-1])
+    model_name_tokens = dst.rstrip('.model').split('/')
+    model_name = model_name_tokens[-2] + '_' + model_name_tokens[-1]
     measure = {
-        'model' : model_name
+        'model' : model_name,
         'pearson' : pearsonr(gold, test_results)[0],
         'MSE' : mean_squared_error(gold, test_results)
         }
@@ -34,7 +36,7 @@ def run_elmo(lang, func):
     model = Embedding(ELMoEmbeddings(lang))
     test_results = run_regression(model, func)
     measure = {
-        'model' : 'ELMo'
+        'model' : 'ELMo',
         'pearson' : pearsonr(gold, test_results)[0],
         'MSE' : mean_squared_error(gold, test_results)
         }
@@ -62,11 +64,11 @@ if __name__ == '__main__':
     stats = []
     for path, subdirs, files in os.walk(EMBEDDINGS_DIR):
         for name in files:
-            dst = path + name
+            dst = path + '/' + name
             if name.endswith('.model'):
                 embedding = KeyedVectors.load(dst)
                 model = Embedding(embedding)
-                measure = run_NILC(model, gensim_distance)
+                measure = run_NILC(model, gensim_distance, dst)
                 logger.debug(measure)
                 stats.append(measure)
 

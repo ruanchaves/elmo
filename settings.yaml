@@ -13,9 +13,19 @@ ASSIN: {
   files: {
     ptbr: {
       'train': 'assin-ptbr-train-hartmann.json',
-      'test': 'asssin-ptbr-test-gold-hartmann.json'
+      'test': 'assin-ptbr-test-gold-hartmann.json'
     }
   }
+}
+
+unzip: {
+  'cores': 8
+}
+
+gensim: {
+  'memory_percent_limit': 50.0,
+  'wait_interval': 1,
+  'cores': 1
 }
 
 NILC: {

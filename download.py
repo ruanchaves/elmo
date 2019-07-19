@@ -10,6 +10,8 @@ import yaml
 import subprocess
 import multiprocessing
 from gensim.models import KeyedVectors
+import psutil
+from time import sleep
 
 def get_large_file(url, file, length=16*1024):
     req = urlopen(url)
@@ -20,12 +22,17 @@ def unzip(cmd):
     return subprocess.call(cmd)
 
 def gensim_load_model(item):
+    while True:
+        mem = psutil.virtual_memory().percent
+        if mem > item['limit']:
+            sleep(item['wait_interval'])
+        else:
+            break
     model = KeyedVectors.load_word2vec_format(item['dst'])
     model.save(item['destination'])
 
 if __name__ == '__main__':
     settings = {}
-    cores = multiprocessing.cpu_count() // 2
     
     with open("settings.yaml", 'r') as stream:
         try:
@@ -68,27 +75,34 @@ if __name__ == '__main__':
 
     if targets:
         cmds_list = [ ['unzip','-o',item['dst'], '-d', item['path']] for item in targets ] 
-        p = multiprocessing.Pool(cores)
+        p = multiprocessing.Pool(settings['unzip']['cores'])
         p.map(unzip, cmds_list)
         p.close()
         p.join()
 
     targets = []
+
+    limit = settings['gensim']['memory_percent_limit']
+    wait_interval = settings['gensim']['wait_interval']
     for path, subdirs, files in os.walk(NILC_DIR):
         for name in files:
             if name.endswith('.txt'):
                 dst = path + '/' + name
-                logger.debug('Converting {0}'.format(dst))
                 destination = dst.rstrip('.txt') + '.model'
                 if os.path.isfile(destination):
                     continue
                 targets.append({
                     'dst' : dst,
-                    'destination' : destination
+                    'destination' : destination,
+                    'limit': limit,
+                    'wait_interval': wait_interval
                 })
     
-    if targets:
-        p = multiprocessing.Pool(cores)
-        p.map(gensim_load_model, targets)
-        p.close()
-        p.join()
+    # if targets:
+    #     p = multiprocessing.Pool(settings['gensim']['cores'])
+    #     p.map(gensim_load_model, targets)
+    #     p.close()
+    #     p.join()
+
+    for idx, item in enumerate(targets):
+        gensim_load_model(item)
