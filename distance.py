@@ -64,7 +64,7 @@ def flair_distance(sentences1, sentences2, model=None):
         sim = cosine_similarity(embedding1, embedding2)[0][0]
         sims.append(sim)
 
-    return sims
+    return sims       
 
 if __name__ == '__main__':
     pass
