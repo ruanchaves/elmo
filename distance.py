@@ -14,15 +14,12 @@ def remove_first_principal_component(X):
     XX = X - X.dot(pc.transpose()) * pc
     return XX
 
-def cosine_distance(sentences1, sentences2, gensim_model=None, flair_model=None, gensim_sif=False, flair_sif=False, freqs={}, a=0.001):
+def cosine_distance(sentences1, sentences2, gensim_model=None, flair_model=None, gensim_sif=False, flair_sif=False, freqs={}, total_freq=1.0, a=0.001):
     sims = []
     embeddings = []
     for (sent1, sent2) in zip(sentences1, sentences2):
         tokens1 = [x.text for x in sent1.tokens]
-        tokens2 = [x.text for x in sent2.tokens]  
-        total_freq = 1.0
-        if gensim_sif or flair_sif:
-            total_freq = sum(freqs.values())   
+        tokens2 = [x.text for x in sent2.tokens]    
 
         if gensim_model:
 

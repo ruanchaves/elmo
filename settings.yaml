@@ -26,6 +26,14 @@ unzip: {
   'cores': 8
 }
 
+logs: {
+  path: './logs/'
+}
+
+results: {
+  path: './results/'
+}
+
 gensim: {
   'memory_percent_limit': 50.0,
   'wait_interval': 1,

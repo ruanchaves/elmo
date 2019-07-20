@@ -80,6 +80,8 @@ def xml_to_csv(filename):
 
 if __name__ == '__main__':
 
+    os.chdir('..')
+
     DIR = './datasets/ASSIN/'
     for item in os.listdir(DIR):
         if 'xml' in item and '._' not in item:

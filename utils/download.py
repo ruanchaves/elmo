@@ -33,6 +33,7 @@ def gensim_load_model(item):
 
 if __name__ == '__main__':
     settings = {}
+    os.chdir('..')
     
     with open("settings.yaml", 'r') as stream:
         try:
@@ -98,11 +99,5 @@ if __name__ == '__main__':
                     'wait_interval': wait_interval
                 })
     
-    # if targets:
-    #     p = multiprocessing.Pool(settings['gensim']['cores'])
-    #     p.map(gensim_load_model, targets)
-    #     p.close()
-    #     p.join()
-
     for idx, item in enumerate(targets):
         gensim_load_model(item)

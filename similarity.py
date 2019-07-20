@@ -37,42 +37,14 @@ class Loader(object):
 
 class Embedding(object):
 
-    def __init__(self, model=None):
-        self.model = model
-        self.train = None
-        self.test = None
-        self.train_sims = None
-        self.test_sims = None
-        self.results = None
-
-    def similarity(self, df, func, label_a, label_b):
-        sentences1 = [Sentence(' '.join(s)) for s in df[label_a]]
-        sentences2 = [Sentence(' '.join(s)) for s in df[label_b]]
-        benchmark = ft.partial(func, model=self.model)
-        sims = benchmark(sentences1, sentences2)
-        return sims
-
-    def get_sims(self, func):
-        self.train_sims = self.similarity(self.train, func, 't', 'h')
-        self.test_sims = self.similarity(self.test, func, 't', 'h')
-        return self
-
-    def format(self):
-        features_train = np.array(self.train_sims).reshape(-1,1)
-        results_train = self.train['similarity'].values.astype(float).flatten()
-        features_test = np.array(self.test_sims).reshape(-1, 1)
-        self.results = {
-            'features_train' : features_train,
-            'results_train' : results_train,
-            'features_test' : features_test
-        }
-        return self
-
-class CombinedEmbedding(object):
-
-    def __init__(self, gensim_model=None, flair_model=None):
+    def __init__(self, gensim_model=None, flair_model=None, gensim_sif=False, flair_sif=False, freqs={}, a=0.001):
         self.gensim_model = gensim_model
         self.flair_model = flair_model
+        self.gensim_sif = gensim_sif
+        self.flair_sif = flair_sif
+        self.freqs = freqs
+        self.total_freq = sum(self.freqs.values())
+        self.a = a
         self.train = None
         self.test = None
         self.train_sims = None
@@ -82,7 +54,7 @@ class CombinedEmbedding(object):
     def similarity(self, df, func, label_a, label_b):
         sentences1 = [Sentence(' '.join(s)) for s in df[label_a]]
         sentences2 = [Sentence(' '.join(s)) for s in df[label_b]]
-        benchmark = ft.partial(func, gensim_model=self.gensim_model, flair_model=self.flair_model)
+        benchmark = ft.partial(func, gensim_model=self.gensim_model, flair_model=self.flair_model, gensim_sif=self.gensim_sif, flair_sif=self.flair_sif, freqs=self.freqs, total_freq=self.total_freq, a=self.a)
         sims = benchmark(sentences1, sentences2)
         return sims
 

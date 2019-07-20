@@ -8,6 +8,8 @@ import datetime
 
 if __name__ == '__main__':
 
+    os.chdir('..')
+
     logger.add("analogies_{time}.log")
     logger.debug("START")
 

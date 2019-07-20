@@ -54,8 +54,7 @@ def run_combined(model, func, dst):
     return measure
 
 if __name__ == '__main__':
-    
-    logger.add("evaluate_{time}.log")
+
 
     stats = []    
     settings = {}
@@ -69,35 +68,41 @@ if __name__ == '__main__':
     PATH = settings['ASSIN']['path']
     files = settings['ASSIN']['files']['ptbr']
     EMBEDDINGS_DIR = settings['NILC']['dir']
+    LOGS_PATH = settings['logs']['path']
+    RESULTS_PATH = settings['results']['path']
+
+    logger.add(LOGS_PATH + "evaluate_{time}.log")
 
     test, train = Loader(PATH, files).load_dataset()
     gold = test['similarity'].astype(float).values.flatten()
 
-    # elmo = Embedding(ELMoEmbeddings('pt'))
-    # measure = run_elmo(elmo, flair_distance)
-    # logger.debug(measure)
-    # stats.append(measure)
+    elmo = Embedding(ELMoEmbeddings('pt'))
+    measure = run_elmo(elmo, flair_distance)
+    logger.debug(measure)
+    stats.append(measure)
+
+        for path, subdirs, files in os.walk(EMBEDDINGS_DIR):
+            for name in files:
+                dst = path + '/' + name
+                if name.endswith('.model'):
+                    embedding = KeyedVectors.load(dst)
+                    model = Embedding(embedding)
+                    measure = run_NILC(model, gensim_distance, dst)
+                    logger.debug(measure)
+                    stats.append(measure)
 
     for path, subdirs, files in os.walk(EMBEDDINGS_DIR):
         for name in files:
             dst = path + '/' + name
             if name.endswith('.model'):
-                embedding = KeyedVectors.load(dst)
-                model = Embedding(embedding)
-                measure = run_NILC(model, gensim_distance, dst)
+                gensim_model = KeyedVectors.load(dst)
+                flair_model = Embedding(ELMoEmbeddings('pt'))
+                model = CombinedEmbedding(gensim_model=gensim_model, flair_model=flair_model)
+                measure = run_combined(model, combined_distance, dst)
                 logger.debug(measure)
                 stats.append(measure)
 
-    # for path, subdirs, files in os.walk(EMBEDDINGS_DIR):
-    #     for name in files:
-    #         dst = path + '/' + name
-    #         if name.endswith('.model'):
-    #             gensim_model = KeyedVectors.load(dst)
-    #             flair_model = Embedding(ELMoEmbeddings('pt'))
-    #             model = CombinedEmbedding(gensim_model=gensim_model, flair_model=flair_model)
-    #             measure = run_combined(model, combined_distance, dst)
-    #             logger.debug(measure)
-    #             stats.append(measure)
-
-    with open('stats-' + str(int(datetime.datetime.now().timestamp())) + '.json', 'w+') as f:
+    stats_fname = RESULTS_PATH + 'stats-' + str(int(datetime.datetime.now().timestamp())) + '.json'
+    with open(stats_fname, 'w+') as f:
         json.dump(stats, f)
+        logger.debug(stats_fname)
