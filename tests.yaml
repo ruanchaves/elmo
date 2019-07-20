@@ -7,4 +7,4 @@ NILC-SIF: True
 ELMo-SIF_NILC-SIF: True
 ELMo-SIF_NILC: True
 ELMo_NILC-SIF: True
-analogies: False
+analogies: True

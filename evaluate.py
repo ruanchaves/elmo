@@ -15,20 +15,18 @@ import os
 import datetime
 
 
-def run_regression(model, test, train, func):
-    model.test = test
-    model.train = train
+def run_regression(model, func):
     model.get_sims(func).format()
     LR = Regression(model.results)
     test_results = LR.evaluate_testset()
     return test_results
 
-def run_test(model, func, gold, test, train, name):
-    test_results = run_regression(model, test, train, func)
+def run_test(model, func, name):
+    test_results = run_regression(model, func)
     return {
-        'test': name
-        'pearson': pearsonr(gold, test_results)[0]
-        'MSE': mean_squared_error(gold, test_results)
+        'test': name,
+        'pearson': pearsonr(model.gold, test_results)[0],
+        'MSE': mean_squared_error(model.gold, test_results)
     }
 
 def load_yaml(fname):
@@ -47,22 +45,24 @@ def load_ASSIN(lang):
     gold = test['similarity'].astype(float).values.flatten()
     return gold, test, train
 
+def get_measure(model, LANGUAGE, test_name):
+        gold, test, train = load_ASSIN(LANGUAGE)
+        model.test = test
+        model.train = train
+        model.gold = gold
+        measure = run_test(model, cosine_distance, test_name)
+        measure['lang'] = LANGUAGE   
+        return measure
+
 def get_NILC(EMBEDDINGS_DIR):
     for path, subdirs, files in os.walk(EMBEDDINGS_DIR):
             for name in files:
                 dst = path + '/' + name
                 if name.endswith('.model'):
                     yield dst
-
-def get_measure(model, LANGUAGE, test_name):
-        gold, test, train = load_ASSIN(LANGUAGE)
-        measure = run_test(model, cosine_distance, test, train, gold, test_name)
-        measure['lang'] = LANGUAGE   
-        return measure
-
 def save_results(fname, results):
     with open(fname,'w+') as f:
-        json.dump(results, fname)
+        json.dump(results, f)
 
 def get_analogies(ANALOGIES_DIR, EMBEDDINGS_DIR):
     for path, subdirs, files in os.walk(ANALOGIES_DIR):
@@ -82,14 +82,19 @@ if __name__ == '__main__':
     results = []
 
     settings = load_yaml("settings.yaml")
-    tests = load_yaml("test.yaml")
+    tests = load_yaml("tests.yaml")
+
+
+    LOGS_PATH = settings['logs']['path']
+    RESULTS_PATH = settings['results']['path']
 
     EMBEDDINGS_DIR = settings['NILC']['dir']
     ANALOGIES_DIR = settings['NILC']['analogies']
     ANALOGIES_FILE = RESULTS_PATH + 'analogies.json'
 
-    LOGS_PATH = settings['logs']['path']
-    RESULTS_PATH = settings['results']['path']
+    FREQ_FILE = settings['wikipedia']['path'] + settings['wikipedia']['word_frequency']
+    with open(FREQ_FILE,'r') as f:
+        freq = json.load(f)
 
     logger.add(LOGS_PATH + "evaluate_{time}.log")
     RESULTS_FILE = RESULTS_PATH + 'stats-' + str(int(datetime.datetime.now().timestamp())) + '.json'
@@ -170,7 +175,7 @@ if __name__ == '__main__':
         elmo = Embedding(flair_model=ELMoEmbeddings('pt'))
         for fname in get_NILC(EMBEDDINGS_DIR):
             emb = KeyedVectors.load(fname)
-            model = Embedding(gensim_model=emb, flair_model=elmo, flair_sif=True, unk=True)
+            model = Embedding(freq=freq, gensim_model=emb, flair_model=elmo, flair_sif=True, unk=True)
 
             LANGUAGE = 'ptbr'
             measure = get_measure(model, LANGUAGE, test_name)
@@ -188,7 +193,7 @@ if __name__ == '__main__':
         test_name = 'NILC-SIF'
         for fname in get_NILC(EMBEDDINGS_DIR):
             emb = KeyedVectors.load(fname)
-            model = Embedding(gensim_model=emb, gensim_sif=True)
+            model = Embedding(freq=freq, gensim_model=emb, gensim_sif=True)
 
             LANGUAGE = 'ptbr'
             measure = get_measure(model, LANGUAGE, test_name)
@@ -207,7 +212,7 @@ if __name__ == '__main__':
         elmo = Embedding(flair_model=ELMoEmbeddings('pt'))
         for fname in get_NILC(EMBEDDINGS_DIR):
             emb = KeyedVectors.load(fname)
-            model = Embedding(gensim_model=emb, flair_model=elmo, gensim_sif=True, flair_sif=True)
+            model = Embedding(freq=freq, gensim_model=emb, flair_model=elmo, gensim_sif=True, flair_sif=True)
 
             LANGUAGE = 'ptbr'
             measure = get_measure(model, LANGUAGE, test_name)
@@ -226,7 +231,7 @@ if __name__ == '__main__':
         elmo = Embedding(flair_model=ELMoEmbeddings('pt'))
         for fname in get_NILC(EMBEDDINGS_DIR):
             emb = KeyedVectors.load(fname)
-            model = Embedding(gensim_model=emb, flair_model=elmo, gensim_sif=False, flair_sif=True)
+            model = Embedding(freq=freq, gensim_model=emb, flair_model=elmo, gensim_sif=False, flair_sif=True)
 
             LANGUAGE = 'ptbr'
             measure = get_measure(model, LANGUAGE, test_name)
@@ -245,7 +250,7 @@ if __name__ == '__main__':
         elmo = Embedding(flair_model=ELMoEmbeddings('pt'))
         for fname in get_NILC(EMBEDDINGS_DIR):
             emb = KeyedVectors.load(fname)
-            model = Embedding(gensim_model=emb, flair_model=elmo, gensim_sif=True, flair_sif=False)
+            model = Embedding(freq=freq, gensim_model=emb, flair_model=elmo, gensim_sif=True, flair_sif=False)
 
             LANGUAGE = 'ptbr'
             measure = get_measure(model, LANGUAGE, test_name)
@@ -278,6 +283,10 @@ if __name__ == '__main__':
             embedding = KeyedVectors.load(dst2)
             score = embedding.evaluate_word_analogies(dst)[0]
             stats[key] = score
-            with open(analogies_file,'w+') as f:
+            with open(ANALOGIES_FILE,'w+') as f:
                 json.dump(stats, f)
-            logger.debug(key, stats)
+            message = {
+                "key" : key,
+                "stats": stats[key]
+            }
+            logger.debug(message)

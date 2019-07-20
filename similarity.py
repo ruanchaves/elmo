@@ -9,7 +9,6 @@ import sys
 
 from flair.embeddings import ELMoEmbeddings
 from flair.data import Sentence
-from distance import flair_distance
 
 from scipy.stats import pearsonr
 from sklearn.linear_model import LinearRegression
@@ -47,6 +46,7 @@ class Embedding(object):
         self.a = a
         self.train = None
         self.test = None
+        self.gold = None
         self.train_sims = None
         self.test_sims = None
         self.results = None
