@@ -8,16 +8,26 @@ from sklearn.decomposition import TruncatedSVD
 # Major parts of this code have been adapted from https://github.com/TharinduDR/Simple-Sentence-Similarity/blob/master/matrices/context_vectors .
 
 def remove_first_principal_component(X):
+    Y = np.array([ w.flatten() for w in X])
     svd = TruncatedSVD(n_components=1, n_iter=7, random_state=0)
-    svd.fit(X)
+    svd.fit(Y)
     pc = svd.components_
-    XX = X - X.dot(pc.transpose()) * pc
+    XX = Y - Y.dot(pc.transpose()) * pc
     return XX
 
-def cosine_distance(sentences1, sentences2, gensim_model=None, flair_model=None, gensim_sif=False, flair_sif=False, freqs={}, total_freq=1.0, a=0.001, unk=False):
-    sims = []
+def safe_division(a, freqs, token, total_freq):
+    try:
+        p_w = freqs.get(token,0) / total_freq
+        return a / (a + p_w)
+    except ZeroDivisionError as e:
+        return a / a
+
+
+def cosine_distance(sentences1, sentences2, gensim_model=None, flair_model=None, gensim_sif=False, flair_sif=False, freqs={}, total_freq=1.0, a=0.0001, unk=False, total_freq=self.total_freq:
+    sims = {}
     embeddings = []
-    for (sent1, sent2) in zip(sentences1, sentences2):
+    embeddings_pos = []
+    for sent_index, (sent1, sent2) in enumerate(zip(sentences1, sentences2)):
         tokens1 = [x.text for x in sent1.tokens]
         tokens2 = [x.text for x in sent2.tokens]    
 
@@ -33,12 +43,12 @@ def cosine_distance(sentences1, sentences2, gensim_model=None, flair_model=None,
                 known_tokens2 = [x if x in gensim_model.wv.vocab else 'unk' for x in tokens2]
 
             if len(known_tokens1) == 0 or len(known_tokens2) == 0:
-                sims.append(0)
+                sims[sent_index] = 0
                 continue
 
-            if gensim_sif:
-                weights1 = [a / (a + freqs.get(token, 0) / total_freq) for token in known_tokens1]
-                weights2 = [a / (a + freqs.get(token, 0) / total_freq) for token in known_tokens2]  
+            if gensim_sif:              
+                weights1 = [ safe_division(a, freqs, token, total_freq) for token in known_tokens1]
+                weights2 = [ safe_division(a, freqs, token, total_freq) for token in known_tokens2]  
 
             embeddings_map1 = [ gensim_model.wv[x] for x in known_tokens1 ]
             embeddings_map2 = [ gensim_model.wv[x] for x in known_tokens2 ]
@@ -53,7 +63,7 @@ def cosine_distance(sentences1, sentences2, gensim_model=None, flair_model=None,
         if flair_model:
 
             if len(tokens1) == 0 or len(tokens2) == 0:
-                sims.append(0)
+                sims[sent_index] = 0
                 continue
 
             flair_sent1 = sent1
@@ -72,11 +82,11 @@ def cosine_distance(sentences1, sentences2, gensim_model=None, flair_model=None,
                 embeddings_map2[token.text] = np.array(token.embedding.data.tolist())
 
             if flair_sif:
-                weights1 = [a / (a + freqs.get(token, 0) / total_freq) for token in tokens1]
-                weights2 = [a / (a + freqs.get(token, 0) / total_freq) for token in tokens2]
+                weights1 = [ safe_division(a, freqs, token, total_freq) for token in tokens1]
+                weights2 = [ safe_division(a, freqs, token, total_freq) for token in tokens2]
             else:
-                weights1 = [ 1.0 for token in tokens1]
-                weights2 = [ 1.0 for token in tokens2]
+                weights1 = None
+                weights2 = None
 
             flair_embedding1 = np.average([embeddings_map1[token] for token in tokens1], axis=0, weights=weights1).reshape(1, -1)
             flair_embedding2 = np.average([embeddings_map2[token] for token in tokens2], axis=0, weights=weights2).reshape(1, -1)
@@ -93,12 +103,16 @@ def cosine_distance(sentences1, sentences2, gensim_model=None, flair_model=None,
 
         embeddings.append(embedding1)
         embeddings.append(embedding2)
+        embeddings_pos.append(sent_index)
     
     if flair_sif or gensim_sif:
         embeddings = remove_first_principal_component(np.array(embeddings))
-    sims.extend( [cosine_similarity(embeddings[idx * 2].reshape(1, -1),
+    distances = [cosine_similarity(embeddings[idx * 2].reshape(1, -1),
                               embeddings[idx * 2 + 1].reshape(1, -1))[0][0]
-            for idx in range(int(len(embeddings) / 2))] )
+            for idx in range(int(len(embeddings) / 2))]
+    for idx,score in enumerate(distances):
+        sims[embeddings_pos[idx]] = score
+    sims = [x[1] for x in sorted(list(sims.items()), key=(lambda x: x[0]))]
     return sims                      
 
 if __name__ == '__main__':
