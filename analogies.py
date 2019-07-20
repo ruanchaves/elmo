@@ -22,7 +22,15 @@ if __name__ == '__main__':
     EMBEDDINGS_DIR = settings['NILC']['dir']
     ANALOGIES_DIR = settings['NILC']['analogies']
 
-    stats = []
+    analogies_file = 'analogies.json'
+
+    try:
+        open(analogies_file, 'r').close()
+    except:
+        with open(analogies_file,'w+') as f:
+            json.dump([], f)
+
+    stats = {}
     for path, subdirs, files in os.walk(ANALOGIES_DIR):
         for name in files:
             dst = path + '/' + name
@@ -30,16 +38,17 @@ if __name__ == '__main__':
                 for name2 in files2:
                     dst2 = path2 + '/' + name2
                     if name2.endswith('.model'):
+                        key = name.rstrip('.txt') + '_' + path2.split('/')[-1] + '_' + name2.rstrip('.model') 
+                        with open(analogies_file,'r') as f:
+                            stats = json.load(f)
+                        try:
+                            stats[key]
+                            continue
+                        except:
+                            pass
                         embedding = KeyedVectors.load(dst2)
                         score = embedding.evaluate_word_analogies(dst)[0]
-                        result = {
-                            'file': name.rstrip('.txt'),
-                            'model': path2.split('/')[-1] + '_' + name2.rstrip('.model'),
-                            'score': score
-                        }
-                        logger.debug(result)
-                        stats.append(result)
-
-    with open('stats-analogies-' + str(int(datetime.datetime.now().timestamp())) + '.json', 'w+') as f:
-        json.dump(stats, f)
-    logger.debug("END")
+                        stats[key] = score
+                        with open(analogies_file,'w+') as f:
+                            json.dump(stats, f)
+                        logger.debug(key, stats)
