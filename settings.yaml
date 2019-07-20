@@ -15,7 +15,7 @@ ASSIN: {
       'train': 'assin-ptbr-train-hartmann.json',
       'test': 'assin-ptbr-test-gold-hartmann.json'
     },
-    ptpt: { 
+    pteu: { 
       'train': 'assin-ptpt-train-hartmann.json',
       'test': 'assin-ptpt-test-gold-hartmann.json'
     }
