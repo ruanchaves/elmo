@@ -12,9 +12,11 @@ def gensim_distance(sentences1, sentences2, model=None):
         tokens1 = [x.text for x in sent1.tokens]
         tokens2 = [x.text for x in sent2.tokens]
 
+        # Isso é o que eu fiz
         # tokens1 = list(filter(lambda x: x in model.wv.vocab, tokens1))
         # tokens2 = list(filter(lambda x: x in model.wv.vocab, tokens2))
 
+        # Isso é o que ele fez
         tokens1 = [x if x in model.wv.vocab else 'unk' for x in tokens1]
         tokens2 = [x if x in model.wv.vocab else 'unk' for x in tokens2]
 
