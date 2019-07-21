@@ -39,10 +39,12 @@ gensim: {
   'wait_interval': 1,
   'cores': 1
 }
-wikipedia: {
-  path: './datasets/wiki/',
-  dump: 'ptwiki-20190701-pages-articles-multistream.xml',
-  word_frequency: 'wordfreq.json'
+
+SICK: {
+  path: './datasets/SICK/stsbenchmark/',
+  dev: 'sts-dev.csv',
+  test: 'sts-test.csv',
+  train: 'sts-train.csv'
 }
 
 NILC: {

@@ -79,202 +79,33 @@ class WordFreq(object):
         return word_frequency(key, 'pt', wordlist='best', minimum=0.0)
 
 
-if __name__ == '__main__':
+def call_test(test_name="", langs=[], template="", params={}, ANALOGIES_FILE="", ANALOGIES_DIR="", EMBEDDINGS_DIR=""):
+ 
+    if template == 'flair':
 
-    stats = []    
-    settings = {}
-    tests = {}
-    results = []
+        params["flair_model"] = ELMoEmbeddings('pt')
+        model = Embedding(**params)
+        for lang in langs:
+            measure = get_measure(model, lang, test_name)
+            logger.debug(measure)
+            yield measure            
 
-    settings = load_yaml("settings.yaml")
-    tests = load_yaml("tests.yaml")
+    elif template == 'gensim' or template == 'flair-gensim':
 
-    LOGS_PATH = settings['logs']['path']
-    RESULTS_PATH = settings['results']['path']
-
-    EMBEDDINGS_DIR = settings['NILC']['dir']
-    ANALOGIES_DIR = settings['NILC']['analogies']
-    ANALOGIES_FILE = RESULTS_PATH + 'analogies.json'
-    FREQ_FILE = settings['wikipedia']['path'] + settings['wikipedia']['word_frequency']
-
-    if tests['wordfreq']:
-        freqs = WordFreq()
-        total_freq = 1.0
-    else:
-        with open(FREQ_FILE,'r') as f:
-            freqs = json.load(f)
-        total_freq = sum(freqs.values())
-
-    logger.add(LOGS_PATH + "evaluate_{time}.log")
-    RESULTS_FILE = RESULTS_PATH + 'stats-' + str(int(datetime.datetime.now().timestamp())) + '.json'
-
-    if tests['ELMo']:
-        test_name = 'ELMo'
-        model = Embedding(flair_model=ELMoEmbeddings('pt'))
-
-        LANGUAGE = 'ptbr'
-        measure = get_measure(model, LANGUAGE, test_name)
-        logger.debug(measure)
-        results.append(measure)
-
-        LANGUAGE = 'pteu'
-        measure = get_measure(model, LANGUAGE, test_name)
-        logger.debug(measure)
-        results.append(measure)
-
-    save_results(RESULTS_FILE, results)
-
-    if tests['ELMo-SIF']:
-        test_name = 'ELMo-SIF'
-        model = Embedding(flair_model=ELMoEmbeddings('pt'), flair_sif=True)
-
-        LANGUAGE = 'ptbr'
-        measure = get_measure(model, LANGUAGE, test_name)
-        logger.debug(measure)
-        results.append(measure)
-
-        LANGUAGE = 'pteu'
-        measure = get_measure(model, LANGUAGE, test_name)
-        logger.debug(measure)
-        results.append(measure)
-
-    save_results(RESULTS_FILE, results)
-
-    if tests['NILC']:
-        test = 'NILC'
+        assert(EMBEDDINGS_DIR != None)
         for fname in get_NILC(EMBEDDINGS_DIR):
             emb = KeyedVectors.load(fname)
-            model = Embedding(gensim_model=emb)
-            test_name = test + '_' + fname
-
-            LANGUAGE = 'ptbr'
-            measure = get_measure(model, LANGUAGE, test_name)
-            logger.debug(measure)
-            results.append(measure)
-
-            LANGUAGE = 'pteu'
-            measure = get_measure(model, LANGUAGE, test_name)
-            logger.debug(measure)
-            results.append(measure)
-
-    save_results(RESULTS_FILE, results)
-
-    if tests['NILC-SIF']:
-        test = 'NILC-SIF'
-        for fname in get_NILC(EMBEDDINGS_DIR):
-            emb = KeyedVectors.load(fname)
-            model = Embedding(freqs=freqs, gensim_model=emb, gensim_sif=True)
-            test_name = test + '_' + fname
-
-            LANGUAGE = 'ptbr'
-            measure = get_measure(model, LANGUAGE, test_name)
-            logger.debug(measure)
-            results.append(measure)
-
-            LANGUAGE = 'pteu'
-            measure = get_measure(model, LANGUAGE, test_name)
-            logger.debug(measure)
-            results.append(measure)
-
-    save_results(RESULTS_FILE, results)
-
-    if tests['NILC_with_unk']:
-        test = 'NILC_with_unk'
-        for fname in get_NILC(EMBEDDINGS_DIR):
-            emb = KeyedVectors.load(fname)
-            model = Embedding(gensim_model=emb, unk=True)
-            test_name = test + '_' + fname
-
-            LANGUAGE = 'ptbr'
-            measure = get_measure(model, LANGUAGE, test_name)
-            logger.debug(measure)
-            results.append(measure)
-
-            LANGUAGE = 'pteu'
-            measure = get_measure(model, LANGUAGE, test_name)
-            logger.debug(measure)
-            results.append(measure)
-
-    save_results(RESULTS_FILE, results)
-
-    if tests['ELMo_NILC']:
-        test = 'ELMo_NILC'
-        for fname in get_NILC(EMBEDDINGS_DIR):
-            emb = KeyedVectors.load(fname)
-            model = Embedding(gensim_model=emb, flair_model=ELMoEmbeddings('pt'))
-            test_name = test + '_' + fname
-
-            LANGUAGE = 'ptbr'
-            measure = get_measure(model, LANGUAGE, test_name)
-            logger.debug(measure)
-            results.append(measure)
-
-            LANGUAGE = 'pteu'
-            measure = get_measure(model, LANGUAGE, test_name)
-            logger.debug(measure)
-            results.append(measure)
-
-    save_results(RESULTS_FILE, results)
-
-    if tests['ELMo-SIF_NILC']:
-        test = 'ELMo-SIF_NILC'
-        for fname in get_NILC(EMBEDDINGS_DIR):
-            emb = KeyedVectors.load(fname)
-            model = Embedding(freqs=freqs, gensim_model=emb, flair_model=ELMoEmbeddings('pt'), gensim_sif=False, flair_sif=True)
-            test_name = test + '_' + fname
-
-            LANGUAGE = 'ptbr'
-            measure = get_measure(model, LANGUAGE, test_name)
-            logger.debug(measure)
-            results.append(measure)
-
-            LANGUAGE = 'pteu'
-            measure = get_measure(model, LANGUAGE, test_name)
-            logger.debug(measure)
-            results.append(measure)
-
-    save_results(RESULTS_FILE, results)
-
-    if tests['ELMo-SIF_NILC-SIF']:
-        test = 'ELMo-SIF_NILC-SIF'
-        for fname in get_NILC(EMBEDDINGS_DIR):
-            emb = KeyedVectors.load(fname)
-            model = Embedding(freqs=freqs, gensim_model=emb, flair_model=ELMoEmbeddings('pt'), gensim_sif=True, flair_sif=True)
-            test_name = test + '_' + fname
-
-            LANGUAGE = 'ptbr'
-            measure = get_measure(model, LANGUAGE, test_name)
-            logger.debug(measure)
-            results.append(measure)
-
-            LANGUAGE = 'pteu'
-            measure = get_measure(model, LANGUAGE, test_name)
-            logger.debug(measure)
-            results.append(measure)
-
-    save_results(RESULTS_FILE, results)
-
-    if tests['ELMo_NILC-SIF']:
-        test = 'ELMo_NILC-SIF'
-        for fname in get_NILC(EMBEDDINGS_DIR):
-            emb = KeyedVectors.load(fname)
-            model = Embedding(freqs=freqs, gensim_model=emb, flair_model=ELMoEmbeddings('pt'), gensim_sif=True, flair_sif=False)
-            test_name = test + '_' + fname
-
-            LANGUAGE = 'ptbr'
-            measure = get_measure(model, LANGUAGE, test_name)
-            logger.debug(measure)
-            results.append(measure)
-
-            LANGUAGE = 'pteu'
-            measure = get_measure(model, LANGUAGE, test_name)
-            logger.debug(measure)
-            results.append(measure)
-
-    save_results(RESULTS_FILE, results)
-
-    if tests['analogies']:
-        test_name = 'analogies'
+            params["gensim_model"] = emb
+            if template == 'flair-gensim':
+                params["flair_model"] = ELMoEmbeddings('pt')
+            model = Embedding(**params)
+            t = test_name + '_' + fname
+            for lang in langs:
+                measure = get_measure(model, lang, t)
+                logger.debug(measure)
+                yield measure
+        
+    elif template == "analogies":
         try:
             open(ANALOGIES_FILE,'r').close()
         except:
@@ -299,3 +130,40 @@ if __name__ == '__main__':
                 "stats": stats[key]
             }
             logger.debug(message)
+            yield message
+
+
+if __name__ == '__main__':
+  
+    settings = {}
+    tests = {}
+    results = []
+
+    settings = load_yaml("settings.yaml")
+    tests = load_yaml("tests.yaml")
+
+    LOGS_PATH = settings['logs']['path']
+    RESULTS_PATH = settings['results']['path']
+
+    EMBEDDINGS_DIR = settings['NILC']['dir']
+    ANALOGIES_DIR = settings['NILC']['analogies']
+    ANALOGIES_FILE = RESULTS_PATH + 'analogies.json'
+
+    freqs = WordFreq()
+
+    logger.add(LOGS_PATH + "evaluate_{time}.log")
+    RESULTS_FILE = RESULTS_PATH + 'stats-' + str(int(datetime.datetime.now().timestamp())) + '.json'
+
+    for key in tests:
+        if key in tests['queue']:
+            parameters = tests[key]
+            parameters["EMBEDDINGS_DIR"] = EMBEDDINGS_DIR
+            parameters["ANALOGIES_FILE"] = ANALOGIES_FILE
+            parameters["ANALOGIES_DIR"] = ANALOGIES_DIR
+
+            class_name = parameters["params"]["freqs"]
+            parameters["params"]["freqs"] = globals()[class_name]()
+            
+            for measure in call_test(**parameters):
+                results.append(measure)
+                save_results(RESULTS_FILE, results)

@@ -23,7 +23,7 @@ def safe_division(a, freqs, token, total_freq):
         return a / a
 
 
-def cosine_distance(sentences1, sentences2, gensim_model=None, flair_model=None, gensim_sif=False, flair_sif=False, freqs={}, total_freq=1.0, a=0.0001, unk=False, total_freq=self.total_freq:
+def cosine_distance(sentences1, sentences2, gensim_model=None, flair_model=None, gensim_sif=False, flair_sif=False, freqs={}, total_freq=1.0, a=0.0001, unk=False):
     sims = {}
     embeddings = []
     embeddings_pos = []
