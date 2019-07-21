@@ -17,13 +17,13 @@ def remove_first_principal_component(X):
 
 def safe_division(a, freqs, token, total_freq):
     try:
-        p_w = freqs.get(token,0) / total_freq
+        p_w = freqs[token] / total_freq
         return a / (a + p_w)
     except ZeroDivisionError as e:
         return a / a
 
 
-def cosine_distance(sentences1, sentences2, gensim_model=None, flair_model=None, gensim_sif=False, flair_sif=False, freqs={}, total_freq=1.0, a=0.0001, unk=False):
+def cosine_distance(sentences1, sentences2, gensim_model=None, flair_model=None, gensim_sif=False, flair_sif=False, freqs={}, total_freq=1.0, a=0.001, unk=False):
     sims = {}
     embeddings = []
     embeddings_pos = []

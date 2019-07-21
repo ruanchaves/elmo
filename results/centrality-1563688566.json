@@ -1,0 +1,1 @@
+[{"local_clustering_coefficient": 0.06878306878306878, "indegree_centrality": 28, "eigenvector_centrality": 80, "key": "unk", "model": "./embeddings/USP/fasttext/cbow_s100.model"}]

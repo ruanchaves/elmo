@@ -1,5 +1,16 @@
 
-queue: [1,2,3,4,5,6,7,8,9,10,11]
+queue: [
+  # 1,
+  # 2,
+  # 3,
+  # 4,
+  # 5,
+  # 6,
+  # 7,
+  8,
+  9,
+  10,
+  11]
 
 0: {
   template: "flair",
@@ -85,7 +96,7 @@ queue: [1,2,3,4,5,6,7,8,9,10,11]
   }
 }
 
-7: {
+6: {
   template: "flair-gensim",
   test_name: "ELMo_NILC",
   langs: ["ptbr", "pteu"],
@@ -99,7 +110,7 @@ queue: [1,2,3,4,5,6,7,8,9,10,11]
   }
 }
 
-8: {
+7: {
   template: "flair-gensim",
   test_name: "ELMo-SIF_NILC",
   langs: ["ptbr", "pteu"],
@@ -113,7 +124,7 @@ queue: [1,2,3,4,5,6,7,8,9,10,11]
   }
 }
 
-9: {
+8: {
   template: "flair-gensim",
   test_name: "ELMo-SIF_NILC-SIF",
   langs: ["ptbr", "pteu"],
@@ -127,7 +138,7 @@ queue: [1,2,3,4,5,6,7,8,9,10,11]
   }
 }
 
-10: {
+9: {
   template: "flair-gensim",
   test_name: "ELMo_NILC-SIF",
   langs: ["ptbr", "pteu"],
@@ -141,6 +152,6 @@ queue: [1,2,3,4,5,6,7,8,9,10,11]
   }
 }
 
-11: {
+10: {
   template: "analogies"
 }

@@ -1,0 +1,1 @@
+[{"local_clustering_coefficient": 0, "indegree_centrality": 0, "eigenvector_centrality": 0, "key": "unk", "model": "./embeddings/USP/fasttext/cbow_s100.model"}, {"local_clustering_coefficient": 0.0, "indegree_centrality": 7, "eigenvector_centrality": 1, "key": "handelmann", "model": "./embeddings/USP/fasttext/cbow_s100.model"}]

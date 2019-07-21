@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: paper-sbc-template.aux
+The style file: sbc.bst
+Database file #1: sbc-template.bib
+Warning--empty booktitle in Cecchini2017GraphbasedCA
+You've used 2 entries,
+            1935 wiz_defined-function locations,
+            479 strings with 4055 characters,
+and the built_in function-call counts, 699 in all, are:
+= -- 60
+> -- 40
+< -- 1
++ -- 14
+- -- 14
+* -- 55
+:= -- 134
+add.period$ -- 4
+call.type$ -- 2
+change.case$ -- 17
+chr.to.int$ -- 2
+cite$ -- 3
+duplicate$ -- 27
+empty$ -- 43
+format.name$ -- 16
+if$ -- 127
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 1
+newline$ -- 11
+num.names$ -- 6
+pop$ -- 21
+preamble$ -- 1
+purify$ -- 17
+quote$ -- 0
+skip$ -- 19
+stack$ -- 0
+substring$ -- 24
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 12
+warning$ -- 1
+while$ -- 4
+width$ -- 0
+write$ -- 22
+(There was 1 warning)

@@ -1,0 +1,56 @@
+\section{Embedding Methods}
+
+In this section, we describe the four methods we used to train 31 word embedding models: GloVe, Word2Vec, Wang2Vec, and FastText.
+
+%\todo[inline]{Favor, descrever o diferencial de cada modelo. Qual sua característica que o torna ``especial''?}
+%\todo[inline]{Deixei em negrito o diferencial!}
+%We trained word embeddings' instances of 50, 100, 300, 600 and 1,000 dimensions for Word2vec methods.
+
+
+%\subsection{GloVe}
+
+The Global Vectors (GloVe) method was proposed by \cite{penningtonetal2014}, and obtained state-of-the-art results for \emph{syntactic} and \emph{semantic} analogies tasks. This method consists in a co-occurrence matrix $M$ that is constructed by looking at context words. Each element $M_{ij}$ in the matrix represents the probability of the word $i$ being close to the word $j$. In the matrix $M$, the rows (or vectors) are randomly generated and trained by obeying the equation $P(w_i, w_j) = log(M_{ij}) = w_iw_j + b_i + b_j$
+%Equation \ref{Eq:GloVe:Constraiment}
+, where $w_i$ and $w_j$ are word vectors, and $b_i$ and $b_j$ are biases.
+
+
+
+% \begin{equation}
+% \label{Eq:GloVe:Constraiment}
+% \textbf{M}_{ij} = \textbf{w}_i\textbf{w}_j + b_i + b_j
+% \end{equation}
+
+
+%\subsection{Word2Vec}
+
+%Word2Vec is a widely used method in NLP that explores the idea of using a neural network\notaerick{não é uma rede neural de verdade. não tem camada oculta} to induce dense representation of a word \cite{collobertetal2011}, where the network does not have a hidden layer, resulting in a fast log-linear model \cite{mikolovetal2013}. This network can be divided in two architectures: (i) \textit{Continuous Bag-of-Words (CBOW)}, where given a sequence of words the model attempts to predict the word in the middle; (ii) \textit{Skip-Gram}, where given a word the model attempts to predict its neighboring words.
+
+%\todo[inline]{Nova versão (Erick) segue abaixo}
+
+Word2Vec is a widely used method in NLP for generating word embeddings. It has two different training strategies: (i) \emph{Continuous Bag-of-Words (CBOW)}, in which the model is given a sequence of words without the middle one, and attempts to predict this omitted word; (ii) \emph{Skip-Gram}, in which the model is given a word and attempts to predict its neighboring words. In both cases, the model consists of only a single weight matrix (apart from the word embeddings), which results in a fast log-linear training that is able to capture \emph{semantic} information~\cite{mikolovetal2013}. 
+
+% It was already shown by the original works \cite{penningtonetal2014,mikolovetal2013} that GloVe and Word2Vec are able to capture \textbf{semantic} information in their induced embeddings.
+
+% Seria bom falar que o Wang2Vec foi proposto para capturar similaridade sintaticas
+%\subsection{Wang2Vec}
+
+% Since Word2Vec does not consider word order, Wang2Vec  \cite{Ling:2015:naacl} was proposed as a modification in the CBOW architecture. It concatenates the input word vectors.
+
+% \todo[inline]{reescrever como isso funciona}
+% vou escrever em ptbr, dps traduzo
+
+Wang2Vec is a modification of Word2Vec made in order to take into account the lack of word order in the original architecture. Two simple modifications were proposed in Wang2Vec expecting embeddings to better capture \emph{syntactic} behavior of words \cite{Ling:2015:naacl}. In the \emph{Continuous Window} architecture, the input is the concatenation of the context word embeddings in the order they occur. In \emph{Structured Skip-Gram}, a different set of parameters is used to predict each context word, depending on its position relative to the target word. %Then, the network has positional information of a word and its neighbors to induce word embeddings.
+
+% \cite{Ling:2015:naacl}
+
+
+% Foi proposto para capturar similaridades morfologicas. Além disso, é bom para palavras OOV, já que essas palavras possuem ngramas de chars
+%\subsection{FastText}%
+
+FastText is a recently developed method \cite{bojanowski2016enriching,joulin2016bag} in which embeddings are associated to character n-grams, and words are represented as the summation of these representations. In this method, a word representation is induced by summing character n-gram vectors with vectors of surrounding words. Therefore, this method attempts to capture \emph{morphological} information to induce word embeddings.
+
+%\todo[inline] {Está meio confusa a explicação de como o vetor de uma palavra é criado.}
+%\todo[inline] {É difícil explicar sem usar notação matemática}
+%\todo[inline]{Acho melhor usar equações mesmo}
+
+% \cite{bojanowski2016enriching}

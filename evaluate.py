@@ -60,6 +60,7 @@ def get_NILC(EMBEDDINGS_DIR):
                 dst = path + '/' + name
                 if name.endswith('.model'):
                     yield dst
+                    
 def save_results(fname, results):
     with open(fname,'w+') as f:
         json.dump(results, f)
@@ -78,8 +79,7 @@ class WordFreq(object):
     def __getitem__(self, key):
         return word_frequency(key, 'pt', wordlist='best', minimum=0.0)
 
-
-def call_test(test_name="", langs=[], template="", params={}, ANALOGIES_FILE="", ANALOGIES_DIR="", EMBEDDINGS_DIR=""):
+def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANALOGIES_FILE="", ANALOGIES_DIR="", EMBEDDINGS_DIR=""):
  
     if template == 'flair':
 
@@ -94,6 +94,9 @@ def call_test(test_name="", langs=[], template="", params={}, ANALOGIES_FILE="",
 
         assert(EMBEDDINGS_DIR != None)
         for fname in get_NILC(EMBEDDINGS_DIR):
+            for item in skip_list:
+                if item in fname:
+                    continue
             emb = KeyedVectors.load(fname)
             params["gensim_model"] = emb
             if template == 'flair-gensim':
@@ -163,7 +166,7 @@ if __name__ == '__main__':
 
             class_name = parameters["params"]["freqs"]
             parameters["params"]["freqs"] = globals()[class_name]()
-            
+
             for measure in call_test(**parameters):
                 results.append(measure)
                 save_results(RESULTS_FILE, results)
