@@ -1,0 +1,1 @@
+[{"global_clustering_coefficient": 0.0, "average_short_distance": NaN, "key": "unk", "model": "./embeddings/USP/glove/glove_s50.model"}, {"global_clustering_coefficient": 0.0, "average_short_distance": NaN, "key": "unk", "model": "./embeddings/USP/glove/glove_s300.model"}]
