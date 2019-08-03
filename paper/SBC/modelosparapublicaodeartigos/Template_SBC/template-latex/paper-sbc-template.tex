@@ -31,9 +31,16 @@
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sed viverra ipsum nunc aliquet bibendum enim. In massa tempor nec feugiat. Nunc aliquet bibendum enim facilisis gravida. Nisl nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Amet luctus venenatis lectus magna fringilla. 
 \end{resumo}
 
-\section{Dealing with OOV ( Out of Vocabulary ) Words}  
+\section{Semantic Similarity}
 
-\subsubsection{Naive Approaches}
+
+For this task we compared the performance of the ELMo embeddings trained by \cite{castro} with the word embeddings trained by \cite{hartmann2017portuguese} under the ASSIN dataset. 
+
+\subsubsection{Smooth Inverse Frequency}
+
+The ASSIN dataset was inspired on the SICK dataset \cite{assin}, and both are targeted towards textual entailment and semantic similarity tasks. However, while the SICK dataset features mostly common words, the ASSIN dataset contains a considerable amount of highly domain-specific terms, as its main sources are Portuguese news websites visited during the year of 2015.
+
+This has an significant impact on 
 
 For some tasks, acceptable results can be obtained by simply ignoring OOV words. However, this may not be a suitable choice, specially if OOV words constitute a significant portion of the dataset, or if factors such as word position are relevant to the task at hand.
 

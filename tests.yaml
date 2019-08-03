@@ -1,16 +1,17 @@
 
 queue: [
-  #  1,
-  #  2,
-  #  3,
-  #  4,
-  #  5,
-#   6,
-   7,
-   8,
-#  9,
-#   10,
-  # 11
+# 1,
+# 2,
+# 3,
+# 4,
+# 5,
+# 6,
+# 7,
+# 8,
+# 9,
+# 10,
+  11,
+  12
   ]
 
 0: {
@@ -136,7 +137,12 @@ queue: [
     total_freq: 1.0,
     a: 0.001,
     unk: False
-  }
+  },
+  skip_list: [
+    'glove',
+    'wang2vec',
+    'fasttext'
+  ]
 }
 
 9: {
@@ -155,4 +161,32 @@ queue: [
 
 10: {
   template: "analogies"
+}
+
+11: {
+  template: "sick",
+  test_name: "ELMo-SICK",
+  langs: ["en"],
+  params: {
+    gensim_sif: False,
+    flair_sif: False,
+    freqs: "WordFreqEn",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
+
+12: {
+  template: "sick",
+  test_name: "ELMo-SIF-SICK",
+  langs: ["en"],
+  params: {
+    gensim_sif: False,
+    flair_sif: True,
+    freqs: "WordFreqEn",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
 }

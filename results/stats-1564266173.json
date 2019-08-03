@@ -1,0 +1,1 @@
+[{"test": "ELMo-SICK", "pearson": 0.45399076062629146, "MSE": 0.8080016517392627, "lang": "en"}, {"test": "ELMo-SIF-SICK", "pearson": 0.4758975101348524, "MSE": 0.7874181092670597, "lang": "en"}]

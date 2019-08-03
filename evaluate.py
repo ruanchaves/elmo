@@ -38,15 +38,19 @@ def load_yaml(fname):
             sys.exit(1)
     return f
 
-def load_ASSIN(lang):
-    files = settings['ASSIN']['files'][lang]
-    PATH = settings['ASSIN']['path']
+def load_ASSIN(lang, sick=False):
+    if sick:
+        files = settings['SICK']['files'][lang]
+        PATH = settings['SICK']['path']
+    else:
+        files = settings['ASSIN']['files'][lang]
+        PATH = settings['ASSIN']['path']
     test, train = Loader(PATH, files).load_dataset()
     gold = test['similarity'].astype(float).values.flatten()
     return gold, test, train
 
-def get_measure(model, LANGUAGE, test_name):
-        gold, test, train = load_ASSIN(LANGUAGE)
+def get_measure(model, LANGUAGE, test_name, sick=False):
+        gold, test, train = load_ASSIN(LANGUAGE, sick=sick)
         model.test = test
         model.train = train
         model.gold = gold
@@ -79,9 +83,22 @@ class WordFreq(object):
     def __getitem__(self, key):
         return word_frequency(key, 'pt', wordlist='best', minimum=0.0)
 
+class WordFreqEn(object):
+    def __getitem__(self, key):
+        return word_frequency(key, 'en', wordlist='best', minimum=0.0)
+
+
 def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANALOGIES_FILE="", ANALOGIES_DIR="", EMBEDDINGS_DIR=""):
  
-    if template == 'flair':
+    if template == 'sick':
+        params["flair_model"] = ELMoEmbeddings('original')
+        model = Embedding(**params)
+        for lang in langs:
+            measure = get_measure(model, 'en', test_name, sick=True)
+            logger.debug(measure)
+            yield measure
+
+    elif template == 'flair':
 
         params["flair_model"] = ELMoEmbeddings('pt')
         model = Embedding(**params)
@@ -96,17 +113,18 @@ def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANAL
         for fname in get_NILC(EMBEDDINGS_DIR):
             for item in skip_list:
                 if item in fname:
-                    continue
-            emb = KeyedVectors.load(fname)
-            params["gensim_model"] = emb
-            if template == 'flair-gensim':
-                params["flair_model"] = ELMoEmbeddings('pt')
-            model = Embedding(**params)
-            t = test_name + '_' + fname
-            for lang in langs:
-                measure = get_measure(model, lang, t)
-                logger.debug(measure)
-                yield measure
+                    break
+            else:
+                emb = KeyedVectors.load(fname)
+                params["gensim_model"] = emb
+                if template == 'flair-gensim':
+                    params["flair_model"] = ELMoEmbeddings('pt')
+                model = Embedding(**params)
+                t = test_name + '_' + fname
+                for lang in langs:
+                    measure = get_measure(model, lang, t)
+                    logger.debug(measure)
+                    yield measure
         
     elif template == "analogies":
         try:

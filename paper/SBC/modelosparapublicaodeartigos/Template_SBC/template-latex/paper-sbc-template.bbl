@@ -1,8 +1,14 @@
 \begin{thebibliography}{}
 
-\bibitem[Cecchini 2017]{Cecchini2017GraphbasedCA}
-Cecchini, F.~M. (2017).
-\newblock Graph-based clustering algorithms for word sense induction.
+\bibitem[Castro et~al. 2019]{castro}
+Castro, P., Felix, N., and Soares, A. (2019).
+\newblock Contextual representations and semi-supervised named entity
+  recognition for portuguese language.
+
+\bibitem[Hartmann 2016]{assin}
+Hartmann, N. (2016).
+\newblock Solo queue at assin: Mix of traditional and emerging approaches.
+\newblock {\em Linguamatica}, 8:59--64.
 
 \bibitem[Hartmann et~al. 2017]{hartmann2017portuguese}
 Hartmann, N., Fonseca, E., Shulby, C., Treviso, M., Rodrigues, J., and Aluisio,

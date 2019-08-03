@@ -1,0 +1,141 @@
+,0,1,2,3,4,5,6,7
+100,ptbr,ELMo_NILC,fasttext,cbow,100,	extbf{0.65},	extbf{0.38},384
+108,ptbr,ELMo_NILC,fasttext,cbow,1000,	extbf{0.63},	extbf{0.42},392
+118,ptbr,ELMo_NILC,fasttext,cbow,300,	extbf{0.65},	extbf{0.39},402
+110,ptbr,ELMo_NILC,fasttext,cbow,50,	extbf{0.66},	extbf{0.37},394
+104,ptbr,ELMo_NILC,fasttext,cbow,600,	extbf{0.63},	extbf{0.42},388
+114,ptbr,ELMo_NILC,fasttext,skip,100,0.49,0.6,398
+106,ptbr,ELMo_NILC,fasttext,skip,1000,0.47,0.62,390
+102,ptbr,ELMo_NILC,fasttext,skip,300,0.48,0.61,386
+112,ptbr,ELMo_NILC,fasttext,skip,50,0.49,0.59,396
+116,ptbr,ELMo_NILC,fasttext,skip,600,0.48,0.61,400
+78,ptbr,ELMo_NILC,glove,glove,100,0.53,0.56,362
+76,ptbr,ELMo_NILC,glove,glove,1000,0.51,0.58,360
+72,ptbr,ELMo_NILC,glove,glove,300,0.52,0.57,356
+70,ptbr,ELMo_NILC,glove,glove,50,0.53,0.55,354
+74,ptbr,ELMo_NILC,glove,glove,600,0.51,0.57,358
+80,ptbr,ELMo_NILC,wang2vec,cbow,100,0.49,0.6,364
+88,ptbr,ELMo_NILC,wang2vec,cbow,1000,0.56,0.51,372
+98,ptbr,ELMo_NILC,wang2vec,cbow,300,0.48,0.61,382
+90,ptbr,ELMo_NILC,wang2vec,cbow,50,0.49,0.6,374
+84,ptbr,ELMo_NILC,wang2vec,cbow,600,0.57,0.5,368
+94,ptbr,ELMo_NILC,wang2vec,skip,100,0.5,0.59,378
+86,ptbr,ELMo_NILC,wang2vec,skip,1000,0.47,0.62,370
+82,ptbr,ELMo_NILC,wang2vec,skip,300,0.48,0.6,366
+92,ptbr,ELMo_NILC,wang2vec,skip,50,0.5,0.59,376
+96,ptbr,ELMo_NILC,wang2vec,skip,600,0.48,0.61,380
+120,ptbr,ELMo_NILC,word2vec,cbow,100,0.49,0.59,404
+128,ptbr,ELMo_NILC,word2vec,cbow,1000,0.48,0.61,412
+138,ptbr,ELMo_NILC,word2vec,cbow,300,0.49,0.6,422
+130,ptbr,ELMo_NILC,word2vec,cbow,50,0.5,0.59,414
+124,ptbr,ELMo_NILC,word2vec,cbow,600,0.48,0.6,408
+134,ptbr,ELMo_NILC,word2vec,skip,100,0.5,0.59,418
+126,ptbr,ELMo_NILC,word2vec,skip,1000,0.49,0.6,410
+122,ptbr,ELMo_NILC,word2vec,skip,300,0.49,0.59,406
+132,ptbr,ELMo_NILC,word2vec,skip,50,0.5,0.59,416
+136,ptbr,ELMo_NILC,word2vec,skip,600,0.49,0.6,420
+30,ptbr,NILC,fasttext,cbow,100,	extbf{0.66},	extbf{0.36},34
+38,ptbr,NILC,fasttext,cbow,1000,	extbf{0.64},	extbf{0.4},42
+48,ptbr,NILC,fasttext,cbow,300,	extbf{0.65},	extbf{0.37},52
+40,ptbr,NILC,fasttext,cbow,50,	extbf{0.67},	extbf{0.35},44
+34,ptbr,NILC,fasttext,cbow,600,	extbf{0.64},	extbf{0.4},38
+44,ptbr,NILC,fasttext,skip,100,0.53,0.55,48
+36,ptbr,NILC,fasttext,skip,1000,0.49,0.6,40
+32,ptbr,NILC,fasttext,skip,300,0.5,0.58,36
+42,ptbr,NILC,fasttext,skip,50,0.55,0.52,46
+46,ptbr,NILC,fasttext,skip,600,	extbf{0.49},0.59,50
+8,ptbr,NILC,glove,glove,100,0.6,0.46,12
+6,ptbr,NILC,glove,glove,1000,0.56,0.52,10
+2,ptbr,NILC,glove,glove,300,0.58,0.49,6
+0,ptbr,NILC,glove,glove,50,0.62,0.43,4
+4,ptbr,NILC,glove,glove,600,0.56,0.51,8
+10,ptbr,NILC,wang2vec,cbow,100,	extbf{0.52},0.56,14
+18,ptbr,NILC,wang2vec,cbow,1000,0.57,0.5,22
+28,ptbr,NILC,wang2vec,cbow,300,0.51,0.58,32
+20,ptbr,NILC,wang2vec,cbow,50,0.55,0.53,24
+14,ptbr,NILC,wang2vec,cbow,600,0.58,0.49,18
+24,ptbr,NILC,wang2vec,skip,100,0.54,0.54,28
+16,ptbr,NILC,wang2vec,skip,1000,0.49,0.59,20
+12,ptbr,NILC,wang2vec,skip,300,0.51,0.58,16
+22,ptbr,NILC,wang2vec,skip,50,0.56,0.51,26
+26,ptbr,NILC,wang2vec,skip,600,0.5,0.59,30
+50,ptbr,NILC,word2vec,cbow,100,0.57,0.5,54
+58,ptbr,NILC,word2vec,cbow,1000,0.5,0.58,62
+68,ptbr,NILC,word2vec,cbow,300,0.53,0.55,72
+60,ptbr,NILC,word2vec,cbow,50,0.59,0.47,64
+54,ptbr,NILC,word2vec,cbow,600,0.51,0.57,58
+64,ptbr,NILC,word2vec,skip,100,0.59,0.48,68
+56,ptbr,NILC,word2vec,skip,1000,0.54,0.54,60
+52,ptbr,NILC,word2vec,skip,300,0.56,0.52,56
+62,ptbr,NILC,word2vec,skip,50,0.6,0.46,66
+66,ptbr,NILC,word2vec,skip,600,0.54,0.53,70
+101,pteu,ELMo_NILC,fasttext,cbow,100,	extbf{1.03},	extbf{0.36},385
+109,pteu,ELMo_NILC,fasttext,cbow,1000,	extbf{1.0},	extbf{0.4},393
+119,pteu,ELMo_NILC,fasttext,cbow,300,	extbf{1.02},	extbf{0.37},403
+111,pteu,ELMo_NILC,fasttext,cbow,50,	extbf{1.04},	extbf{0.35},395
+105,pteu,ELMo_NILC,fasttext,cbow,600,	extbf{0.99},	extbf{0.4},389
+115,pteu,ELMo_NILC,fasttext,skip,100,0.84,0.54,399
+107,pteu,ELMo_NILC,fasttext,skip,1000,0.8,0.58,391
+103,pteu,ELMo_NILC,fasttext,skip,300,0.82,0.56,387
+113,pteu,ELMo_NILC,fasttext,skip,50,0.85,0.54,397
+117,pteu,ELMo_NILC,fasttext,skip,600,0.82,0.56,401
+79,pteu,ELMo_NILC,glove,glove,100,0.89,0.5,363
+77,pteu,ELMo_NILC,glove,glove,1000,0.87,0.52,361
+73,pteu,ELMo_NILC,glove,glove,300,0.88,0.51,357
+71,pteu,ELMo_NILC,glove,glove,50,0.91,0.48,355
+75,pteu,ELMo_NILC,glove,glove,600,0.88,0.51,359
+81,pteu,ELMo_NILC,wang2vec,cbow,100,0.79,0.59,365
+89,pteu,ELMo_NILC,wang2vec,cbow,1000,0.86,0.54,373
+99,pteu,ELMo_NILC,wang2vec,cbow,300,0.81,0.57,383
+91,pteu,ELMo_NILC,wang2vec,cbow,50,0.8,0.58,375
+85,pteu,ELMo_NILC,wang2vec,cbow,600,0.86,0.54,369
+95,pteu,ELMo_NILC,wang2vec,skip,100,0.86,0.52,379
+87,pteu,ELMo_NILC,wang2vec,skip,1000,0.81,0.57,371
+83,pteu,ELMo_NILC,wang2vec,skip,300,0.84,0.55,367
+93,pteu,ELMo_NILC,wang2vec,skip,50,0.87,0.52,377
+97,pteu,ELMo_NILC,wang2vec,skip,600,0.82,0.56,381
+121,pteu,ELMo_NILC,word2vec,cbow,100,0.78,0.6,405
+129,pteu,ELMo_NILC,word2vec,cbow,1000,	extbf{0.76},0.62,413
+139,pteu,ELMo_NILC,word2vec,cbow,300,0.77,0.61,423
+131,pteu,ELMo_NILC,word2vec,cbow,50,0.79,0.59,415
+125,pteu,ELMo_NILC,word2vec,cbow,600,	extbf{0.77},0.61,409
+135,pteu,ELMo_NILC,word2vec,skip,100,0.8,0.58,419
+127,pteu,ELMo_NILC,word2vec,skip,1000,0.79,0.6,411
+123,pteu,ELMo_NILC,word2vec,skip,300,0.8,0.59,407
+133,pteu,ELMo_NILC,word2vec,skip,50,0.8,0.58,417
+137,pteu,ELMo_NILC,word2vec,skip,600,0.79,0.6,421
+31,pteu,NILC,fasttext,cbow,100,	extbf{1.04},	extbf{0.35},35
+39,pteu,NILC,fasttext,cbow,1000,	extbf{1.0},	extbf{0.39},43
+49,pteu,NILC,fasttext,cbow,300,	extbf{1.03},	extbf{0.36},53
+41,pteu,NILC,fasttext,cbow,50,	extbf{1.04},	extbf{0.34},45
+35,pteu,NILC,fasttext,cbow,600,	extbf{1.0},	extbf{0.39},39
+45,pteu,NILC,fasttext,skip,100,0.89,0.5,49
+37,pteu,NILC,fasttext,skip,1000,	extbf{0.84},0.55,41
+33,pteu,NILC,fasttext,skip,300,0.86,0.54,37
+43,pteu,NILC,fasttext,skip,50,0.93,0.47,47
+47,pteu,NILC,fasttext,skip,600,0.85,0.54,51
+9,pteu,NILC,glove,glove,100,0.98,0.42,13
+7,pteu,NILC,glove,glove,1000,0.93,0.46,11
+3,pteu,NILC,glove,glove,300,0.94,0.45,7
+1,pteu,NILC,glove,glove,50,1.01,0.39,5
+5,pteu,NILC,glove,glove,600,0.93,0.46,9
+11,pteu,NILC,wang2vec,cbow,100,	extbf{0.85},	extbf{0.54},15
+19,pteu,NILC,wang2vec,cbow,1000,0.87,0.53,23
+29,pteu,NILC,wang2vec,cbow,300,0.87,0.53,33
+21,pteu,NILC,wang2vec,cbow,50,	extbf{0.89},	extbf{0.5},25
+15,pteu,NILC,wang2vec,cbow,600,0.87,0.53,19
+25,pteu,NILC,wang2vec,skip,100,0.91,0.49,29
+17,pteu,NILC,wang2vec,skip,1000,0.86,0.53,21
+13,pteu,NILC,wang2vec,skip,300,0.87,0.52,17
+23,pteu,NILC,wang2vec,skip,50,0.93,0.46,27
+27,pteu,NILC,wang2vec,skip,600,0.86,0.53,31
+51,pteu,NILC,word2vec,cbow,100,0.91,0.49,55
+59,pteu,NILC,word2vec,cbow,1000,0.86,0.55,63
+69,pteu,NILC,word2vec,cbow,300,0.87,0.54,73
+61,pteu,NILC,word2vec,cbow,50,0.95,0.46,65
+55,pteu,NILC,word2vec,cbow,600,0.86,0.55,59
+65,pteu,NILC,word2vec,skip,100,0.96,0.45,69
+57,pteu,NILC,word2vec,skip,1000,0.91,0.5,61
+53,pteu,NILC,word2vec,skip,300,0.93,0.48,57
+63,pteu,NILC,word2vec,skip,50,0.97,0.43,67
+67,pteu,NILC,word2vec,skip,600,0.92,0.49,71

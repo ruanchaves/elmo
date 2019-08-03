@@ -3,46 +3,47 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: paper-sbc-template.aux
 The style file: sbc.bst
 Database file #1: sbc-template.bib
-Warning--empty booktitle in Cecchini2017GraphbasedCA
-You've used 2 entries,
+Warning--I didn't find a database entry for "gehrmann2019improving"
+Warning--empty booktitle in castro
+You've used 3 entries,
             1935 wiz_defined-function locations,
-            479 strings with 4055 characters,
-and the built_in function-call counts, 699 in all, are:
-= -- 60
-> -- 40
+            487 strings with 4202 characters,
+and the built_in function-call counts, 1095 in all, are:
+= -- 98
+> -- 58
 < -- 1
-+ -- 14
-- -- 14
-* -- 55
-:= -- 134
-add.period$ -- 4
-call.type$ -- 2
-change.case$ -- 17
-chr.to.int$ -- 2
-cite$ -- 3
-duplicate$ -- 27
-empty$ -- 43
-format.name$ -- 16
-if$ -- 127
++ -- 20
+- -- 20
+* -- 90
+:= -- 205
+add.period$ -- 7
+call.type$ -- 3
+change.case$ -- 25
+chr.to.int$ -- 3
+cite$ -- 4
+duplicate$ -- 41
+empty$ -- 70
+format.name$ -- 23
+if$ -- 204
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 1
-newline$ -- 11
-num.names$ -- 6
-pop$ -- 21
+missing$ -- 2
+newline$ -- 16
+num.names$ -- 9
+pop$ -- 27
 preamble$ -- 1
-purify$ -- 17
+purify$ -- 25
 quote$ -- 0
-skip$ -- 19
+skip$ -- 29
 stack$ -- 0
-substring$ -- 24
-swap$ -- 0
+substring$ -- 51
+swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 12
+type$ -- 18
 warning$ -- 1
-while$ -- 4
+while$ -- 7
 width$ -- 0
-write$ -- 22
-(There was 1 warning)
+write$ -- 35
+(There were 2 warnings)

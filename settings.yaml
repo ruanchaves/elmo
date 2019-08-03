@@ -22,6 +22,16 @@ ASSIN: {
   }
 }
 
+SICK: {
+  path: './datasets/SICK/',
+  files: {
+    en: {
+      'train': 'SICK_train.json',
+      'test': 'SICK_test.json'
+    }
+  }
+}
+
 unzip: {
   'cores': 8
 }
@@ -40,11 +50,9 @@ gensim: {
   'cores': 1
 }
 
-SICK: {
-  path: './datasets/SICK/stsbenchmark/',
-  dev: 'sts-dev.csv',
-  test: 'sts-test.csv',
-  train: 'sts-train.csv'
+reddit: {
+  pushshift: 'http://files.pushshift.io/reddit/comments/',
+  path: './reddit/'
 }
 
 NILC: {
