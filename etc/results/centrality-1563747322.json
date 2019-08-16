@@ -1,0 +1,1 @@
+[{"global_clustering_coefficient": 0.004039422406769346, "average_short_distance": 0.3636702259983679, "key": "unk", "model": "./embeddings/USP/glove/glove_s50.model"}, {"global_clustering_coefficient": 0.00927643784786642, "average_short_distance": 0.4852810576558113, "key": "unk", "model": "./embeddings/USP/glove/glove_s300.model"}]

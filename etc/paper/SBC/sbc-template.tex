@@ -1,0 +1,56 @@
+\documentclass[14pt]{article}
+
+\usepackage{sbc-template}
+
+\usepackage{graphicx,url}
+
+%\usepackage[brazil]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{todonotes}
+
+%\usepackage[section]{placeins}
+
+\setlength{\marginparwidth}{0cm}
+\newcommand{\notaerick}[1]{\todo{[Erick:]#1}}
+
+\sloppy
+
+\title{Portuguese Word Embeddings: Evaluating on Word Analogies and Natural Language Tasks}
+
+\author{Nathan S. Hartmann\inst{1}, Erick Fonseca\inst{1}, Christopher D. Shulby\inst{1},\\ Marcos V. Treviso\inst{1}, Jéssica S. Rodrigues\inst{2}, Sandra M. Aluísio\inst{1}}
+
+\address{University of São Paulo, Institute of Mathematics and Computer Sciences
+\nextinstitute
+  Federal University of São Carlos, Department of Computer Science
+\email{\{nathansh,erickrf,sandra\}@icmc.usp.br}
+\email{\{chrisshulby,marcosvtreviso,jsc\}@gmail.com}
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Word embeddings have been found to provide meaningful representations for words in an efficient way; therefore, they have become common in Natural Language Processing systems. In this paper, we evaluated different word embedding models trained on a large Portuguese corpus, including both Brazilian and European variants. We trained 31 word embedding models using FastText, GloVe, Wang2Vec and Word2Vec. We evaluated them intrinsically on syntactic and semantic analogies and extrinsically on POS tagging and sentence semantic similarity tasks. The obtained results suggest that word analogies are not appropriate for word embedding evaluation; task-specific evaluations appear to be a better option.
+%The results are aligned with those obtained by \cite{repeval:16}.
+\end{abstract}
+
+\input{introduction}
+\input{material}
+\input{method}
+\input{experiment}
+\input{related_work}
+\input{conclusion}
+
+\section*{Acknowledgements}
+
+This work was supported by CNPq, CPqD and FAPESP (PIPE-PAPESP project nº 2016/00500-1).
+
+\bibliographystyle{sbc}
+\bibliography{references}
+
+\end{document}

@@ -1,0 +1,106 @@
+\section{Training Corpus}
+
+% In this section, we present the corpus compiled for this paper and its preprocessing steps.
+We collected a large corpus from several sources in order to obtain a multi-genre corpus, representative of the Portuguese language. We rely on the results found by \cite{rodriguesetal2016} and \cite{Fonseca2016} which indicate that the bigger a corpus is, the better the embeddings obtained, even if it is mixed with Brazilian and European texts. Table \ref{tab:corpusembeddings} presents all corpora collected in this work.
+
+\subsection{Preprocessing}
+
+We tokenized and normalized our corpus in order to reduce the vocabulary size, under the premise that vocabulary reduction provides more representative vectors. Word types with less than five occurrences were replaced by a special \texttt{UNKNOWN} symbol. %All HTML tags and elements between brackets were removed. (meio óbvio, não?)
+Numerals were normalized to zeros;  URL's were mapped to a token \texttt{URL} and emails were mapped to a token \texttt{EMAIL}. 
+
+Then, we tokenized the text relying on whitespaces and punctuation signs, paying special attention to hyphenation. Clitic pronouns like ``machucou-se'' are kept intact. Since it differs from the approach used in \cite{rodriguesetal2016} and their corpus is a subset of ours, we adapted their tokenization using our criteria. We also removed their Wikipedia section, and in all our subcorpora, we only used sentences with 5 or more tokens in order to reduce noisy content. This reduced the number of tokens of LX-Corpus from 1,723,693,241 to 714,286,638. 
+
+%\todo[inline]{(Erick) o que isso quer dizer? "A huge vocabulary is undesirable because we need to represent an amount of words in a fixed vector size"}
+
+%\todo[inline]{RE-(Nathan) temos um espaço limitado para representar uma quantidade variante de palavras. Quando maior for essa quantidade, menos o poder de representação dos vetores.}
+
+%\todo[inline]{(erick) tirei a fatídica frase, estava muito confusa e acho que não faz falta.}
+
+%\cite{rodriguesetal2016} showed that the larger the corpus, the better. We also rely on results of \cite{Fonseca2016} to collect corpora of both Brazilian and European variants of Portuguese in order to have available as many texts as possible. Table \ref{tab:corpusembeddings} presents all corpora collected in this work. \textbf{All genre presented follow L\'acioWeb pattern\footnote{http://143.107.183.175:22180/lacioweb/tipologia.htm} \cite{aluisio2003lacioweb}}
+
+
+% (erick) comentei a lista pq já temos a tabela que é mais organizada
+%\begin{itemize}
+    %\item LX-Corpus \cite{rodriguesetal2016}:
+    %\item Wikipedia: It is a Wikipedia's dump of 10/20/16. A preview's version was used by \cite{hartmann2016} whose obtained best result in ASSIN sentence similarity shared-task.
+    %\item GoogleNews:
+    %\item SubIMDB-PT: It is the result of a crawling of subtitles from IMDB website in 12/03/2016\footnote{http://www.imdb.com}.
+    %\item G1: It is the result of a crawling on g1 website\footnote{http://g1.globo.com}. It was already used by \cite{hartmann2016}.
+    %\item PLN-Br \cite{bruckschenetal2008}: It is a corpus largely used on Brazilian Portuguese NLP research. It was used by \cite{hartmann2016} to train word embeddings' models.
+    %\item Literacy works of public domain: A collection of 138,268 literacy works from Domínio Público website\footnote{http://www.dominiopublico.gov.br}.
+    %\item Lacioweb: It is a corpus compiled in the Lácio-Web project \cite{aluisio2003lacioweb} composed by well written Brazilian Portuguese texts. This corpus has informative, scientific, poetry, prose, and drama texts.
+    %\item Portuguese books
+    %\item Mundo Estranho: It is the result of a crawling on Mundo Estranho website\footnote{http://mundoestranho.abril.com.br}.
+    %\item It is the result of a crawling of Ci\^encia Hoje das Crian\c{c}as (CHC) website\footnote{chc.cienciahoje.uol.com.br}.
+    %\item FAPESP: It is the corpus Revista Pesquisa FAPESP.
+    %\item Textbooks: A collection of texts extracted from textbooks written for children between 3rd and 7th-grade years of primary school.
+    %\item Folhinha: \footnote{www.folha.uol.com.br/folhinha}
+    %\item NILC corpus: \footnote{nilc.icmc.usp.br/nilc/images/download/corpusNilc.zip}
+    %\item Para Seu Filho Ler: \footnote{zh.clicrbs.com.br/rs}
+    %\item SARESP: \footnote{sites.google.com/site/provassaresp}
+%\end{itemize}
+
+% \todo[inline]{(erick) Sobre a tabela:
+
+%1) Acabei de verificar que a publicação original do LX-vectors usou um corpus de 1.7 bilhões de tokens. Mesmo com diferenças de tokenização, ainda é bem maior que o nosso! Precisa incluir no texto que pegamos menos da metade do corpus deles e por quê.
+
+
+\begin{table}[!ht]
+  \centering
+    \scriptsize
+    \scalebox{.9}{
+    \begin{tabular}{m{2.7cm}llm{2cm}m{7cm}}
+      \toprule
+        \textbf{Corpus} & \textbf{Tokens} & \textbf{Types} & \textbf{Genre} & \textbf{Description}\\
+        \midrule
+        LX-Corpus \cite{rodriguesetal2016} & 714,286,638 & 2,605,393 & Mixed genres & A huge collection of texts from 19 sources. Most of them are written in European Portuguese. \\%This corpus was used in an extensive evaluation of corpus combination and hyperparameters tuning \cite{rodriguesetal2016}\\
+        \midrule
+        Wikipedia & 219,293,003 & 1,758,191 &  Encyclopedic & Wikipedia dump of 10/20/16 \\
+        %A preview's version was used by \cite{hartmann2016} whose obtained best result in ASSIN sentence similarity shared-task\footnote{http://propor2016.di.fc.ul.pt/?page\_id=381}\\
+        \midrule
+        GoogleNews & 160,396,456 & 664,320 & Informative &  News crawled from GoogleNews service\\%\footnote{https://news.google.com.br} between 2014 and 2016\\
+        \midrule
+        SubIMDB-PT & 129,975,149 & 500,302 & Spoken language & Subtitles crawled from IMDb website\\%\footnote{http://www.imdb.com} in 12/03/2016\\
+        \midrule
+        G1 & 105,341,070 & 392,635 & Informative & News crawled from G1 news portal between 2014 and 2015.\\%\footnote{http://g1.globo.com}% It was already used by \cite{hartmann2016}\\
+        \midrule
+        PLN-Br \cite{bruckschenetal2008} & 31,196,395 & 259,762 & Informative & Large corpus of the PLN-BR Project with texts sampled from  1994 to 2005. It was also used by \cite{hartmann2016} to train word embeddings models\\
+        \midrule
+        Literacy works of\newline public domain & 23,750,521 & 381,697 & Prose & A collection of 138,268 literary works from the Domínio Público website \\%\footnote{http://www.dominiopublico.gov.br}\\
+        \midrule
+        Lacio-web \cite{aluisio2003lacioweb} & 8,962,718 & 196,077 & Mixed genres & Texts from various genres, e.g., literary and its subdivisions (prose, poetry and drama), informative, scientific, law, didactic technical\\
+        %, textual types (e.g. article, manual, research project, letter, biography), subjects (e.g. politics, environment, life style, sports, arts, religion)\\
+%Corpus composed of informative, scientific, poetry, prose, and drama texts  
+        \midrule
+        Portuguese e-books & 1,299,008 & 66,706 & Prose & Collection of classical fiction books written in Brazilian Portuguese crawled from Literatura Brasileira website\\% (p.e., \textit{Iracema}, \textit{O Ateneu} and \textit{O Cortiço})\\
+        \midrule
+        Mundo Estranho & 1,047,108 & 55,000 & Informative & Texts crawled from Mundo Estranho magazine\\%\footnote{http://mundoestranho.abril.com.br}\\
+        \midrule
+        CHC & 941,032 & 36,522 & Informative & Texts crawled from Ci\^encia Hoje das Crian\c{c}as (CHC) website\\%\footnote{chc.cienciahoje.uol.com.br}\\
+        \midrule
+        FAPESP & 499,008 & 31,746 & Science \newline Communication & Brazilian science divulgation texts from Pesquisa FAPESP magazine\\
+        \midrule
+        Textbooks & 96,209 & 11,597 & Didactic & Texts for children between 3rd and 7th-grade years of elementary school\\
+        \midrule
+        Folhinha & 73,575 & 9,207 & Informative & News written for children, crawled in 2015 from Folhinha issue of Folha de São Paulo newspaper\\%\footnote{www.folha.uol.com.br/folhinha}.\\
+        \midrule
+        NILC subcorpus & 32,868 & 4,064 & Informative & Texts written for children of 3rd and 4th-years of elementary school  \\%\footnote{nilc.icmc.usp.br/nilc/images/download/corpusNilc.zip}
+        \midrule
+        Para Seu Filho Ler & 21,224 & 3,942 & Informative & News written for children, from Zero Hora newspaper \\%\footnote{zh.clicrbs.com.br/rs}\\
+        \midrule
+        SARESP & 13,308 & 3,293 &  Didactic & Text questions of Mathematics, Human Sciences, Nature Sciences and essay writing to evaluate students\\
+        
+        %of the 3rd, 5th, 7th and 9th years of elementary school and the 3rd grade of the High School of the State of São Paulo \\%\footnote{sites.google.com/site/provassaresp}\\
+        \bottomrule
+        \\
+        \cmidrule{1-3}
+        \textbf{Total} & 1,395,926,282 & 3,827,725\\
+        \cmidrule{1-3}
+    \end{tabular}}
+    \caption{Sources and statistics of corpora collected.}
+    \label{tab:corpusembeddings}
+\end{table}
+
+%\todo[inline]{(Erick) Não dá para resumir um pouco as descrições?? Estamos gastando espaço demais com isso, inclusive para corpora muito pequenos}
+
+

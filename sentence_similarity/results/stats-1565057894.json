@@ -1,0 +1,1 @@
+[{"test": "ELMo", "pearson": 0.5879096083186333, "MSE": 0.49780896828555227, "lang": "ptbr"}, {"test": "ELMo", "pearson": 0.5933522189804383, "MSE": 0.7861559542528396, "lang": "pteu"}, {"test": "ELMo-SIF", "pearson": 0.5417010497001322, "MSE": 0.5369060585644888, "lang": "ptbr"}, {"test": "ELMo-SIF", "pearson": 0.5855879422660333, "MSE": 0.8072746090112468, "lang": "pteu"}]

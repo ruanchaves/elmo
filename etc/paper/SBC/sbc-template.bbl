@@ -1,0 +1,135 @@
+\begin{thebibliography}{}
+
+\bibitem[Alu{\'\i}sio et~al. 2003]{aluisio2003lacioweb}
+Alu{\'\i}sio, S.~M., Pinheiro, G.~M., Finger, M., Nunes, M. G.~V., and Tagnin,
+  S.~E. (2003).
+\newblock {The LacioWeb Project: Overview and Issues in Brazilian Portuguese
+  Corpora Creation}.
+\newblock In {\em Proceedings of Corpus Linguistics}, pages 14--21.
+
+\bibitem[Baroni et~al. 2014]{baronietal2014}
+Baroni, M., Dinu, G., and Kruszewski, G. (2014).
+\newblock {Don’t count, predict! A systematic comparison of context-counting
+  vs. context-predicting semantic vectors}.
+\newblock In {\em Proceedings of the 52nd Annual Meeting of the Association for
+  Computational Linguistics}, volume~1, pages 238--247.
+
+\bibitem[Bengio et~al. 2003]{bengio2003neural}
+Bengio, Y., Ducharme, R., Vincent, P., and Jauvin, C. (2003).
+\newblock A neural probabilistic language model.
+\newblock {\em Journal of machine learning research}, 3:1137--1155.
+
+\bibitem[Bojanowski et~al. 2016]{bojanowski2016enriching}
+Bojanowski, P., Grave, E., Joulin, A., and Mikolov, T. (2016).
+\newblock {Enriching Word Vectors with Subword Information}.
+\newblock {\em arXiv preprint arXiv:1607.04606}.
+
+\bibitem[Bruckschen et~al. 2008]{bruckschenetal2008}
+Bruckschen, M., Muniz, F., Souza, J., Fuchs, J., Infante, K., Muniz, M., Gon{\c
+  c}alves, P., Vieira, R., and Alu{\'\i}sio, S. (2008).
+\newblock {Anota{\c c}{\~a}o Ling{\"u}{\'\i}stica em XML do Corpus PLN-BR.
+  NILC–TR–09–08}.
+\newblock Technical report, University of São Paulo, Brazil.
+
+\bibitem[Collobert et~al. 2011]{collobertetal2011}
+Collobert, R., Weston, J., Bottou, L., Karlen, M., Kavukcuoglu, K., and Kuksa,
+  P. (2011).
+\newblock {Natural Language Processing (Almost) from Scratch}.
+\newblock {\em Journal of Machine Learning Research}, 12:2493--2537.
+
+\bibitem[Dumais et~al. 1988]{dumais1988using}
+Dumais, S.~T., Furnas, G.~W., Landauer, T.~K., Deerwester, S., and Harshman, R.
+  (1988).
+\newblock Using latent semantic analysis to improve access to textual
+  information.
+\newblock In {\em Proceedings of the SIGCHI conference on Human factors in
+  computing systems}, pages 281--285. ACM.
+
+\bibitem[Faruqui et~al. 2016]{repeval:16}
+Faruqui, M., Tsvetkov, Y., Rastogi, P., and Dyer, C. (2016).
+\newblock {Problems With Evaluation of Word Embeddings Using Word Similarity
+  Tasks}.
+\newblock In {\em Proc. of the 1st Workshop on Evaluating Vector Space
+  Representations for NLP}.
+
+\bibitem[Finkelstein et~al. 2002]{finkelstein2001}
+Finkelstein, L., Gabrilovich, E., Matias, Y., Rivlin, E., Solan, Z., Wolfman,
+  G., and Ruppin, E. (2002).
+\newblock Placing search in context: The concept revisited.
+\newblock {\em ACM Transactions on Information Systems}, 20(1).
+
+\bibitem[Fonseca and Aluisio 2016]{Fonseca2016}
+Fonseca, E. and Aluisio, S. (2016).
+\newblock {Improving POS Tagging Across Portuguese Variants with Word
+  Embeddings}.
+\newblock In {\em Proceedings of the Computational Processing of the Portuguese
+  Language}, pages 227--232.
+
+\bibitem[Fonseca et~al. 2015]{Fonseca2015}
+Fonseca, E.~R., Rosa, J. L.~G., and Aluísio, S.~M. (2015).
+\newblock Evaluating word embeddings and a revised corpus for part-of-speech
+  tagging in portuguese.
+\newblock {\em Journal of the Brazilian Computer Society}.
+
+\bibitem[Hartmann 2016]{hartmann2016}
+Hartmann, N.~S. (2016).
+\newblock {ASSIN Shared Task - Solo Queue Group: Mix of a Traditional and an
+  Emerging Approaches}.
+\newblock In {\em Avaliação de Similaridade Semântica e Inferência Textual
+  (ASSIN), Propor Workshop}.
+
+\bibitem[Joulin et~al. 2016]{joulin2016bag}
+Joulin, A., Grave, E., Bojanowski, P., and Mikolov, T. (2016).
+\newblock Bag of tricks for efficient text classification.
+\newblock {\em arXiv preprint arXiv:1607.01759}.
+
+\bibitem[Lai et~al. 2015]{lai2015recurrent}
+Lai, S., Xu, L., Liu, K., and Zhao, J. (2015).
+\newblock Recurrent convolutional neural networks for text classification.
+\newblock In {\em AAAI}, volume 333, pages 2267--2273.
+
+\bibitem[Ling et~al. 2015]{Ling:2015:naacl}
+Ling, W., Dyer, C., Black, A., and Trancoso, I. (2015).
+\newblock Two/too simple adaptations of word2vec for syntax problems.
+\newblock In {\em Proceedings of the 2015 Conference of the North American
+  Chapter of the Association for Computational Linguistics: Human Language
+  Technologies}. Association for Computational Linguistics.
+
+\bibitem[Lund and Burgess 1996]{lund1996producing}
+Lund, K. and Burgess, C. (1996).
+\newblock Producing high-dimensional semantic spaces from lexical
+  co-occurrence.
+\newblock {\em Behavior Research Methods, Instruments, \& Computers},
+  28(2):203--208.
+
+\bibitem[Mikolov et~al. 2013]{mikolovetal2013}
+Mikolov, T., Chen, K., Corrado, G., and Dean, J. (2013).
+\newblock Efficient estimation of word representations in vector space.
+\newblock In {\em Proceedings of International Conference on Learning
+  Representations Workshop (ICLR-2013)}.
+
+\bibitem[Nayak et~al. 2016]{2016nayak-veceval}
+Nayak, N., Angeli, G., and Manning, C.~D. (2016).
+\newblock {Evaluating Word Embeddings Using a Representative Suite of Practical
+  Tasks}.
+\newblock In {\em RepEval Workshop}.
+
+\bibitem[Pennington et~al. 2014]{penningtonetal2014}
+Pennington, J., Socher, R., and Manning, C.~D. (2014).
+\newblock {Glove: Global vectors for word representation}.
+\newblock {\em Proceedings of the 2014 Conference on Empiricial Methods in
+  Natural Language Processing (EMNLP-2014)}, 12:1532--1543.
+
+\bibitem[Rodrigues et~al. 2016]{rodriguesetal2016}
+Rodrigues, J., António, B., Steven, N., and João, S. (2016).
+\newblock {LX-DSemVectors: Distributional Semantics Models for Portuguese}.
+\newblock In {\em Computational Processing of the Portuguese Language: 12th
+  International Conference (PROPOR-2016)}. Springer International Publishing.
+
+\bibitem[Sousa 2016]{sousa2016}
+Sousa, S. (2016).
+\newblock {Estudo de Modelos de Word Embeddings}.
+\newblock Monograph (Bacharel em Computação), UTFPR (Universidade
+  Tecnológica Federal do Paraná), Paraná, Brazil.
+
+\end{thebibliography}

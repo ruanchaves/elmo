@@ -1,1 +1,0 @@
-[{"test": "ELMo_NILC_./embeddings/USP/glove/glove_s50.model", "pearson": 0.5486266711253124, "MSE": 0.5324656200935775, "lang": "ptbr"}, {"test": "ELMo_NILC_./embeddings/USP/glove/glove_s50.model", "pearson": 0.4802498913656042, "MSE": 0.9091606695775822, "lang": "pteu"}]
