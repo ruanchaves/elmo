@@ -1,5 +1,6 @@
 # ELMo embeddings
 embeddings/NILC/
+embeddings/elmo/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

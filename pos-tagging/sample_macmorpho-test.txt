@@ -1,0 +1,5 @@
+Salto_N sete_ADJ
+O_ART grande_ADJ assunto_N da_PREP+ART semana_N em_PREP Nova_NPROP York_NPROP é_V a_ART edição_N da_PREP+ART revista_N "_PU New_NPROP Yorker_NPROP "_PU que_PRO-KS está_V nas_PREP+ART bancas_N ._PU
+Número_N duplo_ADJ especial_ADJ ,_PU é_V inteirinho_ADJ dedicado_PCP a_PREP ensaios_N sobre_PREP moda_N ._PU
+A_ART endiabrada_PCP editora_N Tina_NPROP Brown_NPROP ex_N da_PREP+ART "_PU Vanity_NPROP Fair_NPROP -_PU convocou_V até_PDEN John_NPROP Updike_NPROP e_KC Salman_NPROP Rushdie_NPROP para_PREP discorrer_V sobre_PREP o_ART tema_N ._PU
+Além_PREP das_PREP+ART fotos_N de_PREP Richard_NPROP Avedon_NPROP ._PU

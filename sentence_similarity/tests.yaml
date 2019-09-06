@@ -1,7 +1,8 @@
 
 queue: [
-  # 1,
-  # 2,
+  0,
+  1,
+  2,
   3,
   4,
   5,
@@ -9,14 +10,22 @@ queue: [
   7,
   8,
   9,
-  # 10,
+  10,
   11,
-  12
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20
   ]
 
 0: {
-  template: "flair",
-  test_name: "",
+  template: "flair-custom-1",
+  test_name: "ELMo_wiki",
   langs: ["ptbr", "pteu"],
   params: {
     gensim_sif: False,
@@ -29,8 +38,8 @@ queue: [
 }
 
 1: {
-  template: "flair",
-  test_name: "ELMo",
+  template: "flair-custom-2",
+  test_name: "ELMo_brwac",
   langs: ["ptbr", "pteu"],
   params: {
     gensim_sif: False,
@@ -44,11 +53,11 @@ queue: [
 
 2: {
   template: "flair",
-  test_name: "ELMo-SIF",
+  test_name: "ELMo_default",
   langs: ["ptbr", "pteu"],
   params: {
     gensim_sif: False,
-    flair_sif: True,
+    flair_sif: False,
     freqs: "WordFreq",
     total_freq: 1.0,
     a: 0.001,
@@ -57,6 +66,48 @@ queue: [
 }
 
 3: {
+  template: "flair-gensim",
+  test_name: "ELMo_default_NILC",
+  langs: ["ptbr", "pteu"],
+  params: {
+    gensim_sif: False,
+    flair_sif: False,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
+
+4: {
+  template: "custom-flair-gensim-1",
+  test_name: "ELMo_wiki_NILC",
+  langs: ["ptbr", "pteu"],
+  params: {
+    gensim_sif: False,
+    flair_sif: False,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
+
+5: {
+  template: "custom-flair-gensim-2",
+  test_name: "ELMo_brwac_NILC",
+  langs: ["ptbr", "pteu"],
+  params: {
+    gensim_sif: False,
+    flair_sif: False,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
+
+6: {
   template: "gensim",
   test_name: "NILC",
   langs: ["ptbr", "pteu"],
@@ -70,7 +121,7 @@ queue: [
   }
 }
 
-4: {
+7: {
   template: "gensim",
   test_name: "NILC-SIF",
   langs: ["ptbr", "pteu"],
@@ -84,7 +135,7 @@ queue: [
   }
 }
 
-5: {
+8: {
   template: "gensim",
   test_name: "NILC_with_unk",
   langs: ["ptbr", "pteu"],
@@ -98,60 +149,14 @@ queue: [
   }
 }
 
-6: {
-  template: "flair-gensim",
-  test_name: "ELMo_NILC",
-  langs: ["ptbr", "pteu"],
-  params: {
-    gensim_sif: False,
-    flair_sif: False,
-    freqs: "WordFreq",
-    total_freq: 1.0,
-    a: 0.001,
-    unk: False
-  }
-}
-
-7: {
-  template: "flair-gensim",
-  test_name: "ELMo-SIF_NILC",
-  langs: ["ptbr", "pteu"],
-  params: {
-    gensim_sif: False,
-    flair_sif: True,
-    freqs: "WordFreq",
-    total_freq: 1.0,
-    a: 0.001,
-    unk: False
-  }
-}
-
-8: {
-  template: "flair-gensim",
-  test_name: "ELMo-SIF_NILC-SIF",
-  langs: ["ptbr", "pteu"],
-  params: {
-    gensim_sif: True,
-    flair_sif: True,
-    freqs: "WordFreq",
-    total_freq: 1.0,
-    a: 0.001,
-    unk: False
-  },
-  skip_list: [
-    'glove',
-    'wang2vec',
-    'fasttext'
-  ]
-}
 
 9: {
-  template: "flair-gensim",
-  test_name: "ELMo_NILC-SIF",
+  template: "flair-custom-1",
+  test_name: "ELMo_wiki_SIF",
   langs: ["ptbr", "pteu"],
   params: {
-    gensim_sif: True,
-    flair_sif: False,
+    gensim_sif: False,
+    flair_sif: True,
     freqs: "WordFreq",
     total_freq: 1.0,
     a: 0.001,
@@ -159,18 +164,28 @@ queue: [
   }
 }
 
-# 10: {
-#   template: "analogies"
-# }
-
-11: {
-  template: "sick",
-  test_name: "ELMo-SICK",
-  langs: ["en"],
+10: {
+  template: "flair-custom-2",
+  test_name: "ELMo_brwac_SIF",
+  langs: ["ptbr", "pteu"],
   params: {
     gensim_sif: False,
-    flair_sif: False,
-    freqs: "WordFreqEn",
+    flair_sif: True,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
+
+11: {
+  template: "flair",
+  test_name: "ELMo_default_SIF",
+  langs: ["ptbr", "pteu"],
+  params: {
+    gensim_sif: False,
+    flair_sif: True,
+    freqs: "WordFreq",
     total_freq: 1.0,
     a: 0.001,
     unk: False
@@ -178,13 +193,126 @@ queue: [
 }
 
 12: {
-  template: "sick",
-  test_name: "ELMo-SIF-SICK",
-  langs: ["en"],
+  template: "flair-gensim",
+  test_name: "ELMo_default_SIF_NILC",
+  langs: ["ptbr", "pteu"],
   params: {
     gensim_sif: False,
     flair_sif: True,
-    freqs: "WordFreqEn",
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
+
+13: {
+  template: "custom-flair-gensim-1",
+  test_name: "ELMo_wiki_SIF_NILC",
+  langs: ["ptbr", "pteu"],
+  params: {
+    gensim_sif: False,
+    flair_sif: True,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
+
+14: {
+  template: "custom-flair-gensim-2",
+  test_name: "ELMo_brwac_SIF_NILC",
+  langs: ["ptbr", "pteu"],
+  params: {
+    gensim_sif: False,
+    flair_sif: True,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
+
+15: {
+  template: "flair-gensim",
+  test_name: "ELMo_default_NILC_SIF",
+  langs: ["ptbr", "pteu"],
+  params: {
+    gensim_sif: True,
+    flair_sif: False,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
+
+16: {
+  template: "custom-flair-gensim-1",
+  test_name: "ELMo_wiki_NILC_SIF",
+  langs: ["ptbr", "pteu"],
+  params: {
+    gensim_sif: True,
+    flair_sif: False,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
+
+17: {
+  template: "custom-flair-gensim-2",
+  test_name: "ELMo_brwac_NILC_SIF",
+  langs: ["ptbr", "pteu"],
+  params: {
+    gensim_sif: True,
+    flair_sif: False,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
+
+
+18: {
+  template: "flair-gensim",
+  test_name: "ELMo_default_SIF_NILC_SIF",
+  langs: ["ptbr", "pteu"],
+  params: {
+    gensim_sif: True,
+    flair_sif: True,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
+
+19: {
+  template: "custom-flair-gensim-1",
+  test_name: "ELMo_wiki_SIF_NILC_SIF",
+  langs: ["ptbr", "pteu"],
+  params: {
+    gensim_sif: True,
+    flair_sif: True,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
+
+20: {
+  template: "custom-flair-gensim-2",
+  test_name: "ELMo_brwac_SIF_NILC_SIF",
+  langs: ["ptbr", "pteu"],
+  params: {
+    gensim_sif: True,
+    flair_sif: True,
+    freqs: "WordFreq",
     total_freq: 1.0,
     a: 0.001,
     unk: False

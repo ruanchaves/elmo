@@ -1,3 +1,7 @@
+workers: 2
+database: 'sqlite:///results.db'
+database_table: results
+
 ELMo: {
   name: 'pt'
 }

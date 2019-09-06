@@ -15,6 +15,9 @@ import os
 import datetime
 from wordfreq import word_frequency
 
+import dataset
+import concurrent.futures
+
 def run_regression(model, func):
     model.get_sims(func).format()
     LR = Regression(model.results)
@@ -55,7 +58,8 @@ def get_measure(model, LANGUAGE, test_name, sick=False):
         model.train = train
         model.gold = gold
         measure = run_test(model, cosine_distance, test_name)
-        measure['lang'] = LANGUAGE   
+        measure['lang'] = LANGUAGE
+        measure['timestamp'] = int(datetime.datetime.now().timestamp())   
         return measure
 
 def get_NILC(EMBEDDINGS_DIR):
@@ -107,7 +111,19 @@ def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANAL
             logger.debug(measure)
             yield measure            
 
-    elif template == 'gensim' or template == 'flair-gensim':
+    elif template == 'flair-custom-1' or template == 'flair-custom-2':
+
+        if template == 'flair-custom-1':
+            params["flair_model"] = ELMoEmbeddings(options_file="../embeddings/elmo/options.json", weight_file="../embeddings/elmo/elmo_pt_weights.hdf5")
+        elif template == 'flair-custom-2':
+            params["flair_model"] = ELMoEmbeddings(options_file="../embeddings/elmo/options_dgx1.json", weight_file="../embeddings/elmo/elmo_pt_weights_dgx1.hdf5")
+        model = Embedding(**params)
+        for lang in langs:
+            measure = get_measure(model, lang, test_name)
+            logger.debug(measure)
+            yield measure         
+
+    elif template == 'gensim' or template == 'flair-gensim' or template == 'custom-flair-gensim-1' or template == 'custom-flair-gensim-2':
 
         assert(EMBEDDINGS_DIR != None)
         for fname in get_NILC(EMBEDDINGS_DIR):
@@ -120,6 +136,10 @@ def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANAL
                 params["gensim_model"] = emb
                 if template == 'flair-gensim':
                     params["flair_model"] = ELMoEmbeddings('pt')
+                elif template == 'custom-flair-gensim-1':
+                    params["flair_model"] = ELMoEmbeddings(options_file="../embeddings/elmo/options.json", weight_file="../embeddings/elmo/elmo_pt_weights.hdf5")
+                elif template == 'custom-flair-gensim-2':
+                    params["flair_model"] = ELMoEmbeddings(options_file="../embeddings/elmo/options_dgx1.json", weight_file="../embeddings/elmo/elmo_pt_weights_dgx1.hdf5")
                 model = Embedding(**params)
                 t = test_name + '_' + fname
                 for lang in langs:
@@ -154,6 +174,17 @@ def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANAL
             logger.debug(message)
             yield message
 
+def evaluate_sentence_similarity(parameters):
+    parameters["EMBEDDINGS_DIR"] = EMBEDDINGS_DIR
+    parameters["ANALOGIES_FILE"] = ANALOGIES_FILE
+    parameters["ANALOGIES_DIR"] = ANALOGIES_DIR
+    class_name = parameters["params"]["freqs"]
+    parameters["params"]["freqs"] = globals()[class_name]()
+
+    results = []
+    for measure in call_test(**parameters):
+        results.append(measure)
+    return results
 
 if __name__ == '__main__':
   
@@ -176,15 +207,21 @@ if __name__ == '__main__':
     logger.add(LOGS_PATH + "evaluate_{time}.log")
     RESULTS_FILE = RESULTS_PATH + 'stats-' + str(int(datetime.datetime.now().timestamp())) + '.json'
 
+    training_list = []
     for key in tests:
         if key in tests['queue']:
             parameters = tests[key]
-            parameters["EMBEDDINGS_DIR"] = EMBEDDINGS_DIR
-            parameters["ANALOGIES_FILE"] = ANALOGIES_FILE
-            parameters["ANALOGIES_DIR"] = ANALOGIES_DIR
-            class_name = parameters["params"]["freqs"]
-            parameters["params"]["freqs"] = globals()[class_name]()
+            training_list.append(parameters)
 
-            for measure in call_test(**parameters):
-                results.append(measure)
-                save_results(RESULTS_FILE, results)
+
+    db = dataset.connect(settings['database'])
+    table = db[settings['database_table']]
+
+    futures = []
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        for item in training_list:
+            future = executor.submit(evaluate_sentence_similarity, item)
+            futures.append(future)
+        for result in concurrent.futures.as_completed(futures):
+            for measure in result:
+                table.insert(measure)

@@ -17,25 +17,20 @@ import tensorflow as tf
 from keras import backend as K
 from keras.layers import Layer
 
-class MyLayer(Layer):
+import copy
+import h5py
+database = 'elmo.hdf5'
 
-    def __init__(self, output_dim, **kwargs):
-        self.output_dim = output_dim
-        super(MyLayer, self).__init__(**kwargs)
-
-    def build(self, input_shape):
-        # Create a trainable weight variable for this layer.
-        self.kernel = self.add_weight(name='kernel', 
-                                      shape=(input_shape[1], self.output_dim),
-                                      initializer='uniform',
-                                      trainable=True)
-        super(MyLayer, self).build(input_shape)  # Be sure to call this at the end
-
-    def call(self, x):
-        return K.dot(x, self.kernel)
-
-    def compute_output_shape(self, input_shape):
-        return (input_shape[0], self.output_dim)
+def ignore_class_accuracy(to_ignore=0):
+    def ignore_accuracy(y_true, y_pred):
+        y_true_class = K.argmax(y_true, axis=-1)
+        y_pred_class = K.argmax(y_pred, axis=-1)
+ 
+        ignore_mask = K.cast(K.not_equal(y_pred_class, to_ignore), 'int32')
+        matches = K.cast(K.equal(y_true_class, y_pred_class), 'int32') * ignore_mask
+        accuracy = K.sum(matches) / K.maximum(K.sum(ignore_mask), 1)
+        return accuracy
+    return ignore_accuracy
 
 def download(source, files):
     if all([x in os.listdir() for x in files]):
@@ -56,18 +51,20 @@ def download(source, files):
 class Document(object):
 
     def __init__(self, fname=None):
+        self.elmo = ELMoEmbeddings('pt')
         self.attributes = self.generate(fname)
-        self.vectors = self.enum(**self.attributes)
+        self.embeddings = None
 
     def padding(self, lst, max_len=None, key='-PAD-'):
         for idx, item in enumerate(lst):
-            tmp = item[::]
+            tmp = list(item[::])
             while len(tmp) < max_len:
                 tmp.append(key)
             lst[idx] = tmp
         return lst
 
     def generate(self, item):
+
         all_content = []
         len_array = []
         for fname in item:
@@ -79,110 +76,112 @@ class Document(object):
                 content = [ v for i,v in enumerate(content) if check[i] == True ]
             len_array.append(len(content))
             all_content.extend(content)
-            sentences = []
-            sentence_tags = []
-            for sent in all_content:
-                txt, tags = zip(*sent)
-                sentences.append(np.array(txt))
-                sentence_tags.append(np.array(tags))
 
-            max_len = len(max(sentences, key=len))
-            sentences = self.padding(sentences,max_len=max_len)
-            sentence_tags = self.padding(sentence_tags, max_len=max_len)
+        sentences = []
+        sentence_tags = []
+        for sent in all_content:
+            txt, tags = zip(*sent)
+            sentences.append(np.array(txt))
+            sentence_tags.append(np.array(tags))
 
-            get_flat = lambda x: sorted(list(set([ z for y in x for z in y ])))
-            tag_list = get_flat(sentence_tags)
-            tag_enum = { v: i + 1 for i, v in enumerate(tag_list) }
-            tag_enum['-PAD-'] = 0
+        max_len = len(max(sentences, key=len))
+        sentences = self.padding(sentences,max_len=max_len)
+        sentence_tags = self.padding(sentence_tags, max_len=max_len)
 
-            word_list = get_flat(sentences)
-            word_enum = { v.lower() : i + 2 for i, v in enumerate(word_list) }
-            word_enum['-PAD-'] = 0
-            word_enum['-OOV-'] = 1
-            word_enum_reverse = { v : i for i, v in word_enum.items() }
+        enum_array = copy.deepcopy(sentences)
+        for idx, item in enumerate(enum_array):
+            for idx2, item2 in enumerate(item):
+                enum_array[idx][idx2] = idx*len(item) + idx2
 
-            return {
-                "sentences": sentences,
-                "sentence_tags": sentence_tags,
-                "word_enum": word_enum,
-                "word_enum_reverse": word_enum_reverse,
-                "tag_enum": tag_enum,
-                "len_array": len_array
-            }
+        tag_list = sorted(list(set(np.array(sentence_tags).flatten().tolist())))
+        tag_list.remove('-PAD-')
+        tag_list.insert(0,'-PAD-')
+        tag_dict = { v:i for i,v in enumerate(tag_list) }
+        tag_array = copy.deepcopy(sentence_tags)
+        tag_len = len(tag_list)
 
-    def enum(self, sentences=None, sentence_tags=None, word_enum=None, word_enum_reverse=None, tag_enum=None, len_array=None):
-        num_sentences = []
-        for sent in sentences:
-            num_sent = []
-            for word in sent:
-                try:
-                    num_sent.append(word_enum[word.lower()])
-                except:
-                    num_sent.append(word_enum['-OOV-'])
-            num_sentences.append(num_sent)
+        for idx, item in enumerate(sentence_tags):
+            for idx2, item2 in enumerate(item):
+                arr = np.zeros(tag_len)
+                arr[tag_dict[item2]] = 1.0
+                tag_array[idx][idx2] = arr
 
-        num_tags = []
-        for tags in sentence_tags:
-            num_t = []
-            for t in tags:
-                num_t.append(tag_enum[t])
-            num_tags.append(num_t)
-    
-        max_len = len(max(num_sentences, key=len))
-        num_sentences = pad_sequences(num_sentences, maxlen=max_len, padding='post')
-        num_tags = pad_sequences(num_tags, maxlen=max_len, padding='post')
+        vocab_size = enum_array[-1][-1] + 1
+        max_sequence_length = len(enum_array[-1])
 
         return {
-            "sentences": num_sentences,
-            "sentence_tags": num_tags,
-            "max_len": max_len
+            "sentences": sentences,
+            "sentence_tags": sentence_tags,
+            "len_array": len_array,
+            "enum_array": enum_array,
+            "tag_array": tag_array,
+            "tag_len": tag_len,
+            "vocab_size": vocab_size,
+            "max_sequence_length": max_sequence_length
         }
-                
+        
+    def get_elmo(self, key='-PAD-', filename=None, vocab_size=None):
+        with h5py.File(database,'w') as f:
+            f.create_dataset("data", (vocab_size, 3072), compression='gzip')
+        sentences = self.attributes['sentences']
+        enum_array = self.attributes['enum_array']
+        embedding_dict = {}
+        for idx, item in enumerate(enum_array):
+            tmp = ' '.join(sentences[idx])
+            sent = Sentence(tmp)
+            self.elmo.embed(sent)
+            for idx2, item2 in enumerate(item):
+                if sent[idx2].text == '-PAD-':
+                    continue
+                else:
+                    embedding_array = np.array(sent[idx2].embedding.data.tolist())
+                    with h5py.File(database, 'a') as f:
+                        f['data'][item2][:] = embedding_array
+        # embedding_dict = sorted(embedding_dict.items(), key=lambda x: x[0])
+        # embedding_dict = np.array([ x[1] for x in embedding_dict ])
+        # if save:
+        #     np.save(filename, embedding_dict, allow_pickle=False)
+        # return embedding_dict
+
+
 def train_test_split_custom(data, attr):
-    split_pos = data.attributes['len_array'][0]
-    train = data.vectors[attr][0:split_pos] 
-    test = data.vectors[attr][split_pos:len(data.attributes[attr])]    
-    return train, test
+    split_array = [0] + data.attributes['len_array']
+    split_array = np.cumsum(split_array)
+    split_array = list(zip(split_array, split_array[1:]))
+    return ( np.array(data.attributes[attr][tup[0]:tup[1]]) for tup in split_array )
 
 source = "http://nilc.icmc.usp.br/macmorpho/macmorpho-v3.tgz"
 fnames = ['macmorpho-dev.txt', 'macmorpho-test.txt', 'macmorpho-train.txt']
 download(source, fnames)
 
 
-data = Document(["macmorpho-train.txt", 'macmorpho-test.txt'])
+data = Document(["macmorpho-train.txt", "macmorpho-test.txt", "macmorpho-dev.txt"])
 
-X_train, X_test = train_test_split_custom(data, "sentences")
-y_train, y_test = train_test_split_custom(data, "sentence_tags")
+vocab_size = data.attributes['vocab_size']
+data.get_elmo(filename=database, vocab_size=vocab_size)
 
-test_tensor = tf.convert_to_tensor(X_train[0:5])
+# X_train, X_test, X_val = train_test_split_custom(data, "enum_array")
+# y_train, y_test, y_val = train_test_split_custom(data, "tag_array")
 
-# embedding = ELMoEmbeddings('pt')
-session = tf.Session()
+# weights = data.embeddings
+# vocab_size = data.attributes['vocab_size']
+# max_len = data.attributes['max_sequence_length']
+# tag_len = data.attributes['tag_len']
 
-def ElmoEmbedding(x):
-    x_arr = session.run(x)
-    # embeddings = []
-    # for sent in x_arr:
-    #     tmp = ' '.join([ data.attributes['word_enum_reverse'][i] for i in sent ])
-    #     tmp_sent = Sentence(tmp)
-    #     embedding.embed(tmp_sent)
-    #     tmp_embedding = [ token.embedding.data.tolist() for token in tmp_sent.tokens ]
-    #     embeddings.append(tmp_embedding)
-    # return tf.convert_to_tensor(x_arr)
-    return tf.convert_to_tensor(x_arr)
+# model = Sequential([
+#     Embedding(vocab_size, 3072, weights=[weights], input_length=max_len, trainable=False),
+#     Bidirectional(LSTM(256, return_sequences=True)),
+#     TimeDistributed(Dense(tag_len)),
+#     Activation('softmax')
+# ])
 
-max_len = data.vectors['max_len']
-model = Sequential([
-    InputLayer(input_shape=(max_len, )),
-    Lambda(ElmoEmbedding, output_shape=(5, max_len, 3072))
-])
-model.summary()
+# model.compile(loss='categorical_crossentropy',
+#               optimizer=Adam(0.001),
+#               metrics=['accuracy', ignore_class_accuracy(0)])
+ 
+# model.summary()
 
-model.compile(optimizer="adam", loss="sparse_categorical_crossentropy", metrics=["accuracy"])
+# model.fit(X_train, y_train, batch_size=128, epochs=40, validation_data=(X_val, y_val) )
 
-labels = [ np.random.randint(2) for x in range(5) ]
-
-model.fit(X_train[0:5], labels, epochs=50, verbose=0)
-
-# loss, accuracy = model.evaluate(padded_docs, labels, verbose=0)
-# print('Accuracy: %f' % (accuracy*100))
+# scores = model.evaluate(X_test, y_test)
+# print(f"{model.metrics_names[1]}: {scores[1] * 100}")
