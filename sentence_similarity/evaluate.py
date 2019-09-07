@@ -211,15 +211,8 @@ if __name__ == '__main__':
     db = dataset.connect(settings['database'])
     table = db[settings['database_table']]
 
-
-    futures = []
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-       for item in training_list:
-          future = executor.submit(evaluate_sentence_similarity, item)
-          futures.append(future)
-
-    logger.debug('Starting futures.')
-    for result in concurrent.futures.as_completed(futures):
-        for measure in result:
+    logger.debug('Start evaluation.')
+    for item in training_list:
+        for measure in evaluate_sentence_similarity(item):
             logger.debug(measure)
             table.insert(measure)
