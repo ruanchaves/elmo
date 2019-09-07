@@ -181,8 +181,10 @@ def evaluate_sentence_similarity(parameters):
     class_name = parameters["params"]["freqs"]
     parameters["params"]["freqs"] = globals()[class_name]()
 
+    results = []
     for measure in call_test(**parameters):
-        yield measure
+        results.append(measure)
+    return results
 
 if __name__ == '__main__':
   
