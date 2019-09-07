@@ -99,7 +99,6 @@ def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANAL
         model = Embedding(**params)
         for lang in langs:
             measure = get_measure(model, 'en', test_name, sick=True)
-            logger.debug(measure)
             yield measure
 
     elif template == 'flair':
@@ -108,7 +107,6 @@ def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANAL
         model = Embedding(**params)
         for lang in langs:
             measure = get_measure(model, lang, test_name)
-            logger.debug(measure)
             yield measure            
 
     elif template == 'flair-custom-1' or template == 'flair-custom-2':
@@ -120,7 +118,6 @@ def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANAL
         model = Embedding(**params)
         for lang in langs:
             measure = get_measure(model, lang, test_name)
-            logger.debug(measure)
             yield measure         
 
     elif template == 'gensim' or template == 'flair-gensim' or template == 'custom-flair-gensim-1' or template == 'custom-flair-gensim-2':
@@ -131,7 +128,6 @@ def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANAL
                 if item in fname:
                     break
             else:
-                print(fname)
                 emb = KeyedVectors.load(fname)
                 params["gensim_model"] = emb
                 if template == 'flair-gensim':
@@ -144,7 +140,6 @@ def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANAL
                 t = test_name + '_' + fname
                 for lang in langs:
                     measure = get_measure(model, lang, t)
-                    logger.debug(measure)
                     yield measure
         
     elif template == "analogies":
@@ -171,7 +166,6 @@ def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANAL
                 "key" : key,
                 "stats": stats[key]
             }
-            logger.debug(message)
             yield message
 
 def evaluate_sentence_similarity(parameters):
@@ -208,7 +202,7 @@ if __name__ == '__main__':
     RESULTS_FILE = RESULTS_PATH + 'stats-' + str(int(datetime.datetime.now().timestamp())) + '.json'
 
     training_list = []
-    for key in tests:
+    for idx,key in enumerate(tests):
         if key in tests['queue']:
             parameters = tests[key]
             training_list.append(parameters)
@@ -224,6 +218,8 @@ if __name__ == '__main__':
           future = executor.submit(evaluate_sentence_similarity, item)
           futures.append(future)
 
+    logger.debug('Starting futures.')
     for result in concurrent.futures.as_completed(futures):
         for measure in result:
+            logger.debug(measure)
             table.insert(measure)
