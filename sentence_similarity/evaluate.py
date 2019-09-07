@@ -181,10 +181,8 @@ def evaluate_sentence_similarity(parameters):
     class_name = parameters["params"]["freqs"]
     parameters["params"]["freqs"] = globals()[class_name]()
 
-    results = []
     for measure in call_test(**parameters):
-        results.append(measure)
-    return results
+        yield measure
 
 if __name__ == '__main__':
   
@@ -217,11 +215,13 @@ if __name__ == '__main__':
     db = dataset.connect(settings['database'])
     table = db[settings['database_table']]
 
+
     futures = []
     with concurrent.futures.ThreadPoolExecutor() as executor:
-        for item in training_list:
-            future = executor.submit(evaluate_sentence_similarity, item)
-            futures.append(future)
-        for result in concurrent.futures.as_completed(futures):
-            for measure in result:
-                table.insert(measure)
+       for item in training_list:
+          future = executor.submit(evaluate_sentence_similarity, item)
+          futures.append(future)
+
+    for result in concurrent.futures.as_completed(futures):
+        for measure in result:
+            table.insert(measure)

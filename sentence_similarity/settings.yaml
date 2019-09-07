@@ -1,4 +1,4 @@
-workers: 2
+workers: 1
 database: 'sqlite:///results.db'
 database_table: results
 
