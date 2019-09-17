@@ -83,6 +83,16 @@ def get_analogies(ANALOGIES_DIR, EMBEDDINGS_DIR):
                     if name2.endswith('.model'):
                         yield path, path2, name, name2, dst, dst2
 
+def test_already_done(name, lang):
+    with open(RESULTS_FILE,'r') as f:
+        results = json.load(f)
+        for item in results:
+            if item['test'] == name and item['lang'] == lang:
+                logger.debug("SKIP - {0}".format(name))
+                return True
+    logger.debug("RUN - {0}".format(name))
+    return False
+
 class WordFreq(object):
     def __getitem__(self, key):
         return word_frequency(key, 'pt', wordlist='best', minimum=0.0)
@@ -95,50 +105,55 @@ class WordFreqEn(object):
 def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANALOGIES_FILE="", ANALOGIES_DIR="", EMBEDDINGS_DIR=""):
  
     if template == 'sick':
-        params["flair_model"] = ELMoEmbeddings('original')
-        model = Embedding(**params)
         for lang in langs:
+            if test_already_done(test_name, lang):
+                continue
+            params["flair_model"] = ELMoEmbeddings('original')
+            model = Embedding(**params)
             measure = get_measure(model, 'en', test_name, sick=True)
             yield measure
 
     elif template == 'flair':
-
-        params["flair_model"] = ELMoEmbeddings('pt')
-        model = Embedding(**params)
         for lang in langs:
+            if test_already_done(test_name, lang):
+                continue
+            params["flair_model"] = ELMoEmbeddings('pt')
+            model = Embedding(**params)
             measure = get_measure(model, lang, test_name)
             yield measure            
 
     elif template == 'flair-custom-1' or template == 'flair-custom-2':
-
-        if template == 'flair-custom-1':
-            params["flair_model"] = ELMoEmbeddings(options_file="../embeddings/elmo/options.json", weight_file="../embeddings/elmo/elmo_pt_weights.hdf5")
-        elif template == 'flair-custom-2':
-            params["flair_model"] = ELMoEmbeddings(options_file="../embeddings/elmo/options_dgx1.json", weight_file="../embeddings/elmo/elmo_pt_weights_dgx1.hdf5")
-        model = Embedding(**params)
         for lang in langs:
+            if test_already_done(test_name, lang):
+                continue
+            if template == 'flair-custom-1':
+                params["flair_model"] = ELMoEmbeddings(options_file="../embeddings/elmo/options.json", weight_file="../embeddings/elmo/elmo_pt_weights.hdf5")
+            elif template == 'flair-custom-2':
+                params["flair_model"] = ELMoEmbeddings(options_file="../embeddings/elmo/options_dgx1.json", weight_file="../embeddings/elmo/elmo_pt_weights_dgx1.hdf5")
+            model = Embedding(**params)
             measure = get_measure(model, lang, test_name)
             yield measure         
 
     elif template == 'gensim' or template == 'flair-gensim' or template == 'custom-flair-gensim-1' or template == 'custom-flair-gensim-2':
-
         assert(EMBEDDINGS_DIR != None)
         for fname in get_NILC(EMBEDDINGS_DIR):
             for item in skip_list:
                 if item in fname:
                     break
             else:
-                emb = KeyedVectors.load(fname)
-                params["gensim_model"] = emb
-                if template == 'flair-gensim':
-                    params["flair_model"] = ELMoEmbeddings('pt')
-                elif template == 'custom-flair-gensim-1':
-                    params["flair_model"] = ELMoEmbeddings(options_file="../embeddings/elmo/options.json", weight_file="../embeddings/elmo/elmo_pt_weights.hdf5")
-                elif template == 'custom-flair-gensim-2':
-                    params["flair_model"] = ELMoEmbeddings(options_file="../embeddings/elmo/options_dgx1.json", weight_file="../embeddings/elmo/elmo_pt_weights_dgx1.hdf5")
-                model = Embedding(**params)
                 t = test_name + '_' + fname
                 for lang in langs:
+                    if test_already_done(t, lang):
+                        continue
+                    emb = KeyedVectors.load(fname)
+                    params["gensim_model"] = emb
+                    if template == 'flair-gensim':
+                        params["flair_model"] = ELMoEmbeddings('pt')
+                    elif template == 'custom-flair-gensim-1':
+                        params["flair_model"] = ELMoEmbeddings(options_file="../embeddings/elmo/options.json", weight_file="../embeddings/elmo/elmo_pt_weights.hdf5")
+                    elif template == 'custom-flair-gensim-2':
+                        params["flair_model"] = ELMoEmbeddings(options_file="../embeddings/elmo/options_dgx1.json", weight_file="../embeddings/elmo/elmo_pt_weights_dgx1.hdf5")
+                    model = Embedding(**params)
                     measure = get_measure(model, lang, t)
                     yield measure
         
@@ -175,10 +190,8 @@ def evaluate_sentence_similarity(parameters):
     class_name = parameters["params"]["freqs"]
     parameters["params"]["freqs"] = globals()[class_name]()
 
-    results = []
     for measure in call_test(**parameters):
-        results.append(measure)
-    return results
+        yield measure
 
 if __name__ == '__main__':
   
@@ -199,7 +212,12 @@ if __name__ == '__main__':
     freqs = WordFreq()
 
     logger.add(LOGS_PATH + "evaluate_{time}.log")
-    RESULTS_FILE = RESULTS_PATH + 'stats-' + str(int(datetime.datetime.now().timestamp())) + '.json'
+    RESULTS_FILE = RESULTS_PATH + 'stats.json'
+    try:
+        open(RESULTS_FILE, 'r').close()
+    except:
+        with open(RESULTS_FILE, 'w+') as f:
+            json.dump([], f)
 
     training_list = []
     for idx,key in enumerate(tests):
@@ -207,12 +225,14 @@ if __name__ == '__main__':
             parameters = tests[key]
             training_list.append(parameters)
 
-
-    db = dataset.connect(settings['database'])
-    table = db[settings['database_table']]
-
     logger.debug('Start evaluation.')
+    logger.debug(RESULTS_FILE)
+    results = []
     for item in training_list:
         for measure in evaluate_sentence_similarity(item):
+            with open(RESULTS_FILE, 'r') as f:
+                results = json.load(f)
             logger.debug(measure)
-            table.insert(measure)
+            results.append(measure)
+            with open(RESULTS_FILE, 'w+') as f:
+                json.dump(results, f)
