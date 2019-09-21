@@ -2,12 +2,24 @@ workers: 1
 database: 'sqlite:///results.db'
 database_table: results
 
+preprocessing: {
+  path: './sources',
+  xml_files: [
+    'assin-ptbr-dev.xml',
+    'assin-ptbr-train.xml',
+    'assin-ptbr-test.xml',
+    'assin-ptpt-dev.xml',
+    'assin-ptpt-test.xml',
+    'assin-ptpt-train.xml'
+  ]
+}
+
 ELMo: {
   name: 'pt'
 }
 
 ASSIN: {
-  path: './datasets/ASSIN/',
+  path: './sources/',
   entailment: {
     -1: 'NONE',
     0: 'NONE',
@@ -16,12 +28,12 @@ ASSIN: {
   },
   files: {
     ptbr: {
-      'train': 'assin-ptbr-train-hartmann.json',
-      'test': 'assin-ptbr-test-gold-hartmann.json'
+      'train': 'assin-ptbr-train.json',
+      'test': 'assin-ptbr-test.json'
     },
     pteu: { 
-      'train': 'assin-ptpt-train-hartmann.json',
-      'test': 'assin-ptpt-test-gold-hartmann.json'
+      'train': 'assin-ptpt-train.json',
+      'test': 'assin-ptpt-test.json'
     }
   }
 }

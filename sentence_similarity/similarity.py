@@ -51,11 +51,13 @@ class Embedding(object):
         self.test_sims = None
         self.results = None
         self.unk = unk
+        with open('./sources/dictionary.json','r') as f:
+            self.dictionary = json.load(f)
 
     def similarity(self, df, func, label_a, label_b):
-        sentences1 = [Sentence(' '.join(s)) for s in df[label_a]]
-        sentences2 = [Sentence(' '.join(s)) for s in df[label_b]]
-        benchmark = ft.partial(func, gensim_model=self.gensim_model, flair_model=self.flair_model, gensim_sif=self.gensim_sif, flair_sif=self.flair_sif, freqs=self.freqs, total_freq=self.total_freq, a=self.a, unk=self.unk)
+        sentences1 = [ s for s in df[label_a]]
+        sentences2 = [ s for s in df[label_b]]
+        benchmark = ft.partial(func, gensim_model=self.gensim_model, flair_model=self.flair_model, gensim_sif=self.gensim_sif, flair_sif=self.flair_sif, freqs=self.freqs, total_freq=self.total_freq, a=self.a, unk=self.unk, dictionary=self.dictionary)
         sims = benchmark(sentences1, sentences2)
         return sims
 
