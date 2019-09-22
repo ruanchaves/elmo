@@ -1,46 +1,13 @@
 
 queue: [
-  0,
-  1,
   2,
-  3,
-  4,
-  5,
-  6,
-  7
+  # 3,
+  # 4
   ]
 
-0: {
-  template: "flair-custom-1",
-  test_name: "ELMo_wiki",
-  langs: ["ptbr", "pteu"],
-  params: {
-    gensim_sif: False,
-    flair_sif: False,
-    freqs: "WordFreq",
-    total_freq: 1.0,
-    a: 0.001,
-    unk: False
-  }
-}
-
-1: {
-  template: "flair-custom-2",
-  test_name: "ELMo_brwac",
-  langs: ["ptbr", "pteu"],
-  params: {
-    gensim_sif: False,
-    flair_sif: False,
-    freqs: "WordFreq",
-    total_freq: 1.0,
-    a: 0.001,
-    unk: False
-  }
-}
-
 2: {
-  template: "flair",
-  test_name: "ELMo_default",
+  template: "bert",
+  test_name: "BERT",
   langs: ["ptbr", "pteu"],
   params: {
     gensim_sif: False,
@@ -53,48 +20,6 @@ queue: [
 }
 
 3: {
-  template: "flair-gensim",
-  test_name: "ELMo_default_NILC",
-  langs: ["ptbr", "pteu"],
-  params: {
-    gensim_sif: False,
-    flair_sif: False,
-    freqs: "WordFreq",
-    total_freq: 1.0,
-    a: 0.001,
-    unk: False
-  }
-}
-
-4: {
-  template: "custom-flair-gensim-1",
-  test_name: "ELMo_wiki_NILC",
-  langs: ["ptbr", "pteu"],
-  params: {
-    gensim_sif: False,
-    flair_sif: False,
-    freqs: "WordFreq",
-    total_freq: 1.0,
-    a: 0.001,
-    unk: False
-  }
-}
-
-5: {
-  template: "custom-flair-gensim-2",
-  test_name: "ELMo_brwac_NILC",
-  langs: ["ptbr", "pteu"],
-  params: {
-    gensim_sif: False,
-    flair_sif: False,
-    freqs: "WordFreq",
-    total_freq: 1.0,
-    a: 0.001,
-    unk: False
-  }
-}
-
-6: {
   template: "gensim",
   test_name: "NILC",
   langs: ["ptbr", "pteu"],
@@ -108,7 +33,7 @@ queue: [
   }
 }
 
-7: {
+4: {
   template: "gensim",
   test_name: "NILC_with_unk",
   langs: ["ptbr", "pteu"],

@@ -29,7 +29,8 @@ def cosine_distance(
     sentences1, 
     sentences2, 
     gensim_model=None, 
-    flair_model=None, 
+    flair_model=None,
+    bert_model=None, 
     gensim_sif=False, 
     flair_sif=False, 
     freqs={}, 
@@ -41,10 +42,15 @@ def cosine_distance(
     sims = {}
     embeddings = []
     embeddings_pos = []
-    equivalence = True
+    equivalence = False
     for sent_index, (sent1, sent2) in enumerate(zip(sentences1, sentences2)):
         tokens1 = [x.text for x in Sentence(sent1).tokens]
-        tokens2 = [x.text for x in Sentence(sent2).tokens]    
+        tokens2 = [x.text for x in Sentence(sent2).tokens]
+
+        if bert_model:
+
+            embedding1 = bert_model.encode([sent1])[0]
+            embedding2 = bert_model.encode([sent2])[0]    
 
         if gensim_model:
 

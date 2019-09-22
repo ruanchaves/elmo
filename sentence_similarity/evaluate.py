@@ -15,8 +15,8 @@ import os
 import datetime
 from wordfreq import word_frequency
 import random
-import dataset
 import concurrent.futures
+from bert_serving.client import BertClient
 
 def run_regression(model, func):
     model.get_sims(func).format()
@@ -112,6 +112,15 @@ def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANAL
             model = Embedding(**params)
             measure = get_measure(model, 'en', test_name, sick=True)
             yield measure
+
+    elif template == 'bert':
+        for lang in langs:
+            if test_already_done(test_name, lang):
+                continue
+            params["bert_model"] = BertClient()
+            model = Embedding(**params)
+            measure = get_measure(model, lang, test_name)
+            yield measure            
 
     elif template == 'flair':
         for lang in langs:

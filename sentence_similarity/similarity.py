@@ -36,9 +36,10 @@ class Loader(object):
 
 class Embedding(object):
 
-    def __init__(self, gensim_model=None, flair_model=None, gensim_sif=False, flair_sif=False, freqs={}, a=0.001, unk=False, total_freq=1.0):
+    def __init__(self, gensim_model=None, flair_model=None, bert_model=None, gensim_sif=False, flair_sif=False, freqs={}, a=0.001, unk=False, total_freq=1.0):
         self.gensim_model = gensim_model
         self.flair_model = flair_model
+        self.bert_model = bert_model
         self.gensim_sif = gensim_sif
         self.flair_sif = flair_sif
         self.freqs = freqs
@@ -57,7 +58,7 @@ class Embedding(object):
     def similarity(self, df, func, label_a, label_b):
         sentences1 = [ s for s in df[label_a]]
         sentences2 = [ s for s in df[label_b]]
-        benchmark = ft.partial(func, gensim_model=self.gensim_model, flair_model=self.flair_model, gensim_sif=self.gensim_sif, flair_sif=self.flair_sif, freqs=self.freqs, total_freq=self.total_freq, a=self.a, unk=self.unk, dictionary=self.dictionary)
+        benchmark = ft.partial(func, gensim_model=self.gensim_model, bert_model=self.bert_model, flair_model=self.flair_model, gensim_sif=self.gensim_sif, flair_sif=self.flair_sif, freqs=self.freqs, total_freq=self.total_freq, a=self.a, unk=self.unk, dictionary=self.dictionary)
         sims = benchmark(sentences1, sentences2)
         return sims
 
