@@ -1,6 +1,9 @@
 name,embedding,model,size,proc_info,pearson
 ELMo_wiki,0,0,0,preprocessed,0.62
+ELMo_wiki,0,0,0,not_preprocessed,0.62
 ELMo_default,0,0,0,preprocessed,0.61
+ELMo_default,0,0,0,not_preprocessed,0.61
+BERT_layer11,0,0,0,preprocessed,0.6
 ELMo_brwac,0,0,0,preprocessed,0.59
 NILC_..,fasttext,skip_s1000,1000,preprocessed,0.59
 NILC_with_unk_..,fasttext,skip_s1000,1000,preprocessed,0.59
@@ -18,7 +21,6 @@ NILC_with_unk_..,fasttext,skip_s300,300,preprocessed,0.56
 NILC_..,fasttext,skip_s300,300,preprocessed,0.56
 NILC_with_unk_..,wang2vec,skip_s300,300,preprocessed,0.56
 NILC_..,wang2vec,skip_s300,300,preprocessed,0.56
-BERT,0,0,0,preprocessed,0.55
 NILC_..,word2vec,cbow_s300,300,preprocessed,0.55
 NILC_with_unk_..,word2vec,cbow_s300,300,preprocessed,0.55
 NILC_with_unk_..,word2vec,skip_s1000,1000,preprocessed,0.55
@@ -49,7 +51,6 @@ NILC_with_unk_..,wang2vec,cbow_s100,100,not_preprocessed,0.49
 NILC_with_unk_..,wang2vec,skip_s600,600,not_preprocessed,0.49
 NILC_with_unk_..,word2vec,cbow_s600,600,not_preprocessed,0.49
 NILC_with_unk_..,word2vec,cbow_s600,600,not_preprocessed,0.49
-BERT,0,0,0,not_preprocessed,0.49
 NILC_with_unk_..,word2vec,cbow_s300,300,not_preprocessed,0.49
 NILC_with_unk_..,fasttext,skip_s50,50,preprocessed,0.49
 NILC_with_unk_..,word2vec,cbow_s1000,1000,not_preprocessed,0.49
