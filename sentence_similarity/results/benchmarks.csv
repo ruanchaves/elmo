@@ -1,8 +1,6 @@
 name,embedding,model,size,proc_info,pearson
 ELMo_wiki,0,0,0,preprocessed,0.62
-ELMo_wiki,0,0,0,not_preprocessed,0.62
 ELMo_default,0,0,0,preprocessed,0.61
-ELMo_default,0,0,0,not_preprocessed,0.61
 BERT_layer11,0,0,0,preprocessed,0.6
 ELMo_brwac,0,0,0,preprocessed,0.59
 NILC_..,fasttext,skip_s1000,1000,preprocessed,0.59
