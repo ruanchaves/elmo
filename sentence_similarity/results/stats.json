@@ -1,1 +1,16 @@
-[{"test": "BERT", "pearson": 0.5506652403171166, "MSE": 0.5329286538541564, "lang": "ptbr", "timestamp": 1569161188}, {"test": "BERT", "pearson": 0.5094496427694575, "MSE": 0.8814460121753236, "lang": "pteu", "timestamp": 1569161576}, {"test": "BERT_layer11", "pearson": 0.6035548166883316, "MSE": 0.4834512985322094, "lang": "ptbr", "timestamp": 1569167249}, {"test": "BERT_layer11", "pearson": 0.5641877377532151, "MSE": 0.8130964114629933, "lang": "pteu", "timestamp": 1569167346}]
+[
+    {
+        "test": "BERT_layer11",
+        "pearson": 0.6035548166883316,
+        "MSE": 0.4834512985322094,
+        "lang": "ptbr",
+        "timestamp": 1569167249
+    },
+    {
+        "test": "BERT_layer11",
+        "pearson": 0.5641877377532151,
+        "MSE": 0.8130964114629933,
+        "lang": "pteu",
+        "timestamp": 1569167346
+    }
+]
