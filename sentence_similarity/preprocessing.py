@@ -6,9 +6,8 @@ from sys import stdout
 import argparse
 import re
 import nltk
-import hashlib
 import yaml 
-from utils import load_yaml, sentence_to_hash
+from utils import load_yaml
 
 class JSONReader(object):
     

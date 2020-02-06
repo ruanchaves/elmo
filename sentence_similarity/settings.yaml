@@ -10,7 +10,10 @@ preprocessing: {
     'assin-ptbr-test.xml',
     'assin-ptpt-dev.xml',
     'assin-ptpt-test.xml',
-    'assin-ptpt-train.xml'
+    'assin-ptpt-train.xml',
+    'assin2-dev.xml',
+    'assin2-test.xml',
+    'assin2-train.xml'
   ]
 }
 
@@ -34,6 +37,10 @@ ASSIN: {
     pteu: { 
       'train': 'assin-ptpt-train.json',
       'test': 'assin-ptpt-test.json'
+    },
+    assin2: {
+      'train': 'assin2-train.json',
+      'test': 'assin2-test.json'
     }
   }
 }

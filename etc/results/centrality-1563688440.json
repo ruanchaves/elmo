@@ -1,1 +1,0 @@
-[{"local_clustering_coefficient": 0, "indegree_centrality": 0, "eigenvector_centrality": 0, "key": "unk", "model": "./embeddings/USP/fasttext/cbow_s100.model"}, {"local_clustering_coefficient": 0.26666666666666666, "indegree_centrality": 6, "eigenvector_centrality": 11, "key": "iconoclasm", "model": "./embeddings/USP/fasttext/cbow_s100.model"}]

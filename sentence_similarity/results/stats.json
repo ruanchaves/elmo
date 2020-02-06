@@ -1,16 +1,1 @@
-[
-    {
-        "test": "BERT_layer11",
-        "pearson": 0.6035548166883316,
-        "MSE": 0.4834512985322094,
-        "lang": "ptbr",
-        "timestamp": 1569167249
-    },
-    {
-        "test": "BERT_layer11",
-        "pearson": 0.5641877377532151,
-        "MSE": 0.8130964114629933,
-        "lang": "pteu",
-        "timestamp": 1569167346
-    }
-]
+[]

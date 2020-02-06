@@ -1,14 +1,34 @@
 
 queue: [
+  1,
   2,
-  # 3,
-  # 4
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
   ]
+
+1: {
+  template: "flair",
+  test_name: "ELMo",
+  langs: ["ptbr", "pteu", "assin2"],
+  params: {
+    gensim_sif: False,
+    flair_sif: False,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
 
 2: {
   template: "bert",
   test_name: "BERT_layer11",
-  langs: ["ptbr", "pteu"],
+  langs: ["ptbr", "pteu", "assin2"],
   params: {
     gensim_sif: False,
     flair_sif: False,
@@ -22,7 +42,7 @@ queue: [
 3: {
   template: "gensim",
   test_name: "NILC",
-  langs: ["ptbr", "pteu"],
+  langs: ["ptbr", "pteu", "assin2"],
   params: {
     gensim_sif: False,
     flair_sif: False,
@@ -36,7 +56,7 @@ queue: [
 4: {
   template: "gensim",
   test_name: "NILC_with_unk",
-  langs: ["ptbr", "pteu"],
+  langs: ["ptbr", "pteu", "assin2"],
   params: {
     gensim_sif: False,
     flair_sif: False,
@@ -44,5 +64,75 @@ queue: [
     total_freq: 1.0,
     a: 0.001,
     unk: True
+  }
+}
+
+5: {
+  template: "flair-gensim",
+  test_name: "ELMo_NILC",
+  langs: ["ptbr", "pteu", "assin2"],
+  params: {
+    gensim_sif: False,
+    flair_sif: False,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
+
+6: {
+  template: "custom-flair-gensim-1",
+  test_name: "ELMo_NILC_custom1",
+  langs: ["ptbr", "pteu", "assin2"],
+  params: {
+    gensim_sif: False,
+    flair_sif: False,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
+
+7: {
+  template: "custom-flair-gensim-2",
+  test_name: "ELMo_NILC_custom2",
+  langs: ["ptbr", "pteu", "assin2"],
+  params: {
+    gensim_sif: False,
+    flair_sif: False,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
+
+8: {
+  template: "flair-custom-1",
+  test_name: "ELMo",
+  langs: ["ptbr", "pteu", "assin2"],
+  params: {
+    gensim_sif: False,
+    flair_sif: False,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
+
+9: {
+  template: "flair-custom-2",
+  test_name: "ELMo",
+  langs: ["ptbr", "pteu", "assin2"],
+  params: {
+    gensim_sif: False,
+    flair_sif: False,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
   }
 }
