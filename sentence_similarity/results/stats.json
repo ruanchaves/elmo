@@ -1,1 +1,1 @@
-[]
+[{"test": "ELMo", "pearson": 0.6107066764203652, "MSE": 0.4790609804274456, "lang": "ptbr", "timestamp": 1581029716}, {"test": "ELMo", "pearson": 0.6201984016680389, "MSE": 0.7453435002038312, "lang": "pteu", "timestamp": 1581033327}, {"test": "ELMo", "pearson": 0.5535828714584121, "MSE": 1.9668846074346336, "lang": "assin2", "timestamp": 1581036529}]

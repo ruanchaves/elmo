@@ -1,46 +1,16 @@
 Portuguese ELMo 
 =================
 
-This repository has the source code for the evaluation of Portuguese ELMo models published at 
-
-Here's the source code for the model that has been submitted by the Deep Learning Brasil team to the 
-[II Evaluation of Semantic Textual Similarity and Textual Inference in Portuguese](https://sites.google.com/view/assin2/english) 
-that happened in 2019 during the [Symposium in Information and Human Language Technology](http://comissoes.sbc.org.br/ce-pln/stil2019/).
-
-It achieved the best results among all submissions for the entailment task.
-
-You may also want to read the current version of [our presentation slides](https://github.com/ruanchaves/assin/blob/master/STIL2019_presentation.pdf). A paper and a brief blog post on our findings are currently in the works.
-
 ## Installation
 
-In order to reproduce our results, simply execute the commands below:
+Assuming you have installed Docker and nvidia-docker, the command below will reproduce all test results on this repository.
 
 ```
-python3.6 -m venv assin2_env
-source assin2_env/bin/activate
-pip install -r requirements.txt
-python assin-roberta.py settings.json
-python assin-eval.py  assin2-test.xml ./submission/assin2/submission.xml
+BERT_DIR=multi_cased_L-12_H-768_A-12 bash scripts/start.sh
 ```
 
-Depending on your resources you may want to edit `settings.json` and increase the amount of workers. Generally speaking, each worker will consume around 8 gigabytes of GPU memory. 
+`BERT_DIR=multi_cased_L-12_H-768_A-12` means that the BERT model is under the folder `embeddings/bert/BERT_DIR=multi_cased_L-12_H-768_A-12`. It must be provided as a model checkpoint that can be understood by [bert-as-service](https://github.com/hanxiao/bert-as-service) .
 
-Increasing both the `buckets` and `kfold_buckets` parameters on the `settings.json` file by the same amount is expected to increase the accuracy of the model, although it will also proportionately increase the training time.
+Running this command will generate the `ruanchaves/elmo:2.0` docker image, if it doesn't exist yet, and also download all NILC embeddings, if they still haven't been downloaded to the `embeddings/NILC` folder.
 
-
-## Citation
-
-A paper about our findings is planned to be released next year. 
-Until then, you may cite this very repository: 
-
-```
-@misc{Rodrigues2019,
-  author = {Ruan Chaves Rodrigues and Jéssica Rodrigues da Silva and Pedro Vitor Quinta de Castro and Nádia Félix Felipe da Silva and Anderson da Silva Soares},
-  title = {ASSIN},
-  year = {2019},
-  publisher = {GitHub},
-  journal = {GitHub repository},
-  howpublished = {\url{https://github.com/ruanchaves/assin}},
-  commit = {f8c3f185fb3bcd106c8a0e5a12d9ef2c6119ec74}
-}
-```
+After these startup steps have been performed, it will automatically start a [bert-as-service](https://github.com/hanxiao/bert-as-service) server and perform all tests specified on `sentence_similarity/tests.yaml`. The results will be saved to `sentence_similarity/results/stats.json`.

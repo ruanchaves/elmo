@@ -1,3 +1,6 @@
+#results
+sentence_similarity/results/stats.json
+
 # ELMo embeddings
 embeddings/NILC/
 embeddings/elmo/
