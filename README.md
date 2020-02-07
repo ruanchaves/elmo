@@ -9,7 +9,7 @@ Assuming you have installed Docker and nvidia-docker, the command below will rep
 BERT_DIR=multi_cased_L-12_H-768_A-12 bash scripts/start.sh
 ```
 
-`BERT_DIR=multi_cased_L-12_H-768_A-12` means that the BERT model is under the folder `embeddings/bert/BERT_DIR=multi_cased_L-12_H-768_A-12`. It must be provided as a model checkpoint that can be understood by [bert-as-service](https://github.com/hanxiao/bert-as-service) .
+`BERT_DIR=multi_cased_L-12_H-768_A-12` means that the BERT model is under the folder `embeddings/bert/multi_cased_L-12_H-768_A-12`. It must be provided as a model checkpoint that can be understood by [bert-as-service](https://github.com/hanxiao/bert-as-service) .
 
 Running this command will generate the `ruanchaves/elmo:2.0` docker image, if it doesn't exist yet, and also download all NILC embeddings, if they still haven't been downloaded to the `embeddings/NILC` folder.
 
