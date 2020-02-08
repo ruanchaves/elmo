@@ -6,6 +6,7 @@ import json
 from urllib.request import urlopen
 from loguru import logger
 from gensim.models import KeyedVectors
+import pathlib
 
 def get_large_file(url, file, length=16*1024):
     req = urlopen(url)
@@ -33,10 +34,8 @@ if __name__ == '__main__':
         folder = url.split('/')[-2]
         dst = url.split('/')[-1]
 
-        try:
-            os.mkdir(NILC_DIR + folder)
-        except FileExistsError as e:
-            pass
+        target_dir = NILC_DIR + folder
+        pathlib.Path(target_dir).mkdir(parents=True, exist_ok=True)
 
         destination = NILC_DIR + folder + '/' + dst
 

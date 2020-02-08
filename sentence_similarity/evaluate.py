@@ -237,7 +237,7 @@ if __name__ == '__main__':
     logger.debug('Start evaluation.')
     logger.debug(RESULTS_FILE)
     results = []
-    random.shuffle(training_list)
+    # random.shuffle(training_list)
     for item in training_list:
         for measure in evaluate_sentence_similarity(item):
             with open(RESULTS_FILE, 'r') as f:

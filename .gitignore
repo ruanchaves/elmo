@@ -3,6 +3,8 @@ sentence_similarity/results/stats.json
 
 # ELMo embeddings
 embeddings/NILC/
+embeddings/NILC_old/
+embeddings/NILC_old2/
 embeddings/elmo/
 embeddings/bert/
 
