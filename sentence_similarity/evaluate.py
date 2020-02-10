@@ -208,8 +208,11 @@ if __name__ == '__main__':
     tests = {}
     results = []
 
+    test_file = '../settings/' + os.environ['TESTS']
+    stats_file = os.environ['RESULTS']
+
     settings = load_yaml("settings.yaml")
-    tests = load_yaml("tests.yaml")
+    tests = load_yaml(test_file)
 
     LOGS_PATH = settings['logs']['path']
     RESULTS_PATH = settings['results']['path']
@@ -221,7 +224,7 @@ if __name__ == '__main__':
     freqs = WordFreq()
 
     logger.add(LOGS_PATH + "evaluate_{time}.log")
-    RESULTS_FILE = RESULTS_PATH + 'stats.json'
+    RESULTS_FILE = RESULTS_PATH + stats_file
     try:
         open(RESULTS_FILE, 'r').close()
     except:
