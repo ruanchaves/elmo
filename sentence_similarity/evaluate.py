@@ -241,6 +241,7 @@ if __name__ == '__main__':
 
     logger.debug('Start evaluation.')
     logger.debug(RESULTS_FILE)
+    logger.debug('Training list: ' + str(training_list))
     results = []
     # random.shuffle(training_list)
     for item in training_list:
