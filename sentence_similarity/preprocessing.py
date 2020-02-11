@@ -132,14 +132,25 @@ class Tokenizer(object):
         sentence_dict = {}
         print(fnames)
         root = None
+        with open('stopwords.json','r') as f:
+            stopwords = json.load(f)
         for item in reader.get_json(fnames):
             root = item['root']
             file_df = []
             target = os.path.join(item['root'], item['name'].rstrip('xml') + 'json')
             for entry in item['df']:
                 file_df.append(entry)
-                sentence_dict[entry['t']] = self.NILC_tokenize(entry['t'])
-                sentence_dict[entry['h']] = self.NILC_tokenize(entry['h'])
+                t_array = self.NILC_tokenize(entry['t'])
+                h_array = self.NILC_tokenize(entry['h'])
+                
+                t_array = [ x for x in t_array if len(x) > 1 ]
+                h_array = [ x for x in h_array if len(x) > 1 ]
+
+                t_array = [ x for x in t_array if x not in stopwords ]
+                h_array = [ x for x in h_array if x not in stopwords ]  
+
+                sentence_dict[entry['t']] = t_array
+                sentence_dict[entry['h']] = h_array
             with open(target, 'w+') as f:
                 json.dump(file_df, f)
         else:

@@ -1,0 +1,50 @@
+
+queue: [
+  1,
+  2
+  ]
+
+1: {
+  template: "flair-custom-1",
+  test_name: "ELMo_custom1",
+  langs: ["ptbr", "pteu", "assin2"],
+  skip_list: ["fasttext", "glove"],
+  params: {
+    gensim_sif: False,
+    flair_sif: False,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
+
+2: {
+  template: "flair-custom-2",
+  test_name: "ELMo_custom2",
+  langs: ["ptbr", "pteu", "assin2"],
+  params: {
+    gensim_sif: False,
+    flair_sif: False,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+
+3: {
+  template: "flair",
+  test_name: "ELMo",
+  langs: ["ptbr", "pteu", "assin2"],
+  params: {
+    gensim_sif: False,
+    flair_sif: False,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
+
+
+}

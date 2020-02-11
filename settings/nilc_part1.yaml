@@ -1,0 +1,19 @@
+
+queue: [
+  1,
+  ]
+
+1: {
+  template: "gensim",
+  test_name: "NILC_part1",
+  langs: ["ptbr", "pteu", "assin2"],
+  skip_list: ["fasttext", "glove"],
+  params: {
+    gensim_sif: False,
+    flair_sif: False,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
