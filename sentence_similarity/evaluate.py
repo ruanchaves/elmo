@@ -146,6 +146,7 @@ def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANAL
     elif template == 'gensim' or template == 'flair-gensim' or template == 'custom-flair-gensim-1' or template == 'custom-flair-gensim-2':
         assert(EMBEDDINGS_DIR != None)
         logger.debug("Template: " + template)
+        logger.debug("EMBEDDINGS_DIR: " + EMBEDDINGS_DIR)
         for fname in get_NILC(EMBEDDINGS_DIR):
             logger.debug("Embedding: " + fname)
             for item in skip_list:
