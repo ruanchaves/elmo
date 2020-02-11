@@ -88,7 +88,7 @@ def test_already_done(name, lang):
         results = json.load(f)
         for item in results:
             if item['test'] == name and item['lang'] == lang:
-                logger.debug("SKIP - {0}".format(name))
+                logger.debug("SKIP - test_already_done - {0}".format(name))
                 return True
     logger.debug("RUN - {0}".format(name))
     return False
