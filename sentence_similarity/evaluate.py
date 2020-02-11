@@ -148,8 +148,10 @@ def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANAL
         for fname in get_NILC(EMBEDDINGS_DIR):
             for item in skip_list:
                 if item in fname:
+                    logger.debug("SKIP - skip_list - {0}".format(fname))
                     break
             else:
+                logger.debug("RUN - {0}".format(fname))
                 t = test_name + '_' + fname
                 for lang in langs:
                     if test_already_done(t, lang):
