@@ -147,6 +147,7 @@ def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANAL
         assert(EMBEDDINGS_DIR != None)
         logger.debug("Template: " + template)
         logger.debug("EMBEDDINGS_DIR: " + EMBEDDINGS_DIR)
+        logger.debug("skip-list: " + str(skip_list))
         for fname in get_NILC(EMBEDDINGS_DIR):
             logger.debug("Embedding: " + fname)
             for item in skip_list:
