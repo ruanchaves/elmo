@@ -1,7 +1,5 @@
 
-queue: [
-  1,
-  ]
+queue: [ 1 ]
 
 1: {
   template: "gensim",

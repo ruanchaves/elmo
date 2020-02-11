@@ -1,7 +1,8 @@
 
 queue: [
   1,
-  2
+  2,
+  3
   ]
 
 1: {
@@ -31,6 +32,7 @@ queue: [
     a: 0.001,
     unk: False
   }
+}
 
 3: {
   template: "flair",
@@ -44,7 +46,4 @@ queue: [
     a: 0.001,
     unk: False
   }
-}
-
-
 }
