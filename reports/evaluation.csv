@@ -1,0 +1,74 @@
+dataset,ELMo,embedding,unk,architecture,dimensions,PCC,MSE
+ASSIN ( pt-BR ),BRWAC, ,False, , ,0.59,0.49
+ASSIN ( pt-BR ),BRWAC,fasttext,False,CBOW,300,0.35,0.67
+ASSIN ( pt-BR ),BRWAC,fasttext,False,skip-gram,50,0.59,0.5
+ASSIN ( pt-BR ),BRWAC,fasttext,False,skip-gram,100,0.59,0.5
+ASSIN ( pt-BR ),BRWAC,fasttext,False,skip-gram,300,0.59,0.5
+ASSIN ( pt-BR ),BRWAC,fasttext,False,skip-gram,600,0.59,0.5
+ASSIN ( pt-BR ),wiki (reduced), ,False, , ,0.62,0.47
+ASSIN ( pt-BR ),wiki (reduced),fasttext,False,CBOW,50,0.33,0.68
+ASSIN ( pt-BR ),wiki (reduced),fasttext,False,CBOW,100,0.34,0.67
+ASSIN ( pt-BR ),wiki (reduced),fasttext,False,CBOW,300,0.35,0.67
+ASSIN ( pt-BR ),wiki (reduced),fasttext,False,CBOW,600,0.37,0.66
+ASSIN ( pt-BR ),wiki (reduced),fasttext,False,CBOW,1000,0.37,0.66
+ASSIN ( pt-BR ),wiki (reduced),fasttext,False,skip-gram,50,0.59,0.49
+ASSIN ( pt-BR ),wiki (reduced),fasttext,False,skip-gram,100,0.59,0.5
+ASSIN ( pt-BR ),wiki (reduced),fasttext,False,skip-gram,300,0.59,0.49
+ASSIN ( pt-BR ),wiki (reduced),fasttext,False,skip-gram,600,0.59,0.5
+ASSIN ( pt-BR ),wiki (reduced),fasttext,False,skip-gram,1000,0.6,0.48
+ASSIN ( pt-BR ),wiki (reduced),glove,False, ,50,0.48,0.58
+ASSIN ( pt-BR ),wiki (reduced),glove,False, ,100,0.49,0.58
+ASSIN ( pt-BR ),wiki (reduced),glove,False, ,300,0.49,0.58
+ASSIN ( pt-BR ),wiki (reduced),glove,False, ,600,0.47,0.59
+ASSIN ( pt-BR ),wiki (reduced),glove,False, ,1000,0.48,0.59
+ASSIN ( pt-BR ),wiki (reduced),word2vec,False,skip-gram,50,0.61,0.47
+ASSIN ( pt-BR ),wiki (reduced),word2vec,False,skip-gram,100,0.62,0.47
+ASSIN ( pt-BR ),wiki (reduced),word2vec,False,skip-gram,300,0.62,0.47
+ASSIN ( pt-PT ),BRWAC, ,False, , ,0.6,0.77
+ASSIN ( pt-PT ),BRWAC,fasttext,False,CBOW,300,0.35,1.03
+ASSIN ( pt-PT ),BRWAC,fasttext,False,skip-gram,50,0.56,0.81
+ASSIN ( pt-PT ),BRWAC,fasttext,False,skip-gram,100,0.55,0.82
+ASSIN ( pt-PT ),BRWAC,fasttext,False,skip-gram,300,0.56,0.8
+ASSIN ( pt-PT ),BRWAC,fasttext,False,skip-gram,600,0.55,0.82
+ASSIN ( pt-PT ),wiki (reduced), ,False, , ,0.63,0.73
+ASSIN ( pt-PT ),wiki (reduced),fasttext,False,CBOW,50,0.33,1.05
+ASSIN ( pt-PT ),wiki (reduced),fasttext,False,CBOW,100,0.34,1.04
+ASSIN ( pt-PT ),wiki (reduced),fasttext,False,CBOW,300,0.35,1.04
+ASSIN ( pt-PT ),wiki (reduced),fasttext,False,CBOW,600,0.37,1.02
+ASSIN ( pt-PT ),wiki (reduced),fasttext,False,CBOW,1000,0.36,1.02
+ASSIN ( pt-PT ),wiki (reduced),fasttext,False,skip-gram,50,0.55,0.82
+ASSIN ( pt-PT ),wiki (reduced),fasttext,False,skip-gram,100,0.54,0.83
+ASSIN ( pt-PT ),wiki (reduced),fasttext,False,skip-gram,300,0.55,0.82
+ASSIN ( pt-PT ),wiki (reduced),fasttext,False,skip-gram,600,0.53,0.84
+ASSIN ( pt-PT ),wiki (reduced),fasttext,False,skip-gram,1000,0.58,0.78
+ASSIN ( pt-PT ),wiki (reduced),glove,False, ,50,0.37,1.0
+ASSIN ( pt-PT ),wiki (reduced),glove,False, ,100,0.37,1.0
+ASSIN ( pt-PT ),wiki (reduced),glove,False, ,300,0.38,0.99
+ASSIN ( pt-PT ),wiki (reduced),glove,False, ,600,0.36,1.01
+ASSIN ( pt-PT ),wiki (reduced),glove,False, ,1000,0.37,1.01
+ASSIN ( pt-PT ),wiki (reduced),word2vec,False,skip-gram,50,0.62,0.75
+ASSIN ( pt-PT ),wiki (reduced),word2vec,False,skip-gram,100,0.62,0.74
+ASSIN ( pt-PT ),wiki (reduced),word2vec,False,skip-gram,300,0.62,0.74
+ASSIN 2,BRWAC, ,False, , ,0.6,1.89
+ASSIN 2,BRWAC,fasttext,False,skip-gram,50,0.57,1.92
+ASSIN 2,BRWAC,fasttext,False,skip-gram,100,0.57,1.92
+ASSIN 2,BRWAC,fasttext,False,skip-gram,300,0.58,1.9
+ASSIN 2,BRWAC,fasttext,False,skip-gram,600,0.57,1.9
+ASSIN 2,wiki (reduced), ,False, , ,0.57,1.94
+ASSIN 2,wiki (reduced),fasttext,False,CBOW,50,0.39,2.08
+ASSIN 2,wiki (reduced),fasttext,False,CBOW,100,0.41,2.08
+ASSIN 2,wiki (reduced),fasttext,False,CBOW,300,0.42,2.07
+ASSIN 2,wiki (reduced),fasttext,False,CBOW,600,0.44,2.05
+ASSIN 2,wiki (reduced),fasttext,False,CBOW,1000,0.44,2.04
+ASSIN 2,wiki (reduced),fasttext,False,skip-gram,50,0.54,1.96
+ASSIN 2,wiki (reduced),fasttext,False,skip-gram,100,0.54,1.96
+ASSIN 2,wiki (reduced),fasttext,False,skip-gram,300,0.55,1.94
+ASSIN 2,wiki (reduced),fasttext,False,skip-gram,600,0.55,1.94
+ASSIN 2,wiki (reduced),fasttext,False,skip-gram,1000,0.58,1.9
+ASSIN 2,wiki (reduced),glove,False, ,50,0.47,2.02
+ASSIN 2,wiki (reduced),glove,False, ,100,0.48,2.01
+ASSIN 2,wiki (reduced),glove,False, ,300,0.49,2.0
+ASSIN 2,wiki (reduced),glove,False, ,600,0.48,2.0
+ASSIN 2,wiki (reduced),glove,False, ,1000,0.49,1.99
+ASSIN 2,wiki (reduced),word2vec,False,skip-gram,50,0.57,1.93
+ASSIN 2,wiki (reduced),word2vec,False,skip-gram,100,0.57,1.92
