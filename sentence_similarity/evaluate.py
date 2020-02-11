@@ -103,7 +103,7 @@ class WordFreqEn(object):
 
 
 def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANALOGIES_FILE="", ANALOGIES_DIR="", EMBEDDINGS_DIR=""):
- 
+    logger.debug('call_test : {0}'.format(test_name))
     if template == 'sick':
         for lang in langs:
             if test_already_done(test_name, lang):
@@ -145,7 +145,9 @@ def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANAL
 
     elif template == 'gensim' or template == 'flair-gensim' or template == 'custom-flair-gensim-1' or template == 'custom-flair-gensim-2':
         assert(EMBEDDINGS_DIR != None)
+        logger.debug("Template: " + template)
         for fname in get_NILC(EMBEDDINGS_DIR):
+            logger.debug("Embedding: " + fname)
             for item in skip_list:
                 if item in fname:
                     logger.debug("SKIP - skip_list - {0}".format(fname))
