@@ -3,7 +3,7 @@ import os
 cuda = 1
 bert = 'portuguese'
 
-cmd_strings = ["cd \"$(dirname \"${BASH_SOURCE[0]}\")"]
+cmd_strings = ["cd \"$(dirname \"${BASH_SOURCE[0]}\")\""]
 
 for root, dirs, files in os.walk("../settings", topdown=False):
    for name in files:
