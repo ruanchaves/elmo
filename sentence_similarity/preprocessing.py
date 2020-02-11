@@ -133,10 +133,10 @@ class Tokenizer(object):
         print(fnames)
         root = None
         for item in reader.get_json(fnames):
+            root = item['root']
             target = os.path.join(root, 'stopwords.json')
             with open(target,'r') as f:
                 stopwords = json.load(f)
-            root = item['root']
             file_df = []
             target = os.path.join(item['root'], item['name'].rstrip('xml') + 'json')
             for entry in item['df']:
