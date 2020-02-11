@@ -132,9 +132,10 @@ class Tokenizer(object):
         sentence_dict = {}
         print(fnames)
         root = None
-        with open('stopwords.json','r') as f:
-            stopwords = json.load(f)
         for item in reader.get_json(fnames):
+            target = os.path.join(root, 'stopwords.json')
+            with open(target,'r') as f:
+                stopwords = json.load(f)
             root = item['root']
             file_df = []
             target = os.path.join(item['root'], item['name'].rstrip('xml') + 'json')
