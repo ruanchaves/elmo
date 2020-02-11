@@ -1,0 +1,16 @@
+
+queue: [ 1 ]
+
+1: {
+  template: "bert",
+  test_name: "multilingual_BERT",
+  langs: ["ptbr", "pteu", "assin2"],
+  params: {
+    gensim_sif: False,
+    flair_sif: False,
+    freqs: "WordFreq",
+    total_freq: 1.0,
+    a: 0.001,
+    unk: False
+  }
+}
