@@ -133,27 +133,40 @@ class Tokenizer(object):
         print(fnames)
         root = None
         for item in reader.get_json(fnames):
-            root = item['root']
-            target = os.path.join(root, 'stopwords.json')
-            with open(target,'r') as f:
-                stopwords = json.load(f)
-            file_df = []
-            target = os.path.join(item['root'], item['name'].rstrip('xml') + 'json')
-            for entry in item['df']:
-                file_df.append(entry)
-                t_array = self.NILC_tokenize(entry['t'])
-                h_array = self.NILC_tokenize(entry['h'])
-                
-                t_array = [ x for x in t_array if len(x) > 1 ]
-                h_array = [ x for x in h_array if len(x) > 1 ]
+            if 'assin-' in item['name'] and 'dev' not in item['name']:
+                pairs_path = os.path.join(item['root'], item['name'].rstrip('.xml') + '-hartmann.json')
+                with open(pairs_path,'r') as f:
+                    pairs = json.load(f)
+                file_df = []
+                target = os.path.join(item['root'], item['name'].rstrip('xml') + 'json')
+                for idx, entry in enumerate(item['df']):
+                    file_df.append(entry)
+                    sentence_dict[entry['t']] = pairs[idx]['t']
+                    sentence_dict[entry['h']] = pairs[idx]['h']
+                with open(target, 'w+') as f:
+                    json.dump(file_df, f)
+            else:
+                root = item['root']
+                target = os.path.join(root, 'stopwords.json')
+                with open(target,'r') as f:
+                    stopwords = json.load(f)
+                file_df = []
+                target = os.path.join(item['root'], item['name'].rstrip('xml') + 'json')
+                for entry in item['df']:
+                    file_df.append(entry)
+                    t_array = self.NILC_tokenize(entry['t'])
+                    h_array = self.NILC_tokenize(entry['h'])
+                    
+                    t_array = [ x for x in t_array if len(x) > 1 ]
+                    h_array = [ x for x in h_array if len(x) > 1 ]
 
-                t_array = [ x for x in t_array if x not in stopwords ]
-                h_array = [ x for x in h_array if x not in stopwords ]  
+                    t_array = [ x for x in t_array if x not in stopwords ]
+                    h_array = [ x for x in h_array if x not in stopwords ]  
 
-                sentence_dict[entry['t']] = t_array
-                sentence_dict[entry['h']] = h_array
-            with open(target, 'w+') as f:
-                json.dump(file_df, f)
+                    sentence_dict[entry['t']] = t_array
+                    sentence_dict[entry['h']] = h_array
+                with open(target, 'w+') as f:
+                    json.dump(file_df, f)
         else:
             target = os.path.join(root, 'dictionary.json')
             with open(target,'w+') as f:

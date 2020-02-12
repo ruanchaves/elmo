@@ -30,8 +30,8 @@ class Loader(object):
                 if key == 'test':
                     max_len = len(data)
                 L.append(data)
-        for idx,item in enumerate(L):
-            L[idx] = item[0:max_len]
+        # for idx,item in enumerate(L):
+        #     L[idx] = item[0:max_len]
         return ( pd.DataFrame(x) for x in L )
 
 class Embedding(object):

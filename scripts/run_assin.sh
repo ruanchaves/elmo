@@ -6,10 +6,10 @@ cd ..
 # bert-serving-start -pooling_layer 11 -model_dir embeddings/bert/$BERT_DIR  &
 # sleep $server_timeout
 
-cd embeddings
-python download.py
+# cd embeddings
+# python download.py
 
-cd ..
+# cd ..
 
 cd sentence_similarity
 

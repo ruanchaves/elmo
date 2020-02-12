@@ -41,7 +41,7 @@ def cosine_distance(
     sims = {}
     embeddings = []
     embeddings_pos = []
-    equivalence = False
+    equivalence = True
     for sent_index, (sent1, sent2) in enumerate(zip(sentences1, sentences2)):
         tokens1 = [x.text for x in Sentence(sent1).tokens]
         tokens2 = [x.text for x in Sentence(sent2).tokens]
