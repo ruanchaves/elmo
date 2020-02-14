@@ -11,18 +11,18 @@ Our full benchmarks are available under `reports/evaluation.csv` and also [on th
 |-------------------|-----------------------|-----------|--------------|------------|--------------:|--------------:|
 | ASSIN 1 ( pt-BR ) | ELMo - wiki (reduced) |           |              |            |          0.62 |          0.47 |
 |                   | ELMo - wiki (reduced) | word2vec  | CBOW         | 1000       |          0.62 |          0.47 |
-|                   | portuguese-BERT       |           |              |            |          0.53 |          0.55 |
-|                   | BERT-multilingual     |           |              |            |          0.51 |          1.94 |
+|                   | [portuguese-BERT](https://github.com/neuralmind-ai/portuguese-bert)       |           |              |            |          0.53 |          0.55 |
+|                   | [BERT-multilingual (cased)](https://github.com/google-research/bert/blob/master/multilingual.md)     |           |              |            |          0.51 |          1.94 |
 | ASSIN 1 ( pt-PT ) | ELMo - wiki (reduced) |           |              |            |          0.63 |          0.73 |
 |                   | ELMo - wiki (reduced) | word2vec  | CBOW         | 1000       |          0.64 |          0.73 |
-|                   | portuguese-BERT       |           |              |            |          0.53 |          0.88 |
-|                   | BERT-multilingual     |           |              |            |          0.52 |          0.90 |
+|                   | [portuguese-BERT](https://github.com/neuralmind-ai/portuguese-bert)       |           |              |            |          0.53 |          0.88 |
+|                   | [BERT-multilingual (cased)](https://github.com/google-research/bert/blob/master/multilingual.md)     |           |              |            |          0.52 |          0.90 |
 | ASSIN 2           | ELMo - wiki (reduced) |           |              |            |          0.57 |          1.94 |
 |                   | ELMo - wiki (reduced) | word2vec  | CBOW         | 1000       |          0.59 |          1.88 |
-|                   | portuguese-BERT       |           |              |            |          0.64 |          1.69 |
+|                   | [portuguese-BERT](https://github.com/neuralmind-ai/portuguese-bert)       |           |              |            |          0.64 |          1.69 |
 |                   | BERT-multilingual     |           |              |            |          0.51 |          1.94 |
 
-In our benchmarks, the ELMo model labelled as `wiki` is the public Portuguese ELMo model made available through the [AllenNLP library website](https://allennlp.org/elmo). The `BRWAC` model is trained on the BRWAC dataset, and the `wiki (reduced)` was trained on the same dataset as `wiki` after words with word frequency below four occurrences were eliminated from the dataset. Both `wiki (reduced)` and `BRWAC` are private models trained by ourselves.
+In our benchmarks, the ELMo model labelled as `wiki` is the public Portuguese ELMo model made available through the [AllenNLP library website](https://allennlp.org/elmo). The `BRWAC` model was trained on [brWaC](https://www.researchgate.net/publication/326303825_The_brWaC_Corpus_A_New_Open_Resource_for_Brazilian_Portuguese), and the `wiki (reduced)` was trained on the same dataset as `wiki` after words with word frequency below four occurrences were eliminated from the dataset. 
 
 
 ## Installation
@@ -35,7 +35,7 @@ sudo bash scripts/quickstart.sh
 
 Running this command will generate the `ruanchaves/elmo:2.0` docker image, if it doesn't exist yet, and also download all NILC embeddings, if they still haven't been downloaded to the `embeddings/NILC` folder.
 
-Bear in mind that this script will also attempt run our private ELMo models: you can comment the relevant lines in case you don't have them, if you want to avoid error messages.
+We plan to publish soon both `wiki (reduced)` and `BRWAC` to the AllenNLP library. Until then, this code will attempt to load their relevant weights and options from local storage. You can comment the relevant lines in case you don't have them, if you want to avoid error messages.
 
 If you would also like to run BERT, extract your Tensorflow checkpoint files under the folder `embeddings/bert/portuguese`. It must be provided as a model checkpoint that can be understood by [bert-as-service](https://github.com/hanxiao/bert-as-service): you may have to rename some of the files in order to comply. Move `sentence_similarity/bert.yaml` to `settings/bert.yaml` and then recompile `scripts/quickstart.sh` by running `python generate_start.py`.
 
