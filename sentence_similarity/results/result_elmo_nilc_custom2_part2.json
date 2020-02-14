@@ -1,314 +1,314 @@
 [
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/skip_s50.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/skip_s50.model",
         "pearson": 0.6025060508295557,
         "MSE": 0.4845455383442149,
         "lang": "ptbr",
         "timestamp": 1581506890
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/skip_s50.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/skip_s50.model",
         "pearson": 0.5628034703419422,
         "MSE": 0.8124826804717389,
         "lang": "pteu",
         "timestamp": 1581507778
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/skip_s50.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/skip_s50.model",
         "pearson": 0.5921958549624934,
         "MSE": 0.7451656233822912,
         "lang": "assin2",
         "timestamp": 1581509072
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/skip_s100.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/skip_s100.model",
         "pearson": 0.6067030898914939,
         "MSE": 0.4806652638208153,
         "lang": "ptbr",
         "timestamp": 1581509914
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/skip_s100.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/skip_s100.model",
         "pearson": 0.564678015484508,
         "MSE": 0.8092742189451908,
         "lang": "pteu",
         "timestamp": 1581510810
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/skip_s100.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/skip_s100.model",
         "pearson": 0.5947003768409038,
         "MSE": 0.7410014668298446,
         "lang": "assin2",
         "timestamp": 1581512083
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/skip_s300.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/skip_s300.model",
         "pearson": 0.612250139190466,
         "MSE": 0.4754780020627395,
         "lang": "ptbr",
         "timestamp": 1581512941
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/skip_s300.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/skip_s300.model",
         "pearson": 0.5760574962988579,
         "MSE": 0.7979472688289003,
         "lang": "pteu",
         "timestamp": 1581513846
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/skip_s300.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/skip_s300.model",
         "pearson": 0.6040622002569234,
         "MSE": 0.7256602838089341,
         "lang": "assin2",
         "timestamp": 1581515163
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/skip_s600.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/skip_s600.model",
         "pearson": 0.6177539221917178,
         "MSE": 0.47034304369656194,
         "lang": "ptbr",
         "timestamp": 1581516008
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/skip_s600.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/skip_s600.model",
         "pearson": 0.5789159872247596,
         "MSE": 0.793907906440966,
         "lang": "pteu",
         "timestamp": 1581516896
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/skip_s600.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/skip_s600.model",
         "pearson": 0.6068389025137595,
         "MSE": 0.7212848152975013,
         "lang": "assin2",
         "timestamp": 1581518083
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/cbow_s300.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/cbow_s300.model",
         "pearson": 0.3961001246937205,
         "MSE": 0.6412344022961499,
         "lang": "ptbr",
         "timestamp": 1581518885
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/cbow_s300.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/cbow_s300.model",
         "pearson": 0.37283892855158385,
         "MSE": 1.0278915714019972,
         "lang": "pteu",
         "timestamp": 1581519713
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/cbow_s300.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/cbow_s300.model",
         "pearson": 0.5898475824527463,
         "MSE": 0.7271180107109209,
         "lang": "assin2",
         "timestamp": 1581520881
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/skip_s1000.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/skip_s1000.model",
         "pearson": 0.6182231981023307,
         "MSE": 0.46991630207727153,
         "lang": "ptbr",
         "timestamp": 1581521637
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/skip_s1000.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/skip_s1000.model",
         "pearson": 0.5933816666513209,
         "MSE": 0.7802420225702539,
         "lang": "pteu",
         "timestamp": 1581522460
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/skip_s1000.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/skip_s1000.model",
         "pearson": 0.6194712666687465,
         "MSE": 0.6999767734095447,
         "lang": "assin2",
         "timestamp": 1581523639
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/cbow_s600.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/cbow_s600.model",
         "pearson": 0.42537105523250207,
         "MSE": 0.6235725778289553,
         "lang": "ptbr",
         "timestamp": 1581524414
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/cbow_s600.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/cbow_s600.model",
         "pearson": 0.4044643483978191,
         "MSE": 0.9974714266953425,
         "lang": "pteu",
         "timestamp": 1581525246
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/cbow_s600.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/cbow_s600.model",
         "pearson": 0.583255630040818,
         "MSE": 0.7355122204409767,
         "lang": "assin2",
         "timestamp": 1581526423
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/cbow_s50.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/cbow_s50.model",
         "pearson": 0.3769960068382033,
         "MSE": 0.652467965661299,
         "lang": "ptbr",
         "timestamp": 1581527180
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/cbow_s50.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/cbow_s50.model",
         "pearson": 0.35247024654592496,
         "MSE": 1.0436803250199789,
         "lang": "pteu",
         "timestamp": 1581527995
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/cbow_s50.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/cbow_s50.model",
         "pearson": 0.5703302033836999,
         "MSE": 0.7618793008956952,
         "lang": "assin2",
         "timestamp": 1581529148
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/cbow_s1000.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/cbow_s1000.model",
         "pearson": 0.423165118889822,
         "MSE": 0.6249627895154775,
         "lang": "ptbr",
         "timestamp": 1581529950
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/cbow_s1000.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/cbow_s1000.model",
         "pearson": 0.4022211739209811,
         "MSE": 0.999400745150974,
         "lang": "pteu",
         "timestamp": 1581530774
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/cbow_s1000.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/cbow_s1000.model",
         "pearson": 0.5874740295529399,
         "MSE": 0.7299846835366358,
         "lang": "assin2",
         "timestamp": 1581531938
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/cbow_s100.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/cbow_s100.model",
         "pearson": 0.38795748710051065,
         "MSE": 0.6461019364515027,
         "lang": "ptbr",
         "timestamp": 1581532703
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/cbow_s100.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/cbow_s100.model",
         "pearson": 0.3636426475165646,
         "MSE": 1.034636767845386,
         "lang": "pteu",
         "timestamp": 1581533522
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/fasttext/cbow_s100.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/fasttext/cbow_s100.model",
         "pearson": 0.5817671863476537,
         "MSE": 0.7423587372727543,
         "lang": "assin2",
         "timestamp": 1581534698
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/glove/glove_s1000.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/glove/glove_s1000.model",
         "pearson": 0.5916128766264489,
         "MSE": 0.4945675800636354,
         "lang": "ptbr",
         "timestamp": 1581535497
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/glove/glove_s1000.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/glove/glove_s1000.model",
         "pearson": 0.5438828047132156,
         "MSE": 0.8405769292826711,
         "lang": "pteu",
         "timestamp": 1581536311
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/glove/glove_s1000.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/glove/glove_s1000.model",
         "pearson": 0.6239643343819194,
         "MSE": 0.6860102275205111,
         "lang": "assin2",
         "timestamp": 1581537485
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/glove/glove_s600.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/glove/glove_s600.model",
         "pearson": 0.5878366569791671,
         "MSE": 0.49797694692724176,
         "lang": "ptbr",
         "timestamp": 1581538257
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/glove/glove_s600.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/glove/glove_s600.model",
         "pearson": 0.5393113570010799,
         "MSE": 0.8443383879319202,
         "lang": "pteu",
         "timestamp": 1581539078
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/glove/glove_s600.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/glove/glove_s600.model",
         "pearson": 0.6196334333031344,
         "MSE": 0.6939829018692423,
         "lang": "assin2",
         "timestamp": 1581540249
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/glove/glove_s50.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/glove/glove_s50.model",
         "pearson": 0.5697562016354424,
         "MSE": 0.5138704848977496,
         "lang": "ptbr",
         "timestamp": 1581541006
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/glove/glove_s50.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/glove/glove_s50.model",
         "pearson": 0.5191224860812288,
         "MSE": 0.865500784342074,
         "lang": "pteu",
         "timestamp": 1581541830
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/glove/glove_s50.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/glove/glove_s50.model",
         "pearson": 0.5969915363493551,
         "MSE": 0.7328940995732797,
         "lang": "assin2",
         "timestamp": 1581542989
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/glove/glove_s100.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/glove/glove_s100.model",
         "pearson": 0.5757329320144682,
         "MSE": 0.5086736804424605,
         "lang": "ptbr",
         "timestamp": 1581543746
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/glove/glove_s100.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/glove/glove_s100.model",
         "pearson": 0.5314722900890807,
         "MSE": 0.8529451150581123,
         "lang": "pteu",
         "timestamp": 1581544555
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/glove/glove_s100.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/glove/glove_s100.model",
         "pearson": 0.6068970382719123,
         "MSE": 0.7173622290065802,
         "lang": "assin2",
         "timestamp": 1581545712
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/glove/glove_s300.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/glove/glove_s300.model",
         "pearson": 0.5837733212618608,
         "MSE": 0.5015662680193125,
         "lang": "ptbr",
         "timestamp": 1581546477
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/glove/glove_s300.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/glove/glove_s300.model",
         "pearson": 0.542262614810322,
         "MSE": 0.8416763336940563,
         "lang": "pteu",
         "timestamp": 1581547243
     },
     {
-        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/glove/glove_s300.model",
+        "test": "ELMo_NILC_custom2_part2_../embeddings/NILC/glove/glove_s300.model",
         "pearson": 0.6168064931381444,
         "MSE": 0.7005116429298612,
         "lang": "assin2",

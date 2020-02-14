@@ -8,3 +8,5 @@ sudo screen -dmS elmo_nilc_custom1_part2 bash -c 'sudo TESTS=elmo_nilc_custom1_p
 sudo screen -dmS nilc_part1 bash -c 'sudo TESTS=nilc_part1.yaml RESULTS=result_nilc_part1.json BERT_DIR=portuguese CUDA_VISIBLE_DEVICES=1 bash start.sh'
 sudo screen -dmS elmo_nilc_custom2_part2 bash -c 'sudo TESTS=elmo_nilc_custom2_part2.yaml RESULTS=result_elmo_nilc_custom2_part2.json BERT_DIR=portuguese CUDA_VISIBLE_DEVICES=1 bash start.sh'
 sudo screen -dmS elmo_nilc_custom2_part1 bash -c 'sudo TESTS=elmo_nilc_custom2_part1.yaml RESULTS=result_elmo_nilc_custom2_part1.json BERT_DIR=portuguese CUDA_VISIBLE_DEVICES=1 bash start.sh'
+sudo screen -dmS elmo_nilc_part1 bash -c 'sudo TESTS=elmo_nilc_part1.yaml RESULTS=result_elmo_nilc_part1.json BERT_DIR=portuguese CUDA_VISIBLE_DEVICES=1 bash start.sh'
+sudo screen -dmS elmo_nilc_part2 bash -c 'sudo TESTS=elmo_nilc_part2.yaml RESULTS=result_elmo_nilc_part2.json BERT_DIR=portuguese CUDA_VISIBLE_DEVICES=1 bash start.sh'
