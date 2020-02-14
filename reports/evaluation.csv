@@ -122,8 +122,10 @@ ASSIN ( pt-BR ),wiki,glove,False, ,300,0.57,0.51
 ASSIN ( pt-BR ),wiki,glove,False, ,600,0.58,0.51
 ASSIN ( pt-BR ),wiki,glove,False, ,1000,0.58,0.5
 ASSIN ( pt-BR ),wiki,wang2vec,False,CBOW,50,0.62,0.47
+ASSIN ( pt-BR ),wiki,wang2vec,False,CBOW,100,0.62,0.46
 ASSIN ( pt-BR ),wiki,wang2vec,False,CBOW,300,0.63,0.46
 ASSIN ( pt-BR ),wiki,wang2vec,False,CBOW,600,0.5,0.57
+ASSIN ( pt-BR ),wiki,wang2vec,False,CBOW,1000,0.51,0.56
 ASSIN ( pt-BR ),wiki,wang2vec,False,skip-gram,50,0.61,0.48
 ASSIN ( pt-BR ),wiki,wang2vec,False,skip-gram,100,0.61,0.48
 ASSIN ( pt-BR ),wiki,wang2vec,False,skip-gram,300,0.62,0.46
@@ -298,8 +300,10 @@ ASSIN ( pt-PT ),wiki,glove,False, ,300,0.52,0.87
 ASSIN ( pt-PT ),wiki,glove,False, ,600,0.52,0.87
 ASSIN ( pt-PT ),wiki,glove,False, ,1000,0.53,0.87
 ASSIN ( pt-PT ),wiki,wang2vec,False,CBOW,50,0.61,0.77
+ASSIN ( pt-PT ),wiki,wang2vec,False,CBOW,100,0.61,0.76
 ASSIN ( pt-PT ),wiki,wang2vec,False,CBOW,300,0.6,0.78
 ASSIN ( pt-PT ),wiki,wang2vec,False,CBOW,600,0.54,0.87
+ASSIN ( pt-PT ),wiki,wang2vec,False,CBOW,1000,0.54,0.87
 ASSIN ( pt-PT ),wiki,wang2vec,False,skip-gram,50,0.53,0.85
 ASSIN ( pt-PT ),wiki,wang2vec,False,skip-gram,100,0.54,0.83
 ASSIN ( pt-PT ),wiki,wang2vec,False,skip-gram,300,0.57,0.81
@@ -473,8 +477,11 @@ ASSIN 2,wiki,glove,False, ,100,0.58,0.75
 ASSIN 2,wiki,glove,False, ,300,0.6,0.73
 ASSIN 2,wiki,glove,False, ,600,0.6,0.72
 ASSIN 2,wiki,glove,False, ,1000,0.61,0.71
+ASSIN 2,wiki,wang2vec,False,CBOW,50,0.56,0.79
+ASSIN 2,wiki,wang2vec,False,CBOW,100,0.57,0.78
 ASSIN 2,wiki,wang2vec,False,CBOW,300,0.58,0.76
 ASSIN 2,wiki,wang2vec,False,CBOW,600,0.59,0.73
+ASSIN 2,wiki,wang2vec,False,CBOW,1000,0.6,0.73
 ASSIN 2,wiki,wang2vec,False,skip-gram,50,0.56,0.8
 ASSIN 2,wiki,wang2vec,False,skip-gram,100,0.56,0.78
 ASSIN 2,wiki,wang2vec,False,skip-gram,300,0.58,0.76

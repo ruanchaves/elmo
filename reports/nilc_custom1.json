@@ -1,1 +1,0 @@
-[{"test": "ELMo_custom1", "pearson": 0.6178163549498302, "MSE": 0.47177348882218223, "lang": "ptbr", "timestamp": 1581333784}, {"test": "ELMo_custom1", "pearson": 0.6270087476668911, "MSE": 0.7347815562527444, "lang": "pteu", "timestamp": 1581335026}, {"test": "ELMo_custom1", "pearson": 0.5684397459716948, "MSE": 1.9357733913496071, "lang": "assin2", "timestamp": 1581336245}]
