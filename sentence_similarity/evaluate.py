@@ -143,7 +143,7 @@ def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANAL
             measure = get_measure(model, lang, test_name)
             yield measure         
 
-    elif template == 'gensim' or template == 'flair-gensim' or template == 'custom-flair-gensim-1' or template == 'custom-flair-gensim-2':
+    elif template == 'gensim' or template == 'flair-gensim' or template == 'custom-flair-gensim-1' or template == 'custom-flair-gensim-2' or template == "flair-gensim-local":
         assert(EMBEDDINGS_DIR != None)
         logger.debug("Template: " + template)
         logger.debug("EMBEDDINGS_DIR: " + EMBEDDINGS_DIR)
