@@ -22,6 +22,9 @@ Our full benchmarks are available under `reports/evaluation.csv` and also [on th
 |                   | portuguese-BERT       |           |              |            |          0.64 |          1.69 |
 |                   | BERT-multilingual     |           |              |            |          0.51 |          1.94 |
 
+In our benchmarks, the ELMo model labelled as `wiki` is the public Portuguese ELMo model made available through the [AllenNLP library website](https://allennlp.org/elmo). The `BRWAC` model is trained on the BRWAC dataset, and the `wiki (reduced)` was trained on the same dataset as `wiki` after words with word frequency below four occurrences were eliminated from the dataset. Both `wiki (reduced)` and `BRWAC` are private models trained by ourselves.
+
+
 ## Installation
 
 Assuming you have installed Docker and nvidia-docker, the command below will reproduce all test results on this repository.
