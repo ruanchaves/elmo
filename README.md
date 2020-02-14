@@ -1,7 +1,7 @@
 Portuguese Language Models and Word Embeddings
 =================
 
-This is the source code for the architecture that generated the evaluation results mentioned in the paper *Portuguese Language Models and Word Embeddings: Evaluating on Semantic Similarity Tasks*. It's designed to evaluate all word embeddings from [nathanshartmann/portuguese_word_embeddings](https://github.com/nathanshartmann/portuguese_word_embeddings) on the semantic textual similarity tasks of the [ASSIN datasets](https://github.com/erickrf/assin) and also compare them with the results achieved by ELMo and BERT. Some of our tests will concatenate ELMo and word embeddings from the said repository.
+This is the source code that generated the evaluation results mentioned in the paper *Portuguese Language Models and Word Embeddings: Evaluating on Semantic Similarity Tasks*. It's designed to evaluate all word embeddings from [nathanshartmann/portuguese_word_embeddings](https://github.com/nathanshartmann/portuguese_word_embeddings) on the semantic textual similarity tasks of the [ASSIN datasets](https://github.com/erickrf/assin) and also compare them with the results achieved by ELMo and BERT. Some of our tests will concatenate ELMo and word embeddings from the said repository.
 
 ## Benchmarks
 
