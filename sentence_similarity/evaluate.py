@@ -164,6 +164,8 @@ def call_test(skip_list=[], test_name="", langs=[], template="", params={}, ANAL
                     params["gensim_model"] = emb
                     if template == 'flair-gensim':
                         params["flair_model"] = ELMoEmbeddings('pt')
+                    elif template == 'flair-gensim-local':
+                        params["flair_model"] = ELMoEmbeddings(options_file="../embeddings/allen_elmo/elmo_pt_options.json", weight_file="../embeddings/allen_elmo/elmo_pt_weights.hdf5")
                     elif template == 'custom-flair-gensim-1':
                         params["flair_model"] = ELMoEmbeddings(options_file="../embeddings/elmo/options.json", weight_file="../embeddings/elmo/elmo_pt_weights.hdf5")
                     elif template == 'custom-flair-gensim-2':

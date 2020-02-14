@@ -2,7 +2,7 @@
 queue: [ 1 ]
 
 1: {
-  template: "flair-gensim",
+  template: "flair-gensim-local",
   test_name: "ELMo_NILC_part2",
   langs: ["ptbr", "pteu", "assin2"],
   skip_list: ["wang2vec", "word2vec"],
