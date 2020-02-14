@@ -2,10 +2,10 @@
 queue: [ 1 ]
 
 1: {
-  template: "custom-flair-gensim-2",
-  test_name: "ELMo_NILC_custom2_part2",
+  template: "flair-gensim",
+  test_name: "ELMo_NILC_part1",
   langs: ["ptbr", "pteu", "assin2"],
-  skip_list: ["wang2vec", "word2vec"],
+  skip_list: ["fasttext", "glove"],
   params: {
     gensim_sif: False,
     flair_sif: False,

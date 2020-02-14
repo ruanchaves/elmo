@@ -1,0 +1,422 @@
+[
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/skip_s50.model",
+        "pearson": 0.5923351921394631,
+        "MSE": 0.493848614855419,
+        "lang": "ptbr",
+        "timestamp": 1581506929
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/skip_s50.model",
+        "pearson": 0.5889818395346914,
+        "MSE": 0.7893308235342043,
+        "lang": "pteu",
+        "timestamp": 1581507995
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/skip_s50.model",
+        "pearson": 0.6014949359650397,
+        "MSE": 0.7281869927121821,
+        "lang": "assin2",
+        "timestamp": 1581509323
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/skip_s100.model",
+        "pearson": 0.5927376006357998,
+        "MSE": 0.49346811504692756,
+        "lang": "ptbr",
+        "timestamp": 1581510201
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/skip_s100.model",
+        "pearson": 0.5888521724865923,
+        "MSE": 0.7900840770591533,
+        "lang": "pteu",
+        "timestamp": 1581511146
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/skip_s100.model",
+        "pearson": 0.6036752034090811,
+        "MSE": 0.7248580154771475,
+        "lang": "assin2",
+        "timestamp": 1581512496
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/skip_s300.model",
+        "pearson": 0.5968932376654661,
+        "MSE": 0.48965120836419046,
+        "lang": "ptbr",
+        "timestamp": 1581513370
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/skip_s300.model",
+        "pearson": 0.5943039129168095,
+        "MSE": 0.7850732728989955,
+        "lang": "pteu",
+        "timestamp": 1581514320
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/skip_s300.model",
+        "pearson": 0.6098931860483526,
+        "MSE": 0.7141573196366118,
+        "lang": "assin2",
+        "timestamp": 1581515668
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/skip_s600.model",
+        "pearson": 0.6005738122134767,
+        "MSE": 0.48629899562952894,
+        "lang": "ptbr",
+        "timestamp": 1581516567
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/skip_s600.model",
+        "pearson": 0.5987397265516292,
+        "MSE": 0.7812514733378321,
+        "lang": "pteu",
+        "timestamp": 1581517450
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/skip_s600.model",
+        "pearson": 0.614616113124298,
+        "MSE": 0.7059017131166897,
+        "lang": "assin2",
+        "timestamp": 1581518691
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/cbow_s300.model",
+        "pearson": 0.6009690731060164,
+        "MSE": 0.48596401469071215,
+        "lang": "ptbr",
+        "timestamp": 1581519498
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/cbow_s300.model",
+        "pearson": 0.6070029771378643,
+        "MSE": 0.7690862942616636,
+        "lang": "pteu",
+        "timestamp": 1581520367
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/cbow_s300.model",
+        "pearson": 0.6100033350836818,
+        "MSE": 0.7139976568879614,
+        "lang": "assin2",
+        "timestamp": 1581521590
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/skip_s1000.model",
+        "pearson": 0.6034557271791414,
+        "MSE": 0.4836331434313818,
+        "lang": "ptbr",
+        "timestamp": 1581522399
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/skip_s1000.model",
+        "pearson": 0.6020123370952459,
+        "MSE": 0.7784885366329666,
+        "lang": "pteu",
+        "timestamp": 1581523270
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/skip_s1000.model",
+        "pearson": 0.6181280240024953,
+        "MSE": 0.6997566563125962,
+        "lang": "assin2",
+        "timestamp": 1581524516
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/cbow_s600.model",
+        "pearson": 0.6054801133878387,
+        "MSE": 0.48177878496108784,
+        "lang": "ptbr",
+        "timestamp": 1581525327
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/cbow_s600.model",
+        "pearson": 0.6124883055982604,
+        "MSE": 0.7637478283974847,
+        "lang": "pteu",
+        "timestamp": 1581526199
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/cbow_s600.model",
+        "pearson": 0.6151824054532996,
+        "MSE": 0.7049621827384354,
+        "lang": "assin2",
+        "timestamp": 1581527472
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/cbow_s50.model",
+        "pearson": 0.5947007300850973,
+        "MSE": 0.491727863971294,
+        "lang": "ptbr",
+        "timestamp": 1581528294
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/cbow_s50.model",
+        "pearson": 0.5965575849159431,
+        "MSE": 0.7798165376047325,
+        "lang": "pteu",
+        "timestamp": 1581529162
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/cbow_s50.model",
+        "pearson": 0.6011976746525868,
+        "MSE": 0.728470355924998,
+        "lang": "assin2",
+        "timestamp": 1581530422
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/cbow_s1000.model",
+        "pearson": 0.6088998393900695,
+        "MSE": 0.47862210658701,
+        "lang": "ptbr",
+        "timestamp": 1581531237
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/cbow_s1000.model",
+        "pearson": 0.6165270283659575,
+        "MSE": 0.7598266270727135,
+        "lang": "pteu",
+        "timestamp": 1581532099
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/cbow_s1000.model",
+        "pearson": 0.6187102347388242,
+        "MSE": 0.6987864355258274,
+        "lang": "assin2",
+        "timestamp": 1581533316
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/cbow_s100.model",
+        "pearson": 0.5960476898602236,
+        "MSE": 0.49051510401085513,
+        "lang": "ptbr",
+        "timestamp": 1581534120
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/cbow_s100.model",
+        "pearson": 0.5992415018335163,
+        "MSE": 0.7771050593775105,
+        "lang": "pteu",
+        "timestamp": 1581534995
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/word2vec/cbow_s100.model",
+        "pearson": 0.603395327710299,
+        "MSE": 0.7248941035156065,
+        "lang": "assin2",
+        "timestamp": 1581536209
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/skip_s50.model",
+        "pearson": 0.6000252569300373,
+        "MSE": 0.48679075497664553,
+        "lang": "ptbr",
+        "timestamp": 1581537075
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/skip_s50.model",
+        "pearson": 0.5472574856867582,
+        "MSE": 0.8292473418062738,
+        "lang": "pteu",
+        "timestamp": 1581537946
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/skip_s50.model",
+        "pearson": 0.5943409864195295,
+        "MSE": 0.7407228843399436,
+        "lang": "assin2",
+        "timestamp": 1581539159
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/skip_s100.model",
+        "pearson": 0.603115181657133,
+        "MSE": 0.4839449871320287,
+        "lang": "ptbr",
+        "timestamp": 1581539962
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/skip_s100.model",
+        "pearson": 0.5532680029505913,
+        "MSE": 0.8226527710085564,
+        "lang": "pteu",
+        "timestamp": 1581540835
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/skip_s100.model",
+        "pearson": 0.5981546859969724,
+        "MSE": 0.7346492133564292,
+        "lang": "assin2",
+        "timestamp": 1581542064
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/skip_s300.model",
+        "pearson": 0.6119592003753698,
+        "MSE": 0.47575868943927024,
+        "lang": "ptbr",
+        "timestamp": 1581542867
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/skip_s300.model",
+        "pearson": 0.5686371196776496,
+        "MSE": 0.806329274686857,
+        "lang": "pteu",
+        "timestamp": 1581543722
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/skip_s300.model",
+        "pearson": 0.608214199073115,
+        "MSE": 0.7178831903465962,
+        "lang": "assin2",
+        "timestamp": 1581544936
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/skip_s600.model",
+        "pearson": 0.6187786052291361,
+        "MSE": 0.4693731376402202,
+        "lang": "ptbr",
+        "timestamp": 1581545735
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/skip_s600.model",
+        "pearson": 0.5797040606685577,
+        "MSE": 0.7950963377879474,
+        "lang": "pteu",
+        "timestamp": 1581546598
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/skip_s600.model",
+        "pearson": 0.616641391675903,
+        "MSE": 0.703290502487681,
+        "lang": "assin2",
+        "timestamp": 1581547730
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/cbow_s300.model",
+        "pearson": 0.6098331334119989,
+        "MSE": 0.47778808967798386,
+        "lang": "ptbr",
+        "timestamp": 1581548450
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/cbow_s300.model",
+        "pearson": 0.5854446609515066,
+        "MSE": 0.7894826161981514,
+        "lang": "pteu",
+        "timestamp": 1581549187
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/cbow_s300.model",
+        "pearson": 0.6101996696927428,
+        "MSE": 0.7149876422354406,
+        "lang": "assin2",
+        "timestamp": 1581550272
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/skip_s1000.model",
+        "pearson": 0.624919186925389,
+        "MSE": 0.4635879770496291,
+        "lang": "ptbr",
+        "timestamp": 1581550992
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/skip_s1000.model",
+        "pearson": 0.587502382889618,
+        "MSE": 0.7889324916060095,
+        "lang": "pteu",
+        "timestamp": 1581551763
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/skip_s1000.model",
+        "pearson": 0.6232637527024183,
+        "MSE": 0.6915974845072779,
+        "lang": "assin2",
+        "timestamp": 1581552858
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/cbow_s600.model",
+        "pearson": 0.506807028332279,
+        "MSE": 0.5648722862380579,
+        "lang": "ptbr",
+        "timestamp": 1581553583
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/cbow_s600.model",
+        "pearson": 0.5441597792456403,
+        "MSE": 0.8636388893246081,
+        "lang": "pteu",
+        "timestamp": 1581554362
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/cbow_s600.model",
+        "pearson": 0.5968932688353801,
+        "MSE": 0.7243996346143508,
+        "lang": "assin2",
+        "timestamp": 1581555302
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/cbow_s50.model",
+        "pearson": 0.599656362562332,
+        "MSE": 0.48714924295122086,
+        "lang": "ptbr",
+        "timestamp": 1581555882
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/cbow_s50.model",
+        "pearson": 0.5901918013052532,
+        "MSE": 0.7848871295676775,
+        "lang": "pteu",
+        "timestamp": 1581556517
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/cbow_s50.model",
+        "pearson": 0.6004606440795499,
+        "MSE": 0.7304413586274331,
+        "lang": "assin2",
+        "timestamp": 1581557406
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/cbow_s1000.model",
+        "pearson": 0.5166199744135623,
+        "MSE": 0.5572350353366041,
+        "lang": "ptbr",
+        "timestamp": 1581557991
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/cbow_s1000.model",
+        "pearson": 0.5462595720454752,
+        "MSE": 0.8611711779306447,
+        "lang": "pteu",
+        "timestamp": 1581558623
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/cbow_s1000.model",
+        "pearson": 0.601909630736873,
+        "MSE": 0.7173842523537024,
+        "lang": "assin2",
+        "timestamp": 1581559510
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/cbow_s100.model",
+        "pearson": 0.6026373055708631,
+        "MSE": 0.4843674354662595,
+        "lang": "ptbr",
+        "timestamp": 1581560089
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/cbow_s100.model",
+        "pearson": 0.5949856675219998,
+        "MSE": 0.7790394294225653,
+        "lang": "pteu",
+        "timestamp": 1581560709
+    },
+    {
+        "test": "ELMo_NILC_custom2_part1_../embeddings/NILC/wang2vec/cbow_s100.model",
+        "pearson": 0.6034298355997182,
+        "MSE": 0.7255441124151182,
+        "lang": "assin2",
+        "timestamp": 1581561595
+    }
+]

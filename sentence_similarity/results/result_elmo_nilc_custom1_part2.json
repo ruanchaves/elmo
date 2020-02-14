@@ -1,1 +1,317 @@
-[{"test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s50.model", "pearson": 0.5733440668320755, "MSE": 0.5111502908619834, "lang": "ptbr", "timestamp": 1581502868}, {"test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s50.model", "pearson": 0.5115225829832589, "MSE": 0.8754667313204574, "lang": "pteu", "timestamp": 1581503227}, {"test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s50.model", "pearson": 0.5725858166934081, "MSE": 0.7648761498544921, "lang": "assin2", "timestamp": 1581503721}, {"test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s300.model", "pearson": 0.5885139314324233, "MSE": 0.49770845205884007, "lang": "ptbr", "timestamp": 1581504060}, {"test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s300.model", "pearson": 0.5378349804227002, "MSE": 0.8486622658400156, "lang": "pteu", "timestamp": 1581504431}, {"test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s300.model", "pearson": 0.5974823007173395, "MSE": 0.726332432704156, "lang": "assin2", "timestamp": 1581504947}]
+[
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s50.model",
+        "pearson": 0.5733440668320755,
+        "MSE": 0.5111502908619834,
+        "lang": "ptbr",
+        "timestamp": 1581502868
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s50.model",
+        "pearson": 0.5115225829832589,
+        "MSE": 0.8754667313204574,
+        "lang": "pteu",
+        "timestamp": 1581503227
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s50.model",
+        "pearson": 0.5725858166934081,
+        "MSE": 0.7648761498544921,
+        "lang": "assin2",
+        "timestamp": 1581503721
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s300.model",
+        "pearson": 0.5885139314324233,
+        "MSE": 0.49770845205884007,
+        "lang": "ptbr",
+        "timestamp": 1581504060
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s300.model",
+        "pearson": 0.5378349804227002,
+        "MSE": 0.8486622658400156,
+        "lang": "pteu",
+        "timestamp": 1581504431
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s300.model",
+        "pearson": 0.5974823007173395,
+        "MSE": 0.726332432704156,
+        "lang": "assin2",
+        "timestamp": 1581504947
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/skip_s50.model",
+        "pearson": 0.6222145028075019,
+        "MSE": 0.4665931686566716,
+        "lang": "ptbr",
+        "timestamp": 1581506934
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/skip_s50.model",
+        "pearson": 0.5764513792372375,
+        "MSE": 0.796030445917456,
+        "lang": "pteu",
+        "timestamp": 1581508106
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/skip_s50.model",
+        "pearson": 0.5640179999166138,
+        "MSE": 0.7821554997439516,
+        "lang": "assin2",
+        "timestamp": 1581509640
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/skip_s100.model",
+        "pearson": 0.6252777486166117,
+        "MSE": 0.46364726318717087,
+        "lang": "ptbr",
+        "timestamp": 1581510677
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/skip_s100.model",
+        "pearson": 0.576919943157667,
+        "MSE": 0.7947426081949301,
+        "lang": "pteu",
+        "timestamp": 1581511729
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/skip_s100.model",
+        "pearson": 0.5675918143161003,
+        "MSE": 0.7766199547943975,
+        "lang": "assin2",
+        "timestamp": 1581513125
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/skip_s300.model",
+        "pearson": 0.6321828645367802,
+        "MSE": 0.4569855782871055,
+        "lang": "ptbr",
+        "timestamp": 1581514037
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/skip_s300.model",
+        "pearson": 0.5904035011479832,
+        "MSE": 0.7807229043654151,
+        "lang": "pteu",
+        "timestamp": 1581514994
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/skip_s300.model",
+        "pearson": 0.5793247539102301,
+        "MSE": 0.7586334189428052,
+        "lang": "assin2",
+        "timestamp": 1581516338
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/skip_s600.model",
+        "pearson": 0.6366471436495964,
+        "MSE": 0.4526676520252513,
+        "lang": "ptbr",
+        "timestamp": 1581517179
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/skip_s600.model",
+        "pearson": 0.5919021598719159,
+        "MSE": 0.7787112569978487,
+        "lang": "pteu",
+        "timestamp": 1581518068
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/skip_s600.model",
+        "pearson": 0.5835204513801227,
+        "MSE": 0.752292513612676,
+        "lang": "assin2",
+        "timestamp": 1581519349
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/cbow_s300.model",
+        "pearson": 0.3938848017517945,
+        "MSE": 0.6425842271579557,
+        "lang": "ptbr",
+        "timestamp": 1581520185
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/cbow_s300.model",
+        "pearson": 0.37118258640046664,
+        "MSE": 1.0294201878813534,
+        "lang": "pteu",
+        "timestamp": 1581521079
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/cbow_s300.model",
+        "pearson": 0.5838948093437007,
+        "MSE": 0.7341817146173045,
+        "lang": "assin2",
+        "timestamp": 1581522370
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/skip_s1000.model",
+        "pearson": 0.641308563602025,
+        "MSE": 0.4482024106122125,
+        "lang": "ptbr",
+        "timestamp": 1581523207
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/skip_s1000.model",
+        "pearson": 0.6125350137909414,
+        "MSE": 0.7568426051667934,
+        "lang": "pteu",
+        "timestamp": 1581524108
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/skip_s1000.model",
+        "pearson": 0.5980728603478945,
+        "MSE": 0.7290683909157102,
+        "lang": "assin2",
+        "timestamp": 1581525350
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/cbow_s600.model",
+        "pearson": 0.42307744018550536,
+        "MSE": 0.6250907175282163,
+        "lang": "ptbr",
+        "timestamp": 1581526194
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/cbow_s600.model",
+        "pearson": 0.4023345510420156,
+        "MSE": 0.9995631177078942,
+        "lang": "pteu",
+        "timestamp": 1581527130
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/cbow_s600.model",
+        "pearson": 0.577892044229049,
+        "MSE": 0.7418203047537588,
+        "lang": "assin2",
+        "timestamp": 1581528396
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/cbow_s50.model",
+        "pearson": 0.37443833907995316,
+        "MSE": 0.6539484511025989,
+        "lang": "ptbr",
+        "timestamp": 1581529232
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/cbow_s50.model",
+        "pearson": 0.35061291653811133,
+        "MSE": 1.0453052853275098,
+        "lang": "pteu",
+        "timestamp": 1581530132
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/cbow_s50.model",
+        "pearson": 0.5632663083655114,
+        "MSE": 0.7700587306776252,
+        "lang": "assin2",
+        "timestamp": 1581531395
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/cbow_s1000.model",
+        "pearson": 0.4208216520782095,
+        "MSE": 0.6265034430776844,
+        "lang": "ptbr",
+        "timestamp": 1581532244
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/cbow_s1000.model",
+        "pearson": 0.400023747073027,
+        "MSE": 1.00154929385067,
+        "lang": "pteu",
+        "timestamp": 1581533179
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/cbow_s1000.model",
+        "pearson": 0.5823447407736241,
+        "MSE": 0.7360402801583443,
+        "lang": "assin2",
+        "timestamp": 1581534447
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/cbow_s100.model",
+        "pearson": 0.3856261811911638,
+        "MSE": 0.6474941308535618,
+        "lang": "ptbr",
+        "timestamp": 1581535291
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/cbow_s100.model",
+        "pearson": 0.36193255391155355,
+        "MSE": 1.0361842837773156,
+        "lang": "pteu",
+        "timestamp": 1581536209
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/fasttext/cbow_s100.model",
+        "pearson": 0.5752925763246195,
+        "MSE": 0.7499396958461242,
+        "lang": "assin2",
+        "timestamp": 1581537531
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s1000.model",
+        "pearson": 0.5953983594996395,
+        "MSE": 0.49146453723966815,
+        "lang": "ptbr",
+        "timestamp": 1581538356
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s1000.model",
+        "pearson": 0.5390697753162185,
+        "MSE": 0.8480346850684047,
+        "lang": "pteu",
+        "timestamp": 1581539247
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s1000.model",
+        "pearson": 0.6075401237765055,
+        "MSE": 0.7078887260341515,
+        "lang": "assin2",
+        "timestamp": 1581540526
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s600.model",
+        "pearson": 0.5914196406279075,
+        "MSE": 0.49507426482229744,
+        "lang": "ptbr",
+        "timestamp": 1581541372
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s600.model",
+        "pearson": 0.5339438983388398,
+        "MSE": 0.8522367728819479,
+        "lang": "pteu",
+        "timestamp": 1581542266
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s600.model",
+        "pearson": 0.6019553096877319,
+        "MSE": 0.7174876942453027,
+        "lang": "assin2",
+        "timestamp": 1581543520
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s100.model",
+        "pearson": 0.5803839753460529,
+        "MSE": 0.504990982559578,
+        "lang": "ptbr",
+        "timestamp": 1581544346
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s100.model",
+        "pearson": 0.5259089417724301,
+        "MSE": 0.8609091009130697,
+        "lang": "pteu",
+        "timestamp": 1581545262
+    },
+    {
+        "test": "ELMo_NILC_custom1_part2_../embeddings/NILC/glove/glove_s100.model",
+        "pearson": 0.5844831766096317,
+        "MSE": 0.747090313171866,
+        "lang": "assin2",
+        "timestamp": 1581546541
+    }
+]

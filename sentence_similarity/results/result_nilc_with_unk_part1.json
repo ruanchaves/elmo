@@ -1,1 +1,422 @@
-[{"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s100.model", "pearson": 0.5628077043276282, "MSE": 0.5191925768320683, "lang": "ptbr", "timestamp": 1581475515}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s100.model", "pearson": 0.5437710194950716, "MSE": 0.8531110867411628, "lang": "pteu", "timestamp": 1581475519}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s100.model", "pearson": 0.6093031193544851, "MSE": 0.7246323747619788, "lang": "assin2", "timestamp": 1581475525}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s300.model", "pearson": 0.5802862698907516, "MSE": 0.5045840027395374, "lang": "ptbr", "timestamp": 1581475539}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s300.model", "pearson": 0.5330348769324245, "MSE": 0.8587072881324679, "lang": "pteu", "timestamp": 1581475544}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s300.model", "pearson": 0.614337799846754, "MSE": 0.7099966980961848, "lang": "assin2", "timestamp": 1581475549}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s600.model", "pearson": 0.4907742192624834, "MSE": 0.5770054597887893, "lang": "ptbr", "timestamp": 1581475569}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s600.model", "pearson": 0.5300515488942098, "MSE": 0.8803653546115368, "lang": "pteu", "timestamp": 1581475574}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s600.model", "pearson": 0.5793145427414861, "MSE": 0.7522138709642961, "lang": "assin2", "timestamp": 1581475581}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s1000.model", "pearson": 0.5978515782224184, "MSE": 0.4890319900661832, "lang": "ptbr", "timestamp": 1581475608}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s1000.model", "pearson": 0.543241745372053, "MSE": 0.8530862830471048, "lang": "pteu", "timestamp": 1581475687}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s1000.model", "pearson": 0.6239510901253216, "MSE": 0.6932096627314777, "lang": "assin2", "timestamp": 1581475699}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s1000.model", "pearson": 0.5014183982159802, "MSE": 0.5689716773874577, "lang": "ptbr", "timestamp": 1581475787}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s1000.model", "pearson": 0.532384996916635, "MSE": 0.8776157856538456, "lang": "pteu", "timestamp": 1581475868}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s1000.model", "pearson": 0.5861432868786237, "MSE": 0.7430229066344706, "lang": "assin2", "timestamp": 1581475946}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s50.model", "pearson": 0.5272179745510334, "MSE": 0.54891190039243, "lang": "ptbr", "timestamp": 1581475956}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s50.model", "pearson": 0.5077379360790266, "MSE": 0.8973508209143916, "lang": "pteu", "timestamp": 1581475961}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s50.model", "pearson": 0.5870961637612206, "MSE": 0.7575334687997729, "lang": "assin2", "timestamp": 1581475967}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s50.model", "pearson": 0.5087483444227393, "MSE": 0.5635538928502168, "lang": "ptbr", "timestamp": 1581475972}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s50.model", "pearson": 0.4747592517809345, "MSE": 0.9238548983876421, "lang": "pteu", "timestamp": 1581475977}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s50.model", "pearson": 0.5600959914104666, "MSE": 0.7879821459822365, "lang": "assin2", "timestamp": 1581475983}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s100.model", "pearson": 0.5417920702888783, "MSE": 0.5372319609700152, "lang": "ptbr", "timestamp": 1581475989}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s100.model", "pearson": 0.49790940226215347, "MSE": 0.8971357872325678, "lang": "pteu", "timestamp": 1581475994}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s100.model", "pearson": 0.5880084529123704, "MSE": 0.7509080319339123, "lang": "assin2", "timestamp": 1581476001}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s600.model", "pearson": 0.5917785804542662, "MSE": 0.4944631428635134, "lang": "ptbr", "timestamp": 1581476042}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s600.model", "pearson": 0.5423018563022215, "MSE": 0.8500608653675894, "lang": "pteu", "timestamp": 1581476083}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s600.model", "pearson": 0.6222221040662428, "MSE": 0.6965280835538677, "lang": "assin2", "timestamp": 1581476124}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s300.model", "pearson": 0.5783350245012263, "MSE": 0.5064563128517894, "lang": "ptbr", "timestamp": 1581476138}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s300.model", "pearson": 0.535389860095213, "MSE": 0.8603348231957522, "lang": "pteu", "timestamp": 1581476143}, {"test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s300.model", "pearson": 0.6312383862056377, "MSE": 0.6872132995181058, "lang": "assin2", "timestamp": 1581476148}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s100.model", "pearson": 0.5003725107505639, "MSE": 0.570471365681911, "lang": "ptbr", "timestamp": 1581476158}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s100.model", "pearson": 0.4935269320745121, "MSE": 0.9162084276830956, "lang": "pteu", "timestamp": 1581476163}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s100.model", "pearson": 0.5618305537793662, "MSE": 0.7846951595009808, "lang": "assin2", "timestamp": 1581476169}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s300.model", "pearson": 0.5192423587552167, "MSE": 0.5556587907338002, "lang": "ptbr", "timestamp": 1581476179}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s300.model", "pearson": 0.48478461915410775, "MSE": 0.9316032098053172, "lang": "pteu", "timestamp": 1581476184}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s300.model", "pearson": 0.6229495967265023, "MSE": 0.6968234735254717, "lang": "assin2", "timestamp": 1581476189}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s600.model", "pearson": 0.5729460513408542, "MSE": 0.5110996093596331, "lang": "ptbr", "timestamp": 1581476210}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s600.model", "pearson": 0.5476845363806169, "MSE": 0.8650487910336515, "lang": "pteu", "timestamp": 1581476216}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s600.model", "pearson": 0.6272629462187147, "MSE": 0.6876383299595201, "lang": "assin2", "timestamp": 1581476223}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s1000.model", "pearson": 0.5414953942992135, "MSE": 0.5382102836650782, "lang": "ptbr", "timestamp": 1581476274}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s1000.model", "pearson": 0.49855206752777204, "MSE": 0.92055868945738, "lang": "pteu", "timestamp": 1581476323}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s1000.model", "pearson": 0.6344608054565182, "MSE": 0.6770408519324785, "lang": "assin2", "timestamp": 1581476359}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s1000.model", "pearson": 0.5813695721669114, "MSE": 0.5038524928504787, "lang": "ptbr", "timestamp": 1581476384}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s1000.model", "pearson": 0.5474077497600409, "MSE": 0.8659425334040954, "lang": "pteu", "timestamp": 1581476417}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s1000.model", "pearson": 0.6292887501183912, "MSE": 0.6851244384462472, "lang": "assin2", "timestamp": 1581476451}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s50.model", "pearson": 0.47230309665791775, "MSE": 0.5915159709537029, "lang": "ptbr", "timestamp": 1581476457}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s50.model", "pearson": 0.45653697658039627, "MSE": 0.953244219764172, "lang": "pteu", "timestamp": 1581476462}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s50.model", "pearson": 0.5213293465366118, "MSE": 0.8390997525399203, "lang": "assin2", "timestamp": 1581476468}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s50.model", "pearson": 0.46220678833311835, "MSE": 0.5980067058544049, "lang": "ptbr", "timestamp": 1581476475}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s50.model", "pearson": 0.4335061624446861, "MSE": 0.9797172910529796, "lang": "pteu", "timestamp": 1581476479}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s50.model", "pearson": 0.560168750762239, "MSE": 0.7884014075080629, "lang": "assin2", "timestamp": 1581476484}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s100.model", "pearson": 0.4807568069095317, "MSE": 0.5847861487890423, "lang": "ptbr", "timestamp": 1581476490}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s100.model", "pearson": 0.45256591645685074, "MSE": 0.9605554296057761, "lang": "pteu", "timestamp": 1581476495}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s100.model", "pearson": 0.5879737520767225, "MSE": 0.7535748452644934, "lang": "assin2", "timestamp": 1581476501}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s600.model", "pearson": 0.534276984835061, "MSE": 0.5440539202002644, "lang": "ptbr", "timestamp": 1581476516}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s600.model", "pearson": 0.49510779884095946, "MSE": 0.9228869264040616, "lang": "pteu", "timestamp": 1581476521}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s600.model", "pearson": 0.6312096342923061, "MSE": 0.6824367494231379, "lang": "assin2", "timestamp": 1581476528}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s300.model", "pearson": 0.5519035111607951, "MSE": 0.5289921696026245, "lang": "ptbr", "timestamp": 1581476537}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s300.model", "pearson": 0.5386645434081985, "MSE": 0.8727348324765444, "lang": "pteu", "timestamp": 1581476542}, {"test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s300.model", "pearson": 0.6187202301974828, "MSE": 0.7031278205818964, "lang": "assin2", "timestamp": 1581476548}]
+[
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s100.model",
+        "pearson": 0.5628077043276282,
+        "MSE": 0.5191925768320683,
+        "lang": "ptbr",
+        "timestamp": 1581475515
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s100.model",
+        "pearson": 0.5437710194950716,
+        "MSE": 0.8531110867411628,
+        "lang": "pteu",
+        "timestamp": 1581475519
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s100.model",
+        "pearson": 0.6093031193544851,
+        "MSE": 0.7246323747619788,
+        "lang": "assin2",
+        "timestamp": 1581475525
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s300.model",
+        "pearson": 0.5802862698907516,
+        "MSE": 0.5045840027395374,
+        "lang": "ptbr",
+        "timestamp": 1581475539
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s300.model",
+        "pearson": 0.5330348769324245,
+        "MSE": 0.8587072881324679,
+        "lang": "pteu",
+        "timestamp": 1581475544
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s300.model",
+        "pearson": 0.614337799846754,
+        "MSE": 0.7099966980961848,
+        "lang": "assin2",
+        "timestamp": 1581475549
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s600.model",
+        "pearson": 0.4907742192624834,
+        "MSE": 0.5770054597887893,
+        "lang": "ptbr",
+        "timestamp": 1581475569
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s600.model",
+        "pearson": 0.5300515488942098,
+        "MSE": 0.8803653546115368,
+        "lang": "pteu",
+        "timestamp": 1581475574
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s600.model",
+        "pearson": 0.5793145427414861,
+        "MSE": 0.7522138709642961,
+        "lang": "assin2",
+        "timestamp": 1581475581
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s1000.model",
+        "pearson": 0.5978515782224184,
+        "MSE": 0.4890319900661832,
+        "lang": "ptbr",
+        "timestamp": 1581475608
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s1000.model",
+        "pearson": 0.543241745372053,
+        "MSE": 0.8530862830471048,
+        "lang": "pteu",
+        "timestamp": 1581475687
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s1000.model",
+        "pearson": 0.6239510901253216,
+        "MSE": 0.6932096627314777,
+        "lang": "assin2",
+        "timestamp": 1581475699
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s1000.model",
+        "pearson": 0.5014183982159802,
+        "MSE": 0.5689716773874577,
+        "lang": "ptbr",
+        "timestamp": 1581475787
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s1000.model",
+        "pearson": 0.532384996916635,
+        "MSE": 0.8776157856538456,
+        "lang": "pteu",
+        "timestamp": 1581475868
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s1000.model",
+        "pearson": 0.5861432868786237,
+        "MSE": 0.7430229066344706,
+        "lang": "assin2",
+        "timestamp": 1581475946
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s50.model",
+        "pearson": 0.5272179745510334,
+        "MSE": 0.54891190039243,
+        "lang": "ptbr",
+        "timestamp": 1581475956
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s50.model",
+        "pearson": 0.5077379360790266,
+        "MSE": 0.8973508209143916,
+        "lang": "pteu",
+        "timestamp": 1581475961
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s50.model",
+        "pearson": 0.5870961637612206,
+        "MSE": 0.7575334687997729,
+        "lang": "assin2",
+        "timestamp": 1581475967
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s50.model",
+        "pearson": 0.5087483444227393,
+        "MSE": 0.5635538928502168,
+        "lang": "ptbr",
+        "timestamp": 1581475972
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s50.model",
+        "pearson": 0.4747592517809345,
+        "MSE": 0.9238548983876421,
+        "lang": "pteu",
+        "timestamp": 1581475977
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s50.model",
+        "pearson": 0.5600959914104666,
+        "MSE": 0.7879821459822365,
+        "lang": "assin2",
+        "timestamp": 1581475983
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s100.model",
+        "pearson": 0.5417920702888783,
+        "MSE": 0.5372319609700152,
+        "lang": "ptbr",
+        "timestamp": 1581475989
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s100.model",
+        "pearson": 0.49790940226215347,
+        "MSE": 0.8971357872325678,
+        "lang": "pteu",
+        "timestamp": 1581475994
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s100.model",
+        "pearson": 0.5880084529123704,
+        "MSE": 0.7509080319339123,
+        "lang": "assin2",
+        "timestamp": 1581476001
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s600.model",
+        "pearson": 0.5917785804542662,
+        "MSE": 0.4944631428635134,
+        "lang": "ptbr",
+        "timestamp": 1581476042
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s600.model",
+        "pearson": 0.5423018563022215,
+        "MSE": 0.8500608653675894,
+        "lang": "pteu",
+        "timestamp": 1581476083
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/skip_s600.model",
+        "pearson": 0.6222221040662428,
+        "MSE": 0.6965280835538677,
+        "lang": "assin2",
+        "timestamp": 1581476124
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s300.model",
+        "pearson": 0.5783350245012263,
+        "MSE": 0.5064563128517894,
+        "lang": "ptbr",
+        "timestamp": 1581476138
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s300.model",
+        "pearson": 0.535389860095213,
+        "MSE": 0.8603348231957522,
+        "lang": "pteu",
+        "timestamp": 1581476143
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/wang2vec/cbow_s300.model",
+        "pearson": 0.6312383862056377,
+        "MSE": 0.6872132995181058,
+        "lang": "assin2",
+        "timestamp": 1581476148
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s100.model",
+        "pearson": 0.5003725107505639,
+        "MSE": 0.570471365681911,
+        "lang": "ptbr",
+        "timestamp": 1581476158
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s100.model",
+        "pearson": 0.4935269320745121,
+        "MSE": 0.9162084276830956,
+        "lang": "pteu",
+        "timestamp": 1581476163
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s100.model",
+        "pearson": 0.5618305537793662,
+        "MSE": 0.7846951595009808,
+        "lang": "assin2",
+        "timestamp": 1581476169
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s300.model",
+        "pearson": 0.5192423587552167,
+        "MSE": 0.5556587907338002,
+        "lang": "ptbr",
+        "timestamp": 1581476179
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s300.model",
+        "pearson": 0.48478461915410775,
+        "MSE": 0.9316032098053172,
+        "lang": "pteu",
+        "timestamp": 1581476184
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s300.model",
+        "pearson": 0.6229495967265023,
+        "MSE": 0.6968234735254717,
+        "lang": "assin2",
+        "timestamp": 1581476189
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s600.model",
+        "pearson": 0.5729460513408542,
+        "MSE": 0.5110996093596331,
+        "lang": "ptbr",
+        "timestamp": 1581476210
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s600.model",
+        "pearson": 0.5476845363806169,
+        "MSE": 0.8650487910336515,
+        "lang": "pteu",
+        "timestamp": 1581476216
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s600.model",
+        "pearson": 0.6272629462187147,
+        "MSE": 0.6876383299595201,
+        "lang": "assin2",
+        "timestamp": 1581476223
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s1000.model",
+        "pearson": 0.5414953942992135,
+        "MSE": 0.5382102836650782,
+        "lang": "ptbr",
+        "timestamp": 1581476274
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s1000.model",
+        "pearson": 0.49855206752777204,
+        "MSE": 0.92055868945738,
+        "lang": "pteu",
+        "timestamp": 1581476323
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s1000.model",
+        "pearson": 0.6344608054565182,
+        "MSE": 0.6770408519324785,
+        "lang": "assin2",
+        "timestamp": 1581476359
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s1000.model",
+        "pearson": 0.5813695721669114,
+        "MSE": 0.5038524928504787,
+        "lang": "ptbr",
+        "timestamp": 1581476384
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s1000.model",
+        "pearson": 0.5474077497600409,
+        "MSE": 0.8659425334040954,
+        "lang": "pteu",
+        "timestamp": 1581476417
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s1000.model",
+        "pearson": 0.6292887501183912,
+        "MSE": 0.6851244384462472,
+        "lang": "assin2",
+        "timestamp": 1581476451
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s50.model",
+        "pearson": 0.47230309665791775,
+        "MSE": 0.5915159709537029,
+        "lang": "ptbr",
+        "timestamp": 1581476457
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s50.model",
+        "pearson": 0.45653697658039627,
+        "MSE": 0.953244219764172,
+        "lang": "pteu",
+        "timestamp": 1581476462
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s50.model",
+        "pearson": 0.5213293465366118,
+        "MSE": 0.8390997525399203,
+        "lang": "assin2",
+        "timestamp": 1581476468
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s50.model",
+        "pearson": 0.46220678833311835,
+        "MSE": 0.5980067058544049,
+        "lang": "ptbr",
+        "timestamp": 1581476475
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s50.model",
+        "pearson": 0.4335061624446861,
+        "MSE": 0.9797172910529796,
+        "lang": "pteu",
+        "timestamp": 1581476479
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s50.model",
+        "pearson": 0.560168750762239,
+        "MSE": 0.7884014075080629,
+        "lang": "assin2",
+        "timestamp": 1581476484
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s100.model",
+        "pearson": 0.4807568069095317,
+        "MSE": 0.5847861487890423,
+        "lang": "ptbr",
+        "timestamp": 1581476490
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s100.model",
+        "pearson": 0.45256591645685074,
+        "MSE": 0.9605554296057761,
+        "lang": "pteu",
+        "timestamp": 1581476495
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s100.model",
+        "pearson": 0.5879737520767225,
+        "MSE": 0.7535748452644934,
+        "lang": "assin2",
+        "timestamp": 1581476501
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s600.model",
+        "pearson": 0.534276984835061,
+        "MSE": 0.5440539202002644,
+        "lang": "ptbr",
+        "timestamp": 1581476516
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s600.model",
+        "pearson": 0.49510779884095946,
+        "MSE": 0.9228869264040616,
+        "lang": "pteu",
+        "timestamp": 1581476521
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/skip_s600.model",
+        "pearson": 0.6312096342923061,
+        "MSE": 0.6824367494231379,
+        "lang": "assin2",
+        "timestamp": 1581476528
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s300.model",
+        "pearson": 0.5519035111607951,
+        "MSE": 0.5289921696026245,
+        "lang": "ptbr",
+        "timestamp": 1581476537
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s300.model",
+        "pearson": 0.5386645434081985,
+        "MSE": 0.8727348324765444,
+        "lang": "pteu",
+        "timestamp": 1581476542
+    },
+    {
+        "test": "NILC_with_unk_part1_../embeddings/NILC/word2vec/cbow_s300.model",
+        "pearson": 0.6187202301974828,
+        "MSE": 0.7031278205818964,
+        "lang": "assin2",
+        "timestamp": 1581476548
+    }
+]

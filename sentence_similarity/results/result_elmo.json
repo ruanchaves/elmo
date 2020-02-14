@@ -1,0 +1,65 @@
+[
+    {
+        "test": "ELMo_custom1",
+        "pearson": 0.6178164353343458,
+        "MSE": 0.4713142161805513,
+        "lang": "ptbr",
+        "timestamp": 1581506937
+    },
+    {
+        "test": "ELMo_custom1",
+        "pearson": 0.627010263475315,
+        "MSE": 0.7414619969398943,
+        "lang": "pteu",
+        "timestamp": 1581508110
+    },
+    {
+        "test": "ELMo_custom1",
+        "pearson": 0.5684397454358714,
+        "MSE": 0.7734830058498235,
+        "lang": "assin2",
+        "timestamp": 1581509658
+    },
+    {
+        "test": "ELMo_custom2",
+        "pearson": 0.5933682701401588,
+        "MSE": 0.493008879139397,
+        "lang": "ptbr",
+        "timestamp": 1581510692
+    },
+    {
+        "test": "ELMo_custom2",
+        "pearson": 0.5960515308161334,
+        "MSE": 0.7803068861244848,
+        "lang": "pteu",
+        "timestamp": 1581511766
+    },
+    {
+        "test": "ELMo_custom2",
+        "pearson": 0.599741734207123,
+        "MSE": 0.7306273549916997,
+        "lang": "assin2",
+        "timestamp": 1581513155
+    },
+    {
+        "test": "ELMo",
+        "pearson": 0.6107064558346883,
+        "MSE": 0.47843197568778495,
+        "lang": "ptbr",
+        "timestamp": 1581514194
+    },
+    {
+        "test": "ELMo",
+        "pearson": 0.6201968641494077,
+        "MSE": 0.7523866597863739,
+        "lang": "pteu",
+        "timestamp": 1581515183
+    },
+    {
+        "test": "ELMo",
+        "pearson": 0.5535828550542796,
+        "MSE": 0.797939402861347,
+        "lang": "assin2",
+        "timestamp": 1581516552
+    }
+]

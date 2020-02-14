@@ -1,1 +1,317 @@
-[{"test": "NILC_part2_../embeddings/NILC/glove/glove_s50.model", "pearson": 0.4253664262477941, "MSE": 0.622727816106863, "lang": "ptbr", "timestamp": 1581475963}, {"test": "NILC_part2_../embeddings/NILC/glove/glove_s50.model", "pearson": 0.38544300464570186, "MSE": 1.0156331228995104, "lang": "pteu", "timestamp": 1581475968}, {"test": "NILC_part2_../embeddings/NILC/glove/glove_s50.model", "pearson": 0.5445203478843885, "MSE": 0.797724757022687, "lang": "assin2", "timestamp": 1581475974}, {"test": "NILC_part2_../embeddings/NILC/glove/glove_s300.model", "pearson": 0.49014073148578774, "MSE": 0.5780355476998416, "lang": "ptbr", "timestamp": 1581475984}, {"test": "NILC_part2_../embeddings/NILC/glove/glove_s300.model", "pearson": 0.45375018646259324, "MSE": 0.9518063401442232, "lang": "pteu", "timestamp": 1581475989}, {"test": "NILC_part2_../embeddings/NILC/glove/glove_s300.model", "pearson": 0.5978111301639184, "MSE": 0.7241663246729944, "lang": "assin2", "timestamp": 1581475995}, {"test": "NILC_part2_../embeddings/NILC/glove/glove_s600.model", "pearson": 0.5094617958427975, "MSE": 0.5635482099203395, "lang": "ptbr", "timestamp": 1581476025}, {"test": "NILC_part2_../embeddings/NILC/glove/glove_s600.model", "pearson": 0.46250780756854065, "MSE": 0.9398274908265397, "lang": "pteu", "timestamp": 1581476069}, {"test": "NILC_part2_../embeddings/NILC/glove/glove_s600.model", "pearson": 0.5952798969723361, "MSE": 0.7256167720665717, "lang": "assin2", "timestamp": 1581476112}, {"test": "NILC_part2_../embeddings/NILC/glove/glove_s1000.model", "pearson": 0.5177159522076112, "MSE": 0.5571902341785993, "lang": "ptbr", "timestamp": 1581476712}, {"test": "NILC_part2_../embeddings/NILC/glove/glove_s1000.model", "pearson": 0.4646615667076485, "MSE": 0.9383650705418286, "lang": "pteu", "timestamp": 1581476755}, {"test": "NILC_part2_../embeddings/NILC/glove/glove_s1000.model", "pearson": 0.598101781390106, "MSE": 0.7216824802653005, "lang": "assin2", "timestamp": 1581476799}, {"test": "NILC_part2_../embeddings/NILC/glove/glove_s100.model", "pearson": 0.4550463811231402, "MSE": 0.602957271516001, "lang": "ptbr", "timestamp": 1581476807}, {"test": "NILC_part2_../embeddings/NILC/glove/glove_s100.model", "pearson": 0.4191107100919086, "MSE": 0.9856902780214395, "lang": "pteu", "timestamp": 1581476812}, {"test": "NILC_part2_../embeddings/NILC/glove/glove_s100.model", "pearson": 0.57949549612225, "MSE": 0.7508067729058686, "lang": "assin2", "timestamp": 1581476817}, {"test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s100.model", "pearson": 0.3637256053899113, "MSE": 0.6598487927811718, "lang": "ptbr", "timestamp": 1581476825}, {"test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s100.model", "pearson": 0.35207301523885887, "MSE": 1.0452871939985777, "lang": "pteu", "timestamp": 1581476829}, {"test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s100.model", "pearson": 0.5677830803373072, "MSE": 0.7603624166611579, "lang": "assin2", "timestamp": 1581476835}, {"test": "NILC_part2_../embeddings/NILC/fasttext/skip_s300.model", "pearson": 0.5846947890287584, "MSE": 0.5001969504439037, "lang": "ptbr", "timestamp": 1581476845}, {"test": "NILC_part2_../embeddings/NILC/fasttext/skip_s300.model", "pearson": 0.5363002590037218, "MSE": 0.8637934564917306, "lang": "pteu", "timestamp": 1581476850}, {"test": "NILC_part2_../embeddings/NILC/fasttext/skip_s300.model", "pearson": 0.640420623720327, "MSE": 0.6790021987324687, "lang": "assin2", "timestamp": 1581476856}, {"test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s600.model", "pearson": 0.4038951509749124, "MSE": 0.6370059878521531, "lang": "ptbr", "timestamp": 1581476874}, {"test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s600.model", "pearson": 0.3928949973043401, "MSE": 1.0092427088657516, "lang": "pteu", "timestamp": 1581476879}, {"test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s600.model", "pearson": 0.5709457366348774, "MSE": 0.7512617456238126, "lang": "assin2", "timestamp": 1581476885}, {"test": "NILC_part2_../embeddings/NILC/fasttext/skip_s1000.model", "pearson": 0.5955336016644373, "MSE": 0.49086396934964666, "lang": "ptbr", "timestamp": 1581476928}, {"test": "NILC_part2_../embeddings/NILC/fasttext/skip_s1000.model", "pearson": 0.5515240977438345, "MSE": 0.8479234505507469, "lang": "pteu", "timestamp": 1581476967}, {"test": "NILC_part2_../embeddings/NILC/fasttext/skip_s1000.model", "pearson": 0.6503730147355884, "MSE": 0.6571160954995404, "lang": "assin2", "timestamp": 1581476986}, {"test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s1000.model", "pearson": 0.4016723400313926, "MSE": 0.638344133818411, "lang": "ptbr", "timestamp": 1581477023}, {"test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s1000.model", "pearson": 0.3901622335363152, "MSE": 1.0114990683140312, "lang": "pteu", "timestamp": 1581477064}, {"test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s1000.model", "pearson": 0.5760003098754403, "MSE": 0.7449117647072562, "lang": "assin2", "timestamp": 1581477084}, {"test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s50.model", "pearson": 0.3499083877267044, "MSE": 0.6673110948437456, "lang": "ptbr", "timestamp": 1581477090}, {"test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s50.model", "pearson": 0.3402934914958399, "MSE": 1.0546387568956894, "lang": "pteu", "timestamp": 1581477095}, {"test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s50.model", "pearson": 0.5508938589539456, "MSE": 0.7864122893674125, "lang": "assin2", "timestamp": 1581477100}, {"test": "NILC_part2_../embeddings/NILC/fasttext/skip_s50.model", "pearson": 0.5202303429542012, "MSE": 0.5542597086988102, "lang": "ptbr", "timestamp": 1581477105}, {"test": "NILC_part2_../embeddings/NILC/fasttext/skip_s50.model", "pearson": 0.4713783567731031, "MSE": 0.9352532346862659, "lang": "pteu", "timestamp": 1581477110}, {"test": "NILC_part2_../embeddings/NILC/fasttext/skip_s50.model", "pearson": 0.5984685104919633, "MSE": 0.7453699566896906, "lang": "assin2", "timestamp": 1581477115}, {"test": "NILC_part2_../embeddings/NILC/fasttext/skip_s100.model", "pearson": 0.5518163445083976, "MSE": 0.5285404611938891, "lang": "ptbr", "timestamp": 1581477121}, {"test": "NILC_part2_../embeddings/NILC/fasttext/skip_s100.model", "pearson": 0.5005777372514022, "MSE": 0.9001162526874796, "lang": "pteu", "timestamp": 1581477126}, {"test": "NILC_part2_../embeddings/NILC/fasttext/skip_s100.model", "pearson": 0.6216660925316311, "MSE": 0.7088311272301933, "lang": "assin2", "timestamp": 1581477131}, {"test": "NILC_part2_../embeddings/NILC/fasttext/skip_s600.model", "pearson": 0.591510560457584, "MSE": 0.49417491158102317, "lang": "ptbr", "timestamp": 1581477147}, {"test": "NILC_part2_../embeddings/NILC/fasttext/skip_s600.model", "pearson": 0.5392038953506405, "MSE": 0.8595580204412848, "lang": "pteu", "timestamp": 1581477152}, {"test": "NILC_part2_../embeddings/NILC/fasttext/skip_s600.model", "pearson": 0.6367984434090819, "MSE": 0.6814121566489448, "lang": "assin2", "timestamp": 1581477159}, {"test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s300.model", "pearson": 0.37463739170179156, "MSE": 0.6537317305479465, "lang": "ptbr", "timestamp": 1581477180}, {"test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s300.model", "pearson": 0.3611308015734166, "MSE": 1.0386180586677725, "lang": "pteu", "timestamp": 1581477187}, {"test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s300.model", "pearson": 0.5788646483678104, "MSE": 0.7423197234568235, "lang": "assin2", "timestamp": 1581477193}]
+[
+    {
+        "test": "NILC_part2_../embeddings/NILC/glove/glove_s50.model",
+        "pearson": 0.4253664262477941,
+        "MSE": 0.622727816106863,
+        "lang": "ptbr",
+        "timestamp": 1581475963
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/glove/glove_s50.model",
+        "pearson": 0.38544300464570186,
+        "MSE": 1.0156331228995104,
+        "lang": "pteu",
+        "timestamp": 1581475968
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/glove/glove_s50.model",
+        "pearson": 0.5445203478843885,
+        "MSE": 0.797724757022687,
+        "lang": "assin2",
+        "timestamp": 1581475974
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/glove/glove_s300.model",
+        "pearson": 0.49014073148578774,
+        "MSE": 0.5780355476998416,
+        "lang": "ptbr",
+        "timestamp": 1581475984
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/glove/glove_s300.model",
+        "pearson": 0.45375018646259324,
+        "MSE": 0.9518063401442232,
+        "lang": "pteu",
+        "timestamp": 1581475989
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/glove/glove_s300.model",
+        "pearson": 0.5978111301639184,
+        "MSE": 0.7241663246729944,
+        "lang": "assin2",
+        "timestamp": 1581475995
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/glove/glove_s600.model",
+        "pearson": 0.5094617958427975,
+        "MSE": 0.5635482099203395,
+        "lang": "ptbr",
+        "timestamp": 1581476025
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/glove/glove_s600.model",
+        "pearson": 0.46250780756854065,
+        "MSE": 0.9398274908265397,
+        "lang": "pteu",
+        "timestamp": 1581476069
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/glove/glove_s600.model",
+        "pearson": 0.5952798969723361,
+        "MSE": 0.7256167720665717,
+        "lang": "assin2",
+        "timestamp": 1581476112
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/glove/glove_s1000.model",
+        "pearson": 0.5177159522076112,
+        "MSE": 0.5571902341785993,
+        "lang": "ptbr",
+        "timestamp": 1581476712
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/glove/glove_s1000.model",
+        "pearson": 0.4646615667076485,
+        "MSE": 0.9383650705418286,
+        "lang": "pteu",
+        "timestamp": 1581476755
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/glove/glove_s1000.model",
+        "pearson": 0.598101781390106,
+        "MSE": 0.7216824802653005,
+        "lang": "assin2",
+        "timestamp": 1581476799
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/glove/glove_s100.model",
+        "pearson": 0.4550463811231402,
+        "MSE": 0.602957271516001,
+        "lang": "ptbr",
+        "timestamp": 1581476807
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/glove/glove_s100.model",
+        "pearson": 0.4191107100919086,
+        "MSE": 0.9856902780214395,
+        "lang": "pteu",
+        "timestamp": 1581476812
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/glove/glove_s100.model",
+        "pearson": 0.57949549612225,
+        "MSE": 0.7508067729058686,
+        "lang": "assin2",
+        "timestamp": 1581476817
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s100.model",
+        "pearson": 0.3637256053899113,
+        "MSE": 0.6598487927811718,
+        "lang": "ptbr",
+        "timestamp": 1581476825
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s100.model",
+        "pearson": 0.35207301523885887,
+        "MSE": 1.0452871939985777,
+        "lang": "pteu",
+        "timestamp": 1581476829
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s100.model",
+        "pearson": 0.5677830803373072,
+        "MSE": 0.7603624166611579,
+        "lang": "assin2",
+        "timestamp": 1581476835
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/skip_s300.model",
+        "pearson": 0.5846947890287584,
+        "MSE": 0.5001969504439037,
+        "lang": "ptbr",
+        "timestamp": 1581476845
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/skip_s300.model",
+        "pearson": 0.5363002590037218,
+        "MSE": 0.8637934564917306,
+        "lang": "pteu",
+        "timestamp": 1581476850
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/skip_s300.model",
+        "pearson": 0.640420623720327,
+        "MSE": 0.6790021987324687,
+        "lang": "assin2",
+        "timestamp": 1581476856
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s600.model",
+        "pearson": 0.4038951509749124,
+        "MSE": 0.6370059878521531,
+        "lang": "ptbr",
+        "timestamp": 1581476874
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s600.model",
+        "pearson": 0.3928949973043401,
+        "MSE": 1.0092427088657516,
+        "lang": "pteu",
+        "timestamp": 1581476879
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s600.model",
+        "pearson": 0.5709457366348774,
+        "MSE": 0.7512617456238126,
+        "lang": "assin2",
+        "timestamp": 1581476885
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/skip_s1000.model",
+        "pearson": 0.5955336016644373,
+        "MSE": 0.49086396934964666,
+        "lang": "ptbr",
+        "timestamp": 1581476928
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/skip_s1000.model",
+        "pearson": 0.5515240977438345,
+        "MSE": 0.8479234505507469,
+        "lang": "pteu",
+        "timestamp": 1581476967
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/skip_s1000.model",
+        "pearson": 0.6503730147355884,
+        "MSE": 0.6571160954995404,
+        "lang": "assin2",
+        "timestamp": 1581476986
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s1000.model",
+        "pearson": 0.4016723400313926,
+        "MSE": 0.638344133818411,
+        "lang": "ptbr",
+        "timestamp": 1581477023
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s1000.model",
+        "pearson": 0.3901622335363152,
+        "MSE": 1.0114990683140312,
+        "lang": "pteu",
+        "timestamp": 1581477064
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s1000.model",
+        "pearson": 0.5760003098754403,
+        "MSE": 0.7449117647072562,
+        "lang": "assin2",
+        "timestamp": 1581477084
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s50.model",
+        "pearson": 0.3499083877267044,
+        "MSE": 0.6673110948437456,
+        "lang": "ptbr",
+        "timestamp": 1581477090
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s50.model",
+        "pearson": 0.3402934914958399,
+        "MSE": 1.0546387568956894,
+        "lang": "pteu",
+        "timestamp": 1581477095
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s50.model",
+        "pearson": 0.5508938589539456,
+        "MSE": 0.7864122893674125,
+        "lang": "assin2",
+        "timestamp": 1581477100
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/skip_s50.model",
+        "pearson": 0.5202303429542012,
+        "MSE": 0.5542597086988102,
+        "lang": "ptbr",
+        "timestamp": 1581477105
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/skip_s50.model",
+        "pearson": 0.4713783567731031,
+        "MSE": 0.9352532346862659,
+        "lang": "pteu",
+        "timestamp": 1581477110
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/skip_s50.model",
+        "pearson": 0.5984685104919633,
+        "MSE": 0.7453699566896906,
+        "lang": "assin2",
+        "timestamp": 1581477115
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/skip_s100.model",
+        "pearson": 0.5518163445083976,
+        "MSE": 0.5285404611938891,
+        "lang": "ptbr",
+        "timestamp": 1581477121
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/skip_s100.model",
+        "pearson": 0.5005777372514022,
+        "MSE": 0.9001162526874796,
+        "lang": "pteu",
+        "timestamp": 1581477126
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/skip_s100.model",
+        "pearson": 0.6216660925316311,
+        "MSE": 0.7088311272301933,
+        "lang": "assin2",
+        "timestamp": 1581477131
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/skip_s600.model",
+        "pearson": 0.591510560457584,
+        "MSE": 0.49417491158102317,
+        "lang": "ptbr",
+        "timestamp": 1581477147
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/skip_s600.model",
+        "pearson": 0.5392038953506405,
+        "MSE": 0.8595580204412848,
+        "lang": "pteu",
+        "timestamp": 1581477152
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/skip_s600.model",
+        "pearson": 0.6367984434090819,
+        "MSE": 0.6814121566489448,
+        "lang": "assin2",
+        "timestamp": 1581477159
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s300.model",
+        "pearson": 0.37463739170179156,
+        "MSE": 0.6537317305479465,
+        "lang": "ptbr",
+        "timestamp": 1581477180
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s300.model",
+        "pearson": 0.3611308015734166,
+        "MSE": 1.0386180586677725,
+        "lang": "pteu",
+        "timestamp": 1581477187
+    },
+    {
+        "test": "NILC_part2_../embeddings/NILC/fasttext/cbow_s300.model",
+        "pearson": 0.5788646483678104,
+        "MSE": 0.7423197234568235,
+        "lang": "assin2",
+        "timestamp": 1581477193
+    }
+]
