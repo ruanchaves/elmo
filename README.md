@@ -11,7 +11,7 @@ This source code can reproduce the experiments mentioned in our paper [Portugues
 
 ## Benchmarks
 
-Our full benchmarks are available under [`reports/evaluation.csv`](reports/evaluation.csv) and also [on the slides]() of our presentation at the 14th edition of the International Conference on the Computational Processing of Portuguese (PROPOR 2020). The most relevant benchmarks for the semantic textual similarity task are reproduced below.
+Our full benchmarks are available under [`reports/evaluation.csv`](reports/evaluation.csv). The most relevant benchmarks for the semantic textual similarity task are reproduced below.
 
 | Dataset           | Model                 | Embedding | Architecture | Dimensions |           PCC |           MSE |
 |-------------------|-----------------------|-----------|--------------|------------|--------------:|--------------:|
