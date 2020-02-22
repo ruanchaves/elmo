@@ -1,11 +1,17 @@
 Portuguese Language Models and Word Embeddings
 =================
 
-This is the source code that generated the evaluation results mentioned in the paper *Portuguese Language Models and Word Embeddings: Evaluating on Semantic Similarity Tasks*. It's designed to evaluate all word embeddings from [nathanshartmann/portuguese_word_embeddings](https://github.com/nathanshartmann/portuguese_word_embeddings) on the semantic textual similarity tasks of the [ASSIN datasets](https://github.com/erickrf/assin) and also compare them with the results achieved by ELMo and BERT. Some of our tests will concatenate ELMo and word embeddings from the said repository.
+This source code can reproduce the experiments mentioned in our paper [Portuguese Language Models and Word Embeddings: Evaluating on Semantic Similarity Tasks](https://www.springer.com/gp/book/9783030415044). It's designed to evaluate all word embeddings from [nathanshartmann/portuguese_word_embeddings](https://github.com/nathanshartmann/portuguese_word_embeddings) on the semantic textual similarity tasks of the [ASSIN datasets](https://github.com/erickrf/assin) and also compare them with the results achieved by ELMo and BERT. Some of our tests will concatenate ELMo and word embeddings from the said repository.
+
+* [Paper](https://www.springer.com/gp/book/9783030415044)
+
+* [Blog post](https://ruanchaves.github.io/portuguese-language-models/)
+
+* [Benchmarks](reports/evaluation.csv)
 
 ## Benchmarks
 
-Our full benchmarks are available under `reports/evaluation.csv` and also [on the slides]() of our presentation at the 14th edition of the International Conference on the Computational Processing of Portuguese (PROPOR 2020). The most relevant benchmarks for the semantic textual similarity task are reproduced below.
+Our full benchmarks are available under [`reports/evaluation.csv`](reports/evaluation.csv) and also [on the slides]() of our presentation at the 14th edition of the International Conference on the Computational Processing of Portuguese (PROPOR 2020). The most relevant benchmarks for the semantic textual similarity task are reproduced below.
 
 | Dataset           | Model                 | Embedding | Architecture | Dimensions |           PCC |           MSE |
 |-------------------|-----------------------|-----------|--------------|------------|--------------:|--------------:|
@@ -22,7 +28,7 @@ Our full benchmarks are available under `reports/evaluation.csv` and also [on th
 |                   | [portuguese-BERT](https://github.com/neuralmind-ai/portuguese-bert)       |           |              |            |          0.64 |          1.69 |
 |                   | BERT-multilingual     |           |              |            |          0.51 |          1.94 |
 
-In our benchmarks, the ELMo model labelled as `wiki` is the public Portuguese ELMo model made available through the [AllenNLP library website](https://allennlp.org/elmo). The `BRWAC` model was trained on [brWaC](https://www.researchgate.net/publication/326303825_The_brWaC_Corpus_A_New_Open_Resource_for_Brazilian_Portuguese), and the `wiki (reduced)` was trained on the same dataset as `wiki` after words with word frequency below four occurrences were eliminated from the dataset. 
+In our benchmarks, the ELMo model labelled as `wiki` is the first public Portuguese ELMo model made available through the [AllenNLP library website](https://allennlp.org/elmo). The `BRWAC` model was trained on [brWaC](https://www.researchgate.net/publication/326303825_The_brWaC_Corpus_A_New_Open_Resource_for_Brazilian_Portuguese), and the `wiki (reduced)` was trained on the same dataset as `wiki` after words with word frequency below four occurrences were eliminated from the dataset. 
 
 
 ## Installation
