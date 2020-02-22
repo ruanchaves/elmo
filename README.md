@@ -50,3 +50,18 @@ Your results will be stored in the folder `sentence_similarity/results` by defau
 ## Associated Repositories
 
 You may want to take a look at the [ruanchaves/assin](https://github.com/ruanchaves/assin) repository. It contains tests which were performed with ensembles of fine-tuned Transformer models on the ASSIN datasets.
+
+## Citation
+
+```
+@inproceedings{rodrigues_propor2020,
+  author = {Ruan Chaves Rodrigues and Jéssica Rodrigues da Silva and Pedro Vitor Quinta de Castro and Nádia Félix Felipe da Silva and Anderson da Silva Soares },
+  title = {Portuguese Language Models and Word Embeddings: Evaluating on Semantic Similarity Tasks},
+  editor = { Paulo Quaresma and Renata Vieira and Sandra Aluísio and Helena Moniz and Fernando Batista and Teresa Gonçalves },
+  booktitle = { Computational Processing of the Portuguese Language },
+  note = { 14th International Conference, PROPOR 2020, Evora, Portugal, March 2–4, 2020, Proceedings },
+  publisher = { Springer International Publishing },
+  address = { Springer Nature Switzerland AG },
+  doi = {10.1007/978-3-030-41505-1},
+  year = {2020}}
+```
