@@ -7,6 +7,8 @@ This source code can reproduce the experiments mentioned in our paper [Portugues
 
 * [Blog post](https://ruanchaves.github.io/portuguese-language-models/)
 
+* [PROPOR 2020 Presentation](presentations/PROPOR_2020_presentation.pdf)
+
 * [Benchmarks](reports/evaluation.csv)
 
 ## Benchmarks
