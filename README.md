@@ -54,7 +54,9 @@ Your results will be stored in the folder `sentence_similarity/results` by defau
 
 ## Associated Repositories
 
-You may want to take a look at the [ruanchaves/assin](https://github.com/ruanchaves/assin) repository. It contains tests which were performed with ensembles of fine-tuned Transformer models on the ASSIN datasets.
+* [Pull request to nathanshartmann/portuguese_word_embeddings: Improvements to the scores of evaluated embeddings #11](https://github.com/nathanshartmann/portuguese_word_embeddings/pull/11) 
+
+* You may want to take a look at the [ruanchaves/assin](https://github.com/ruanchaves/assin) repository. It contains tests which were performed with ensembles of fine-tuned Transformer models on the ASSIN datasets.
 
 ## Citation
 
