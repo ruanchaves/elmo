@@ -1,6 +1,8 @@
 Portuguese Language Models and Word Embeddings
 =================
 
+This repository has primarily been designed to assess the quality of the Portuguese ELMo representations made available through the AllenNLP library in comparison with the language models and word embeddings currently available for the Portuguese language.
+
 This source code can reproduce the experiments mentioned in our paper [Portuguese Language Models and Word Embeddings: Evaluating on Semantic Similarity Tasks](https://www.springer.com/gp/book/9783030415044). It's designed to evaluate all word embeddings from [nathanshartmann/portuguese_word_embeddings](https://github.com/nathanshartmann/portuguese_word_embeddings) on the semantic textual similarity tasks of the [ASSIN datasets](https://github.com/erickrf/assin) and also compare them with the results achieved by ELMo and BERT. Some of our tests will concatenate ELMo and word embeddings from the said repository.
 
 * [Paper](https://www.springer.com/gp/book/9783030415044)
