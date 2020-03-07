@@ -1,7 +1,7 @@
 Portuguese Language Models and Word Embeddings
 =================
 
-This repository has primarily been designed to assess the quality of the Portuguese ELMo representations made available through the AllenNLP library in comparison with the language models and word embeddings currently available for the Portuguese language.
+This repository has primarily been designed to assess the quality of the [Portuguese ELMo representations made available through the AllenNLP library](https://allennlp.org/elmo) in comparison with the language models and word embeddings currently available for the Portuguese language.
 
 This source code can reproduce the experiments mentioned in our paper [Portuguese Language Models and Word Embeddings: Evaluating on Semantic Similarity Tasks](https://www.springer.com/gp/book/9783030415044). It's designed to evaluate all word embeddings from [nathanshartmann/portuguese_word_embeddings](https://github.com/nathanshartmann/portuguese_word_embeddings) on the semantic textual similarity tasks of the [ASSIN datasets](https://github.com/erickrf/assin) and also compare them with the results achieved by ELMo and BERT. Some of our tests will concatenate ELMo and word embeddings from the said repository.
 
@@ -32,11 +32,9 @@ Our full benchmarks are available under [`reports/evaluation.csv`](reports/evalu
 |                   | [portuguese-BERT](https://github.com/neuralmind-ai/portuguese-bert)       |           |              |            |          0.64 |          1.69 |
 |                   | BERT-multilingual     |           |              |            |          0.51 |          1.94 |
 
-In our benchmarks, the ELMo model labelled as `wiki` is the first public Portuguese ELMo model that was made available through the [AllenNLP library website](https://allennlp.org/elmo). 
+In our benchmarks, the ELMo model labelled as `wiki` is the first public Portuguese ELMo model that was made available through the [AllenNLP library website](https://allennlp.org/elmo). Since then it has been replaced on the website by `wiki (reduced)`.
 
 The `BRWAC` model was trained on [brWaC](https://www.researchgate.net/publication/326303825_The_brWaC_Corpus_A_New_Open_Resource_for_Brazilian_Portuguese), and the `wiki (reduced)` was trained on the same dataset as `wiki` after words with word frequency below four occurrences were eliminated from the dataset. 
-
-Currently, both `BRWAC` and `wiki (reduced)` are available for download on the [website for the AllenNLP library](https://allennlp.org/elmo). 
 
 ## Installation
 
