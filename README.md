@@ -30,8 +30,11 @@ Our full benchmarks are available under [`reports/evaluation.csv`](reports/evalu
 |                   | [portuguese-BERT](https://github.com/neuralmind-ai/portuguese-bert)       |           |              |            |          0.64 |          1.69 |
 |                   | BERT-multilingual     |           |              |            |          0.51 |          1.94 |
 
-In our benchmarks, the ELMo model labelled as `wiki` is the first public Portuguese ELMo model made available through the [AllenNLP library website](https://allennlp.org/elmo). The `BRWAC` model was trained on [brWaC](https://www.researchgate.net/publication/326303825_The_brWaC_Corpus_A_New_Open_Resource_for_Brazilian_Portuguese), and the `wiki (reduced)` was trained on the same dataset as `wiki` after words with word frequency below four occurrences were eliminated from the dataset. 
+In our benchmarks, the ELMo model labelled as `wiki` is the first public Portuguese ELMo model that was made available through the [AllenNLP library website](https://allennlp.org/elmo). 
 
+The `BRWAC` model was trained on [brWaC](https://www.researchgate.net/publication/326303825_The_brWaC_Corpus_A_New_Open_Resource_for_Brazilian_Portuguese), and the `wiki (reduced)` was trained on the same dataset as `wiki` after words with word frequency below four occurrences were eliminated from the dataset. 
+
+Currently, both `BRWAC` and `wiki (reduced)` are available for download on the [website for the AllenNLP library](https://allennlp.org/elmo). 
 
 ## Installation
 
@@ -42,8 +45,6 @@ sudo bash scripts/quickstart.sh
 ```
 
 Running this command will generate the `ruanchaves/elmo:2.0` docker image, if it doesn't exist yet, and also download all NILC embeddings, if they still haven't been downloaded to the `embeddings/NILC` folder.
-
-We plan to publish soon both `wiki (reduced)` and `BRWAC` to the AllenNLP library. Until then, this code will attempt to load their relevant weights and options from local storage. You can comment the relevant lines in case you don't have them, if you want to avoid error messages.
 
 If you would also like to run BERT, extract your Tensorflow checkpoint files under the folder `embeddings/bert/portuguese`. It must be provided as a model checkpoint that can be understood by [bert-as-service](https://github.com/hanxiao/bert-as-service): you may have to rename some of the files in order to comply. Move `sentence_similarity/bert.yaml` to `settings/bert.yaml` and then recompile `scripts/quickstart.sh` by running `python generate_start.py`.
 
