@@ -19,11 +19,11 @@ Our full benchmarks are available under [`reports/evaluation.csv`](reports/evalu
 
 | Dataset           | Model                 | Embedding | Architecture | Dimensions |           PCC |           MSE |
 |-------------------|-----------------------|-----------|--------------|------------|--------------:|--------------:|
-| ASSIN 1 ( pt-BR ) | ELMo - wiki (reduced) |           |              |            |          0.62 |          0.47 |
+| ASSIN 1 (pt-BR) | ELMo - wiki (reduced) |           |              |            |          0.62 |          0.47 |
 |                   | ELMo - wiki (reduced) | word2vec  | CBOW         | 1000       |          0.62 |          0.47 |
 |                   | [portuguese-BERT](https://github.com/neuralmind-ai/portuguese-bert)       |           |              |            |          0.53 |          0.55 |
 |                   | [BERT-multilingual (cased)](https://github.com/google-research/bert/blob/master/multilingual.md)     |           |              |            |          0.51 |          1.94 |
-| ASSIN 1 ( pt-PT ) | ELMo - wiki (reduced) |           |              |            |          0.63 |          0.73 |
+| ASSIN 1 (pt-PT) | ELMo - wiki (reduced) |           |              |            |          0.63 |          0.73 |
 |                   | ELMo - wiki (reduced) | word2vec  | CBOW         | 1000       |          0.64 |          0.73 |
 |                   | [portuguese-BERT](https://github.com/neuralmind-ai/portuguese-bert)       |           |              |            |          0.53 |          0.88 |
 |                   | [BERT-multilingual (cased)](https://github.com/google-research/bert/blob/master/multilingual.md)     |           |              |            |          0.52 |          0.90 |
