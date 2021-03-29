@@ -82,7 +82,7 @@ preshed==2.0.1
 protobuf==3.8.0
 py==1.8.1
 pycrypto==2.6.1
-Pygments==2.5.2
+Pygments==2.7.4
 pygobject==3.26.1
 pyparsing==2.4.6
 pytest==5.3.5
