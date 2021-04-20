@@ -80,7 +80,7 @@ plac==0.9.6
 pluggy==0.13.1
 preshed==2.0.1
 protobuf==3.8.0
-py==1.8.1
+py==1.10.0
 pycrypto==2.6.1
 Pygments==2.5.2
 pygobject==3.26.1
