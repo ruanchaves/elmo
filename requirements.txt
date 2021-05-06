@@ -30,7 +30,7 @@ filelock==3.0.12
 flair==0.4.5
 flaky==3.6.1
 Flask==1.1.1
-Flask-Cors==3.0.8
+Flask-Cors==3.0.9
 ftfy==5.6
 future==0.18.2
 gast==0.2.2
